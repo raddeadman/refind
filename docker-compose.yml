@@ -1,0 +1,54 @@
+# ReFind development stack.
+#   docker compose up -d          -> MongoDB 7 single-node replica set + MailHog
+# The API runs on the host (uvicorn) and connects with directConnection=true.
+name: refind
+
+services:
+  mongo:
+    image: mongo:7.0
+    container_name: refind-mongo
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USER:-root}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD:-change-me-root}
+    # A replica set with auth needs a keyfile; it is generated inside the
+    # container on start (single node, so it never has to be shared).
+    entrypoint:
+      - bash
+      - -c
+      - |
+        openssl rand -base64 756 > /etc/mongo-keyfile
+        chmod 400 /etc/mongo-keyfile
+        chown 999:999 /etc/mongo-keyfile
+        exec docker-entrypoint.sh mongod --replSet rs0 --bind_ip_all --keyFile /etc/mongo-keyfile
+    ports:
+      - "127.0.0.1:27017:27017" # localhost only (§5.2)
+    volumes:
+      - mongo-data:/data/db
+      - mongo-config:/data/configdb
+      - ./backups:/backups
+    healthcheck:
+      # Initiates the replica set on first run, then reports healthy once
+      # this node is PRIMARY (transactions need a primary).
+      test:
+        - CMD-SHELL
+        - >
+          mongosh --quiet -u "$$MONGO_INITDB_ROOT_USERNAME" -p "$$MONGO_INITDB_ROOT_PASSWORD"
+          --authenticationDatabase admin --eval
+          "try { rs.status().ok } catch (e) { rs.initiate({_id: 'rs0', members: [{_id: 0, host: 'localhost:27017'}]}).ok }; db.hello().isWritablePrimary ? 0 : quit(1)"
+      interval: 5s
+      timeout: 10s
+      retries: 30
+      start_period: 10s
+
+  mailhog:
+    image: mailhog/mailhog:v1.0.1
+    container_name: refind-mailhog
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:1025:1025" # SMTP
+      - "127.0.0.1:8025:8025" # web inbox
+
+volumes:
+  mongo-data:
+  mongo-config:
