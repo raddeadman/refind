@@ -1,0 +1,310 @@
+
+=== C1 items.insertMany - one found and one lost report ===
+db.items.insertMany([found, lost])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6ae1bf40fb543ce544ce5f47'),
+    '1': ObjectId('6ae1bf40fb543ce544ce5f48')
+  }
+}
+
+=== C2 itemSecrets.insertOne - the found item's verification questions (hashed answers) ===
+db.itemSecrets.insertOne({ itemId, verification: [{ question, answerHash }] })
+{
+  acknowledged: true,
+  insertedId: ObjectId('6ae1bf40fb543ce544ce5f49')
+}
+
+=== C3 matches.updateOne upsert + $setOnInsert - how the matching engine saves a candidate ===
+db.matches.updateOne({ lostItemId, foundItemId }, { $setOnInsert: {...} }, { upsert: true })
+{
+  acknowledged: true,
+  insertedId: ObjectId('6ae1bf409bfc879badfd6a10'),
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 1
+}
+
+=== C3b the same upsert again - matchedCount 1, upsertedCount 0, so no duplicate and no second alert ===
+(same call)
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+
+=== C4 claims.insertOne - the owner claims the found item with answers ===
+db.claims.insertOne({ itemId, claimantId: DBRef('users', id), matchId, answers, status: 'pending' })
+{
+  acknowledged: true,
+  insertedId: ObjectId('6ae1bf40fb543ce544ce5f4a')
+}
+
+=== C5 notifications.insertOne - new_match alert with its dedupeKey ===
+db.notifications.insertOne({ userId, type: 'new_match', dedupeKey: 'new_match:<matchId>:<userId>' })
+{
+  acknowledged: true,
+  insertedId: ObjectId('6ae1bf40fb543ce544ce5f4b')
+}
+
+=== C6 the same alert again - rejected by the unique dedupeKey index ===
+db.notifications.insertOne({ ...same dedupeKey })
+Rejected by MongoDB: MongoServerError (code 11000) - E11000 duplicate key error collection: refind.notifications index: dedupeKey_unique dup key: { dedupeKey: "new_match:6ae1bf409bfc879badfd6a10:6ae1bf229beea47bfc38e2e0" }
+
+=== C7 a second claim by the same user on the same item - rejected by { itemId, claimantId } unique ===
+db.claims.insertOne({ itemId, claimantId: <same user> })
+Rejected by MongoDB: MongoServerError (code 11000) - E11000 duplicate key error collection: refind.claims index: item_claimant_unique dup key: { itemId: ObjectId('6ae1bf40fb543ce544ce5f47'), claimantId: { $ref: "users", $id: ObjectId('6ae1bf229beea47bfc38e2e0') } }
+
+=== C8 an item in an unknown building - rejected by the $jsonSchema validator ===
+db.items.insertOne({ ..., location: { building: 'Mars' } })
+Rejected by MongoDB: MongoServerError (code 121) - Document failed validation
+
+=== R1 find with filters + projection + sort - open found wallets in the Library, newest first ===
+db.items.find({ type: 'found', category: 'wallets', status: { $in: ['open','matched'] }, 'location.building': 'Library' }, { title: 1, date: 1, status: 1 }).sort({ date: -1 }).limit(5)
+[
+  {
+    _id: ObjectId('6ae1bf40fb543ce544ce5f47'),
+    title: 'Black wallet',
+    location: {
+      building: 'Library'
+    },
+    date: ISODate('2026-10-27T00:00:00.000Z'),
+    status: 'open'
+  }
+]
+
+=== R2 find on an embedded field + date range - items found in the last 7 days on the ground floor ===
+db.items.find({ type: 'found', 'location.floor': 'Ground floor', date: { $gte: <7 days ago> } }).count()
+5
+
+=== R3 $text keyword search - 'black wallet', ranked by text score ===
+db.items.find({ $text: { $search: 'black wallet' } }, { score: { $meta: 'textScore' } }).sort({ score: { $meta: 'textScore' } }).limit(5)
+[
+  {
+    _id: ObjectId('6ae1bf40fb543ce544ce5f47'),
+    title: 'Black wallet',
+    score: 8.125
+  },
+  {
+    _id: ObjectId('6ae1bf329beea47bfc38e442'),
+    title: 'Black wallet',
+    score: 8.125
+  },
+  {
+    _id: ObjectId('6ae1bf40fb543ce544ce5f48'),
+    title: 'Wallet',
+    score: 5.5
+  },
+  {
+    _id: ObjectId('6ae1bf379beea47bfc38e526'),
+    title: 'Black backpack',
+    score: 4.375
+  },
+  {
+    _id: ObjectId('6ae1bf349beea47bfc38e4a7'),
+    title: 'Black ring',
+    score: 4.375
+  }
+]
+
+=== R4 officer review queue - pending claims, oldest first ===
+db.claims.find({ status: 'pending' }).sort({ submittedAt: 1 })
+[
+  {
+    _id: ObjectId('6ae1bf3b9beea47bfc38e5ea'),
+    itemId: ObjectId('6ae1bf239beea47bfc38e374'),
+    status: 'pending',
+    submittedAt: ISODate('2026-09-18T21:11:47.000Z')
+  },
+  {
+    _id: ObjectId('6ae1bf3b9beea47bfc38e5d8'),
+    itemId: ObjectId('6ae1bf349beea47bfc38e4de'),
+    status: 'pending',
+    submittedAt: ISODate('2026-09-19T01:29:47.000Z')
+  },
+  {
+    _id: ObjectId('6ae1bf3b9beea47bfc38e5dc'),
+    itemId: ObjectId('6ae1bf339beea47bfc38e494'),
+    status: 'pending',
+    submittedAt: ISODate('2026-09-26T14:54:47.000Z')
+  },
+  {
+    _id: ObjectId('6ae1bf3b9beea47bfc38e5da'),
+    itemId: ObjectId('6ae1bf389beea47bfc38e54c'),
+    status: 'pending',
+    submittedAt: ISODate('2026-10-04T13:02:47.000Z')
+  },
+  {
+    _id: ObjectId('6ae1bf3b9beea47bfc38e5e0'),
+    itemId: ObjectId('6ae1bf2d9beea47bfc38e3c8'),
+    status: 'pending',
+    submittedAt: ISODate('2026-10-08T20:16:47.000Z')
+  },
+  {
+    _id: ObjectId('6ae1bf3b9beea47bfc38e5de'),
+    itemId: ObjectId('6ae1bf329beea47bfc38e440'),
+    status: 'pending',
+    submittedAt: ISODate('2026-10-25T02:33:47.000Z')
+  },
+  {
+    _id: ObjectId('6ae1bf40fb543ce544ce5f4a'),
+    itemId: ObjectId('6ae1bf40fb543ce544ce5f47'),
+    status: 'pending',
+    submittedAt: ISODate('2026-10-28T09:24:16.325Z')
+  }
+]
+
+=== R5 aggregate + $lookup - a claim with its item and claimant (referenced documents joined) ===
+db.claims.aggregate([{ $match: { _id } }, { $lookup: items }, { $lookup: users }, { $project }])
+[
+  {
+    _id: ObjectId('6ae1bf40fb543ce544ce5f4a'),
+    status: 'pending',
+    item: [
+      {
+        title: 'Black wallet',
+        location: {
+          building: 'Library'
+        }
+      }
+    ],
+    claimant: [
+      {
+        name: 'Sara Al Khalifa',
+        email: 'student001@university.edu'
+      }
+    ]
+  }
+]
+
+=== R6 itemSecrets are never returned by an item query - the item has no verification field ===
+db.items.findOne({ _id: foundId }).verification
+{
+  verificationOnItem: null
+}
+
+=== U1 $set + $inc with a version check - optimistic edit of the item (version 1 -> 2) ===
+db.items.updateOne({ _id, version: 1 }, { $set: { description }, $inc: { version: 1 } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+=== U1b a stale edit (still version 1) changes nothing - the API turns matchedCount 0 into 409 ===
+(same call)
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+
+=== U2 $set + $push + $inc - matching moves both items to 'matched' and appends to statusHistory ===
+db.items.updateMany({ _id: { $in: [lostId, foundId] }, status: 'open' }, { $set: { status: 'matched' }, $push: { statusHistory: {...} }, $inc: { version: 1 } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+
+=== U3 $inc - a wrong set of answers increments failedAttempts ===
+db.claims.updateOne({ _id: claimId, status: 'pending' }, { $inc: { failedAttempts: 1 } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+=== U4 $addToSet - add a reason to the match only if it is not there yet ===
+db.matches.updateOne({ _id: matchId }, { $addToSet: { reasons: 'dates 1 day(s) apart' } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+=== U5 $set readAt - the user opens the notification (starts its 90-day TTL) ===
+db.notifications.updateOne({ dedupeKey }, { $set: { readAt: new Date() } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+=== U6 conditional approval - only a still-pending claim can be approved (step 1 of the §5.4 transaction) ===
+db.claims.updateOne({ _id: claimId, status: 'pending' }, { $set: { status: 'approved', reviewedBy, reviewedAt } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+=== U7 a second confirmed match for the same found item - rejected by the partial unique index ===
+db.matches.insertOne({ lostItemId: <another>, foundItemId, status: 'confirmed' }) after confirming the first
+Rejected by MongoDB: MongoServerError (code 11000) - E11000 duplicate key error collection: refind.matches index: found_confirmed_unique dup key: { foundItemId: ObjectId('6ae1bf40fb543ce544ce5f47') }
+
+=== U8 the item after the updates ===
+db.items.findOne({ _id: foundId }, { status: 1, version: 1, description: 1, statusHistory: 1 })
+{
+  _id: ObjectId('6ae1bf40fb543ce544ce5f47'),
+  description: 'crud-demo: brown leather wallet',
+  status: 'matched',
+  version: 3,
+  statusHistory: [
+    {
+      status: 'open',
+      at: ISODate('2026-10-28T09:24:16.325Z'),
+      by: ObjectId('6ae1bf229beea47bfc38e2dc')
+    },
+    {
+      status: 'matched',
+      at: ISODate('2026-10-28T09:24:16.325Z'),
+      by: null
+    }
+  ]
+}
+
+=== D1 deleteOne - the claimant's notification ===
+db.notifications.deleteOne({ dedupeKey })
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+
+=== D2 deleteMany - remove everything this demo created ===
+db.claims / matches / itemSecrets / items .deleteMany({ <demo ids> })
+{
+  claims: 1,
+  matches: 1,
+  itemSecrets: 1,
+  items: 2
+}
+
+=== D3 soft delete of a user - $set status 'disabled', then restore ===
+db.users.updateOne({ _id }, { $set: { status: 'disabled' } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+Done. Demo documents removed.

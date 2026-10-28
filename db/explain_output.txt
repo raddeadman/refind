@@ -1,0 +1,14 @@
+Collection sizes: items 600, users 150, claims 16, notifications 31
+┌─────────┬─────────────────────────────┬─────────────────┬──────────┬─────────────┬────────────┬────────────┬───────────┬──────────┬──────────────────────────────────────────────────────────┬───────┐
+│ (index) │ query                       │ coll            │ returned │ docs before │ docs after │ keys after │ ms before │ ms after │ plan after                                               │ ok    │
+├─────────┼─────────────────────────────┼─────────────────┼──────────┼─────────────┼────────────┼────────────┼───────────┼──────────┼──────────────────────────────────────────────────────────┼───────┤
+│ 0       │ 'Matching candidates'       │ 'items'         │ 4        │ 600         │ 4          │ 4          │ 0         │ 0        │ 'FETCH > SORT_MERGE > IXSCAN(type_category_status_date)' │ 'yes' │
+│ 1       │ 'Items in a building'       │ 'items'         │ 20       │ 600         │ 20         │ 20         │ 1         │ 0        │ 'LIMIT > FETCH > IXSCAN(building_date)'                  │ 'yes' │
+│ 2       │ 'My reports'                │ 'items'         │ 52       │ 600         │ 52         │ 52         │ 1         │ 0        │ 'FETCH > IXSCAN(reporter_submitted)'                     │ 'yes' │
+│ 3       │ 'Archive job (stale items)' │ 'items'         │ 66       │ 600         │ 66         │ 68         │ 0         │ 0        │ 'FETCH > IXSCAN(status_date)'                            │ 'yes' │
+│ 4       │ 'Login by email'            │ 'users'         │ 1        │ 150         │ 1          │ 1          │ 0         │ 0        │ 'FETCH > IXSCAN(email_unique)'                           │ 'yes' │
+│ 5       │ 'Secrets for one item'      │ 'itemSecrets'   │ 1        │ 300         │ 1          │ 1          │ 0         │ 0        │ 'FETCH > IXSCAN(itemId_unique)'                          │ 'yes' │
+│ 6       │ 'Officer review queue'      │ 'claims'        │ 6        │ 16          │ 6          │ 6          │ 0         │ 0        │ 'FETCH > IXSCAN(review_queue)'                           │ 'yes' │
+│ 7       │ 'My notifications'          │ 'notifications' │ 2        │ 31          │ 2          │ 2          │ 0         │ 0        │ 'FETCH > IXSCAN(user_created)'                           │ 'yes' │
+│ 8       │ 'Keyword search'            │ 'items'         │ 17       │ 600         │ 17         │ 17         │ 1         │ 0        │ 'TEXT_MATCH(item_text) > FETCH > IXSCAN(item_text)'      │ 'yes' │
+└─────────┴─────────────────────────────┴─────────────────┴──────────┴─────────────┴────────────┴────────────┴───────────┴──────────┴──────────────────────────────────────────────────────────┴───────┘

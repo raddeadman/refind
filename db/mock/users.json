@@ -1,0 +1,3002 @@
+[
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2db"
+    },
+    "name": "ReFind Admin",
+    "email": "admin@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "admin",
+    "studentId": null,
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.946Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2dc"
+    },
+    "name": "Security Officer 1",
+    "email": "officer1@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "officer",
+    "studentId": null,
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.946Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2dd"
+    },
+    "name": "Security Officer 2",
+    "email": "officer2@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "officer",
+    "studentId": null,
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.947Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2de"
+    },
+    "name": "Security Officer 3",
+    "email": "officer3@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "officer",
+    "studentId": null,
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.947Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2df"
+    },
+    "name": "Security Officer 4",
+    "email": "officer4@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "officer",
+    "studentId": null,
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.947Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2e0"
+    },
+    "name": "Sara Al Khalifa",
+    "email": "student001@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300001",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.947Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2e1"
+    },
+    "name": "Maryam Ebrahim",
+    "email": "student002@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300002",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.947Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2e2"
+    },
+    "name": "Maryam Saleh",
+    "email": "student003@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300003",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.947Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2e3"
+    },
+    "name": "Hassan Rashid",
+    "email": "student004@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300004",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.947Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2e4"
+    },
+    "name": "Hassan Yousif",
+    "email": "student005@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300005",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.947Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2e5"
+    },
+    "name": "Huda Al Khalifa",
+    "email": "student006@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300006",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.948Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2e6"
+    },
+    "name": "Mohammed Rashid",
+    "email": "student007@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300007",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.948Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2e7"
+    },
+    "name": "Noor Mansoor",
+    "email": "student008@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300008",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.948Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2e8"
+    },
+    "name": "Abdulla Saleh",
+    "email": "student009@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300009",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.948Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2e9"
+    },
+    "name": "Omar Saleh",
+    "email": "student010@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300010",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.948Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2ea"
+    },
+    "name": "Sara Isa",
+    "email": "student011@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300011",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.948Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2eb"
+    },
+    "name": "Khalid Yousif",
+    "email": "student012@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300012",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.948Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2ec"
+    },
+    "name": "Yousif Yousif",
+    "email": "student013@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300013",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.948Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2ed"
+    },
+    "name": "Reem Ebrahim",
+    "email": "student014@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300014",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.949Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2ee"
+    },
+    "name": "Hamad Ahmed",
+    "email": "student015@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300015",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.949Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2ef"
+    },
+    "name": "Layla Rashid",
+    "email": "student016@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300016",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.949Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2f0"
+    },
+    "name": "Khalid Al Khalifa",
+    "email": "student017@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300017",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.949Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2f1"
+    },
+    "name": "Salman Saleh",
+    "email": "student018@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300018",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.949Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2f2"
+    },
+    "name": "Ali Ebrahim",
+    "email": "student019@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300019",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.949Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2f3"
+    },
+    "name": "Khalid Al Khalifa",
+    "email": "student020@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300020",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.949Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2f4"
+    },
+    "name": "Layla Rashid",
+    "email": "student021@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300021",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.949Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2f5"
+    },
+    "name": "Fatima Ebrahim",
+    "email": "student022@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300022",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.949Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2f6"
+    },
+    "name": "Reem Hasan",
+    "email": "student023@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300023",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.950Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2f7"
+    },
+    "name": "Hamad Ahmed",
+    "email": "student024@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300024",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.950Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2f8"
+    },
+    "name": "Huda Al Khalifa",
+    "email": "student025@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300025",
+    "status": "unverified",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.950Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2f9"
+    },
+    "name": "Huda Ebrahim",
+    "email": "student026@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300026",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.950Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2fa"
+    },
+    "name": "Ahmed Isa",
+    "email": "student027@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300027",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.950Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2fb"
+    },
+    "name": "Reem Yousif",
+    "email": "student028@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300028",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.950Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2fc"
+    },
+    "name": "Hassan Saleh",
+    "email": "student029@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300029",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.950Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2fd"
+    },
+    "name": "Abdulla Yousif",
+    "email": "student030@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300030",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.950Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2fe"
+    },
+    "name": "Layla Ebrahim",
+    "email": "student031@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300031",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.950Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2ff"
+    },
+    "name": "Layla Al Khalifa",
+    "email": "student032@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300032",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.950Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e300"
+    },
+    "name": "Hamad Ahmed",
+    "email": "student033@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300033",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.951Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e301"
+    },
+    "name": "Yousif Jaffar",
+    "email": "student034@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300034",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.951Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e302"
+    },
+    "name": "Ahmed Isa",
+    "email": "student035@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300035",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.951Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e303"
+    },
+    "name": "Fatima Hasan",
+    "email": "student036@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300036",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.951Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e304"
+    },
+    "name": "Omar Isa",
+    "email": "student037@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300037",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.951Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e305"
+    },
+    "name": "Yousif Rashid",
+    "email": "student038@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300038",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.951Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e306"
+    },
+    "name": "Aisha Yousif",
+    "email": "student039@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300039",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.951Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e307"
+    },
+    "name": "Khalid Jaffar",
+    "email": "student040@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300040",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.951Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e308"
+    },
+    "name": "Mohammed Hasan",
+    "email": "student041@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300041",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.952Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e309"
+    },
+    "name": "Salman Mansoor",
+    "email": "student042@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300042",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.952Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e30a"
+    },
+    "name": "Sara Hasan",
+    "email": "student043@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300043",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.952Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e30b"
+    },
+    "name": "Abdulla Yousif",
+    "email": "student044@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300044",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.952Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e30c"
+    },
+    "name": "Noor Ahmed",
+    "email": "student045@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300045",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.952Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e30d"
+    },
+    "name": "Omar Saleh",
+    "email": "student046@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300046",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.952Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e30e"
+    },
+    "name": "Maryam Saleh",
+    "email": "student047@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300047",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.952Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e30f"
+    },
+    "name": "Huda Ebrahim",
+    "email": "student048@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300048",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.952Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e310"
+    },
+    "name": "Ahmed Mansoor",
+    "email": "student049@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300049",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.952Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e311"
+    },
+    "name": "Maryam Rashid",
+    "email": "student050@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300050",
+    "status": "unverified",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.952Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e312"
+    },
+    "name": "Huda Yousif",
+    "email": "student051@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300051",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.953Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e313"
+    },
+    "name": "Yousif Yousif",
+    "email": "student052@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300052",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.953Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e314"
+    },
+    "name": "Layla Mansoor",
+    "email": "student053@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300053",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.953Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e315"
+    },
+    "name": "Dana Al Khalifa",
+    "email": "student054@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300054",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.953Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e316"
+    },
+    "name": "Abdulla Ahmed",
+    "email": "student055@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300055",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.953Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e317"
+    },
+    "name": "Maryam Ebrahim",
+    "email": "student056@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300056",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.953Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e318"
+    },
+    "name": "Zainab Ebrahim",
+    "email": "student057@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300057",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.953Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e319"
+    },
+    "name": "Maryam Yousif",
+    "email": "student058@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300058",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.953Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e31a"
+    },
+    "name": "Reem Rashid",
+    "email": "student059@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300059",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.954Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e31b"
+    },
+    "name": "Noor Hasan",
+    "email": "student060@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300060",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.954Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e31c"
+    },
+    "name": "Layla Rashid",
+    "email": "student061@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300061",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.954Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e31d"
+    },
+    "name": "Huda Ebrahim",
+    "email": "student062@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300062",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.954Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e31e"
+    },
+    "name": "Omar Saleh",
+    "email": "student063@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300063",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.954Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e31f"
+    },
+    "name": "Hamad Ebrahim",
+    "email": "student064@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300064",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.954Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e320"
+    },
+    "name": "Ahmed Ebrahim",
+    "email": "student065@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300065",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.954Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e321"
+    },
+    "name": "Huda Saleh",
+    "email": "student066@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300066",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.954Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e322"
+    },
+    "name": "Dana Saleh",
+    "email": "student067@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300067",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.954Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e323"
+    },
+    "name": "Yousif Ahmed",
+    "email": "student068@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300068",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.954Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e324"
+    },
+    "name": "Fatima Rashid",
+    "email": "student069@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300069",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.955Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e325"
+    },
+    "name": "Abdulla Al Khalifa",
+    "email": "student070@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300070",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.955Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e326"
+    },
+    "name": "Fatima Yousif",
+    "email": "student071@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300071",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.955Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e327"
+    },
+    "name": "Sara Al Khalifa",
+    "email": "student072@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300072",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.955Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e328"
+    },
+    "name": "Aisha Al Khalifa",
+    "email": "student073@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300073",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.955Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e329"
+    },
+    "name": "Ali Al Khalifa",
+    "email": "student074@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300074",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.955Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e32a"
+    },
+    "name": "Khalid Ahmed",
+    "email": "student075@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300075",
+    "status": "unverified",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.955Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e32b"
+    },
+    "name": "Salman Saleh",
+    "email": "student076@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300076",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.955Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e32c"
+    },
+    "name": "Huda Hasan",
+    "email": "student077@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300077",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.955Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e32d"
+    },
+    "name": "Fatima Saleh",
+    "email": "student078@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300078",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.956Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e32e"
+    },
+    "name": "Mohammed Al Khalifa",
+    "email": "student079@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300079",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.956Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e32f"
+    },
+    "name": "Omar Mansoor",
+    "email": "student080@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300080",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.956Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e330"
+    },
+    "name": "Khalid Saleh",
+    "email": "student081@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300081",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.957Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e331"
+    },
+    "name": "Ali Rashid",
+    "email": "student082@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300082",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.957Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e332"
+    },
+    "name": "Salman Rashid",
+    "email": "student083@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300083",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.957Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e333"
+    },
+    "name": "Maryam Ebrahim",
+    "email": "student084@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300084",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.958Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e334"
+    },
+    "name": "Dana Mansoor",
+    "email": "student085@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300085",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.958Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e335"
+    },
+    "name": "Omar Ebrahim",
+    "email": "student086@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300086",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.958Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e336"
+    },
+    "name": "Maryam Ebrahim",
+    "email": "student087@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300087",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.958Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e337"
+    },
+    "name": "Maryam Ebrahim",
+    "email": "student088@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300088",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.958Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e338"
+    },
+    "name": "Hassan Hasan",
+    "email": "student089@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300089",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.958Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e339"
+    },
+    "name": "Hassan Mansoor",
+    "email": "student090@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300090",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.958Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e33a"
+    },
+    "name": "Hassan Rashid",
+    "email": "student091@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300091",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.958Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e33b"
+    },
+    "name": "Layla Ahmed",
+    "email": "student092@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300092",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.958Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e33c"
+    },
+    "name": "Noor Rashid",
+    "email": "student093@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300093",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.959Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e33d"
+    },
+    "name": "Dana Rashid",
+    "email": "student094@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300094",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.959Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e33e"
+    },
+    "name": "Zainab Yousif",
+    "email": "student095@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300095",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.959Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e33f"
+    },
+    "name": "Khalid Yousif",
+    "email": "student096@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300096",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.959Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e340"
+    },
+    "name": "Ali Yousif",
+    "email": "student097@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300097",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.959Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e341"
+    },
+    "name": "Khalid Hasan",
+    "email": "student098@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300098",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.959Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e342"
+    },
+    "name": "Huda Hasan",
+    "email": "student099@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300099",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.959Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e343"
+    },
+    "name": "Sara Al Khalifa",
+    "email": "student100@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300100",
+    "status": "unverified",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.959Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e344"
+    },
+    "name": "Omar Mansoor",
+    "email": "student101@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300101",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.959Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e345"
+    },
+    "name": "Mohammed Mansoor",
+    "email": "student102@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300102",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.960Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e346"
+    },
+    "name": "Khalid Yousif",
+    "email": "student103@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300103",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.960Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e347"
+    },
+    "name": "Sara Saleh",
+    "email": "student104@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300104",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.960Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e348"
+    },
+    "name": "Omar Yousif",
+    "email": "student105@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300105",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.960Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e349"
+    },
+    "name": "Mohammed Isa",
+    "email": "student106@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300106",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.960Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e34a"
+    },
+    "name": "Aisha Yousif",
+    "email": "student107@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300107",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.960Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e34b"
+    },
+    "name": "Khalid Yousif",
+    "email": "student108@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300108",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.960Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e34c"
+    },
+    "name": "Ahmed Yousif",
+    "email": "student109@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300109",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.960Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e34d"
+    },
+    "name": "Aisha Jaffar",
+    "email": "student110@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300110",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.960Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e34e"
+    },
+    "name": "Maryam Ebrahim",
+    "email": "student111@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300111",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.960Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e34f"
+    },
+    "name": "Salman Jaffar",
+    "email": "student112@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300112",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.961Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e350"
+    },
+    "name": "Omar Mansoor",
+    "email": "student113@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300113",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.961Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e351"
+    },
+    "name": "Hamad Mansoor",
+    "email": "student114@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300114",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.961Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e352"
+    },
+    "name": "Hamad Ebrahim",
+    "email": "student115@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300115",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.961Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e353"
+    },
+    "name": "Aisha Hasan",
+    "email": "student116@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300116",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.961Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e354"
+    },
+    "name": "Ahmed Isa",
+    "email": "student117@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300117",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.961Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e355"
+    },
+    "name": "Abdulla Saleh",
+    "email": "student118@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300118",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.961Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e356"
+    },
+    "name": "Yousif Mansoor",
+    "email": "student119@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300119",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.961Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e357"
+    },
+    "name": "Huda Ahmed",
+    "email": "student120@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300120",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.961Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e358"
+    },
+    "name": "Aisha Ahmed",
+    "email": "student121@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300121",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.962Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e359"
+    },
+    "name": "Ali Jaffar",
+    "email": "student122@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300122",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.962Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e35a"
+    },
+    "name": "Layla Ahmed",
+    "email": "student123@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300123",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.962Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e35b"
+    },
+    "name": "Reem Mansoor",
+    "email": "student124@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300124",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.962Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e35c"
+    },
+    "name": "Reem Yousif",
+    "email": "student125@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300125",
+    "status": "unverified",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.962Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e35d"
+    },
+    "name": "Salman Saleh",
+    "email": "student126@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300126",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.962Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e35e"
+    },
+    "name": "Hamad Ahmed",
+    "email": "student127@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300127",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.962Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e35f"
+    },
+    "name": "Ahmed Ebrahim",
+    "email": "student128@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300128",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.962Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e360"
+    },
+    "name": "Maryam Ahmed",
+    "email": "student129@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300129",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.962Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e361"
+    },
+    "name": "Sara Ebrahim",
+    "email": "student130@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300130",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.963Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e362"
+    },
+    "name": "Maryam Hasan",
+    "email": "student131@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300131",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.963Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e363"
+    },
+    "name": "Yousif Ahmed",
+    "email": "student132@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300132",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.963Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e364"
+    },
+    "name": "Noor Yousif",
+    "email": "student133@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300133",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.963Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e365"
+    },
+    "name": "Layla Saleh",
+    "email": "student134@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300134",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.963Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e366"
+    },
+    "name": "Ali Ebrahim",
+    "email": "student135@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300135",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.963Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e367"
+    },
+    "name": "Abdulla Yousif",
+    "email": "student136@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300136",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.963Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e368"
+    },
+    "name": "Noor Ebrahim",
+    "email": "student137@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300137",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.963Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e369"
+    },
+    "name": "Reem Yousif",
+    "email": "student138@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300138",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.963Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e36a"
+    },
+    "name": "Sara Jaffar",
+    "email": "student139@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300139",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.963Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e36b"
+    },
+    "name": "Omar Isa",
+    "email": "student140@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300140",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.964Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e36c"
+    },
+    "name": "Hamad Ebrahim",
+    "email": "student141@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300141",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.964Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e36d"
+    },
+    "name": "Fatima Isa",
+    "email": "student142@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300142",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.964Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e36e"
+    },
+    "name": "Ahmed Ebrahim",
+    "email": "student143@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300143",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.964Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e36f"
+    },
+    "name": "Noor Mansoor",
+    "email": "student144@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300144",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.964Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e370"
+    },
+    "name": "Ahmed Ahmed",
+    "email": "student145@university.edu",
+    "passwordHash": "$2b$12$gSP/0I5GexGRB/bF1htivez89YD3S/DT14azDe02mHo/4UPybXZi6",
+    "googleSub": null,
+    "role": "user",
+    "studentId": "F2300145",
+    "status": "active",
+    "profile": {
+      "phone": null,
+      "preferredContact": "email"
+    },
+    "emailVerification": null,
+    "createdAt": {
+      "$date": "2026-10-28T09:23:46.964Z"
+    }
+  }
+]

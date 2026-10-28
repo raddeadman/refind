@@ -1,7 +1,8 @@
-"""Seed data with insert_many (§4.1): 15 categories, 150 users, 600 items.
+"""Seed data with insert_many (§4.1): 15 categories, 150 users, 600 items,
+plus matches, claims, notifications and audit entries (scripts/seed_activity.py).
 
-Every found item is inserted together with its itemSecrets document in one
-transaction. Data is random but reproducible (fixed random seed).
+Every found item is inserted together with its itemSecrets document, and all
+the activity that refers to it, in one transaction. Data is random but reproducible (fixed random seed).
 
 Run from backend/:  python -m scripts.seed [--db refind_test] [--reset]
 All seeded accounts use the password printed at the end.
@@ -19,16 +20,22 @@ from app.config import get_settings
 from app.models import (
     ALL_MODELS,
     Attributes,
+    AuditLog,
     Category,
+    Claim,
     Item,
     ItemSecret,
     Location,
+    Match,
+    Notification,
     StatusChange,
     User,
     VerificationQuestion,
 )
 from app.models.common import BUILDINGS, ItemStatus, ItemType, Role, UserStatus
 from app.security import hash_password, normalise_answer
+
+from .seed_activity import make_activity
 
 SEED_PASSWORD = "Password123!"
 N_USERS = 150
@@ -215,16 +222,25 @@ async def seed(db_name: str, reset: bool) -> None:
                 items.append(item)
                 secrets.append(make_secret(item, hash_answer))
 
+        questions = {code: c[3] for code, c in CATEGORIES.items()}
+        activity = make_activity(items, users, questions, now)
+
         # Found items and their secrets go in together, as one transaction (§3).
         async def txn(session):
             await Item.insert_many(items, session=session)
             await ItemSecret.insert_many(secrets, session=session)
+            await Match.insert_many(activity.matches, session=session)
+            await Claim.insert_many(activity.claims, session=session)
+            await Notification.insert_many(activity.notifications, session=session)
+            await AuditLog.insert_many(activity.audit, session=session)
 
         await db.run_in_transaction(txn)
 
         print(
             f"Seeded {db_name}: {await Category.count()} categories, {await User.count()} users, "
-            f"{await Item.count()} items ({len(secrets)} found), {await ItemSecret.count()} itemSecrets."
+            f"{await Item.count()} items ({len(secrets)} found), {await ItemSecret.count()} itemSecrets, "
+            f"{await Match.count()} matches, {await Claim.count()} claims, "
+            f"{await Notification.count()} notifications, {await AuditLog.count()} auditLogs."
         )
         print(f"Logins: admin@{settings.allowed_email_domains[0]}, officer1..{N_OFFICERS}@..., "
               f"student001@... - password '{SEED_PASSWORD}'")

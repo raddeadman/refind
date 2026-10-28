@@ -1,0 +1,627 @@
+[
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5ca"
+    },
+    "itemId": {
+      "$oid": "6ae1bf349beea47bfc38e4ae"
+    },
+    "claimantId": {
+      "$ref": "users",
+      "$id": {
+        "$oid": "6ae1bf229beea47bfc38e2fb"
+      }
+    },
+    "matchId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5c9"
+    },
+    "answers": [
+      {
+        "question": "What colour is the strap?",
+        "answer": "brown"
+      },
+      {
+        "question": "What is the watch face showing?",
+        "answer": "blue sticker"
+      }
+    ],
+    "proofNote": "I can describe a scratch on the back.",
+    "status": "approved",
+    "failedAttempts": 0,
+    "submittedAt": {
+      "$date": "2026-09-25T23:22:47Z"
+    },
+    "reviewedBy": {
+      "$oid": "6ae1bf229beea47bfc38e2df"
+    },
+    "reviewedAt": {
+      "$date": "2026-09-26T15:20:47Z"
+    },
+    "handover": {
+      "at": {
+        "$date": "2026-09-28T07:38:47Z"
+      },
+      "officerId": {
+        "$oid": "6ae1bf229beea47bfc38e2df"
+      },
+      "idChecked": true,
+      "idLast4": "2192"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5cb"
+    },
+    "itemId": {
+      "$oid": "6ae1bf349beea47bfc38e4ae"
+    },
+    "claimantId": {
+      "$ref": "users",
+      "$id": {
+        "$oid": "6ae1bf229beea47bfc38e2e0"
+      }
+    },
+    "matchId": null,
+    "answers": [
+      {
+        "question": "What colour is the strap?",
+        "answer": "no idea"
+      },
+      {
+        "question": "What is the watch face showing?",
+        "answer": "maybe red"
+      }
+    ],
+    "proofNote": null,
+    "status": "rejected",
+    "failedAttempts": 0,
+    "submittedAt": {
+      "$date": "2026-09-25T19:28:47Z"
+    },
+    "reviewedBy": {
+      "$oid": "6ae1bf229beea47bfc38e2df"
+    },
+    "reviewedAt": {
+      "$date": "2026-09-26T15:20:47Z"
+    },
+    "handover": null
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5cd"
+    },
+    "itemId": {
+      "$oid": "6ae1bf339beea47bfc38e48e"
+    },
+    "claimantId": {
+      "$ref": "users",
+      "$id": {
+        "$oid": "6ae1bf229beea47bfc38e32f"
+      }
+    },
+    "matchId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5cc"
+    },
+    "answers": [
+      {
+        "question": "What is the desktop wallpaper?",
+        "answer": "brown"
+      },
+      {
+        "question": "What sticker is on the cover?",
+        "answer": "blue sticker"
+      }
+    ],
+    "proofNote": "I can describe a scratch on the back.",
+    "status": "approved",
+    "failedAttempts": 0,
+    "submittedAt": {
+      "$date": "2026-09-10T22:06:47Z"
+    },
+    "reviewedBy": {
+      "$oid": "6ae1bf229beea47bfc38e2df"
+    },
+    "reviewedAt": {
+      "$date": "2026-09-11T02:49:47Z"
+    },
+    "handover": {
+      "at": {
+        "$date": "2026-09-11T13:10:47Z"
+      },
+      "officerId": {
+        "$oid": "6ae1bf229beea47bfc38e2df"
+      },
+      "idChecked": true,
+      "idLast4": "8171"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5ce"
+    },
+    "itemId": {
+      "$oid": "6ae1bf339beea47bfc38e48e"
+    },
+    "claimantId": {
+      "$ref": "users",
+      "$id": {
+        "$oid": "6ae1bf229beea47bfc38e2e0"
+      }
+    },
+    "matchId": null,
+    "answers": [
+      {
+        "question": "What is the desktop wallpaper?",
+        "answer": "no idea"
+      },
+      {
+        "question": "What sticker is on the cover?",
+        "answer": "maybe red"
+      }
+    ],
+    "proofNote": null,
+    "status": "rejected",
+    "failedAttempts": 0,
+    "submittedAt": {
+      "$date": "2026-09-10T11:45:47Z"
+    },
+    "reviewedBy": {
+      "$oid": "6ae1bf229beea47bfc38e2df"
+    },
+    "reviewedAt": {
+      "$date": "2026-09-11T02:49:47Z"
+    },
+    "handover": null
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d0"
+    },
+    "itemId": {
+      "$oid": "6ae1bf3a9beea47bfc38e5a4"
+    },
+    "claimantId": {
+      "$ref": "users",
+      "$id": {
+        "$oid": "6ae1bf229beea47bfc38e352"
+      }
+    },
+    "matchId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5cf"
+    },
+    "answers": [
+      {
+        "question": "What is attached to the key ring?",
+        "answer": "pink"
+      },
+      {
+        "question": "How many keys are on it?",
+        "answer": "blue sticker"
+      }
+    ],
+    "proofNote": "I can describe a scratch on the back.",
+    "status": "approved",
+    "failedAttempts": 0,
+    "submittedAt": {
+      "$date": "2026-10-06T23:57:47Z"
+    },
+    "reviewedBy": {
+      "$oid": "6ae1bf229beea47bfc38e2dd"
+    },
+    "reviewedAt": {
+      "$date": "2026-10-07T14:46:47Z"
+    },
+    "handover": {
+      "at": {
+        "$date": "2026-10-08T04:30:47Z"
+      },
+      "officerId": {
+        "$oid": "6ae1bf229beea47bfc38e2dd"
+      },
+      "idChecked": true,
+      "idLast4": "1937"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d2"
+    },
+    "itemId": {
+      "$oid": "6ae1bf329beea47bfc38e450"
+    },
+    "claimantId": {
+      "$ref": "users",
+      "$id": {
+        "$oid": "6ae1bf229beea47bfc38e32e"
+      }
+    },
+    "matchId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d1"
+    },
+    "answers": [
+      {
+        "question": "What colour is the strap?",
+        "answer": "brown"
+      },
+      {
+        "question": "What is the watch face showing?",
+        "answer": "blue sticker"
+      }
+    ],
+    "proofNote": "I can describe a scratch on the back.",
+    "status": "approved",
+    "failedAttempts": 0,
+    "submittedAt": {
+      "$date": "2026-10-20T09:52:47Z"
+    },
+    "reviewedBy": {
+      "$oid": "6ae1bf229beea47bfc38e2dd"
+    },
+    "reviewedAt": {
+      "$date": "2026-10-21T07:57:47Z"
+    },
+    "handover": null
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d4"
+    },
+    "itemId": {
+      "$oid": "6ae1bf249beea47bfc38e378"
+    },
+    "claimantId": {
+      "$ref": "users",
+      "$id": {
+        "$oid": "6ae1bf229beea47bfc38e346"
+      }
+    },
+    "matchId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d3"
+    },
+    "answers": [
+      {
+        "question": "What material is it?",
+        "answer": "pink"
+      },
+      {
+        "question": "Is anything engraved on it?",
+        "answer": "blue sticker"
+      }
+    ],
+    "proofNote": "I can describe a scratch on the back.",
+    "status": "approved",
+    "failedAttempts": 0,
+    "submittedAt": {
+      "$date": "2026-09-18T09:21:47Z"
+    },
+    "reviewedBy": {
+      "$oid": "6ae1bf229beea47bfc38e2dd"
+    },
+    "reviewedAt": {
+      "$date": "2026-09-19T03:07:47Z"
+    },
+    "handover": null
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d6"
+    },
+    "itemId": {
+      "$oid": "6ae1bf239beea47bfc38e372"
+    },
+    "claimantId": {
+      "$ref": "users",
+      "$id": {
+        "$oid": "6ae1bf229beea47bfc38e31c"
+      }
+    },
+    "matchId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d5"
+    },
+    "answers": [
+      {
+        "question": "What colour is the bottle?",
+        "answer": "red"
+      },
+      {
+        "question": "What sticker is on it?",
+        "answer": "blue sticker"
+      }
+    ],
+    "proofNote": "I can describe a scratch on the back.",
+    "status": "approved",
+    "failedAttempts": 0,
+    "submittedAt": {
+      "$date": "2026-10-15T08:53:47Z"
+    },
+    "reviewedBy": {
+      "$oid": "6ae1bf229beea47bfc38e2de"
+    },
+    "reviewedAt": {
+      "$date": "2026-10-15T14:39:47Z"
+    },
+    "handover": null
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d8"
+    },
+    "itemId": {
+      "$oid": "6ae1bf349beea47bfc38e4de"
+    },
+    "claimantId": {
+      "$ref": "users",
+      "$id": {
+        "$oid": "6ae1bf229beea47bfc38e366"
+      }
+    },
+    "matchId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d7"
+    },
+    "answers": [
+      {
+        "question": "What colour is the case?",
+        "answer": "black"
+      },
+      {
+        "question": "What is the device name when paired?",
+        "answer": "blue sticker"
+      }
+    ],
+    "proofNote": "I can describe a scratch on the back.",
+    "status": "pending",
+    "failedAttempts": 0,
+    "submittedAt": {
+      "$date": "2026-09-19T01:29:47Z"
+    },
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "handover": null
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5da"
+    },
+    "itemId": {
+      "$oid": "6ae1bf389beea47bfc38e54c"
+    },
+    "claimantId": {
+      "$ref": "users",
+      "$id": {
+        "$oid": "6ae1bf229beea47bfc38e31b"
+      }
+    },
+    "matchId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d9"
+    },
+    "answers": [
+      {
+        "question": "Whose name is on the card?",
+        "answer": "silver"
+      },
+      {
+        "question": "What is the colour of the card holder?",
+        "answer": "blue sticker"
+      }
+    ],
+    "proofNote": "I can describe a scratch on the back.",
+    "status": "pending",
+    "failedAttempts": 0,
+    "submittedAt": {
+      "$date": "2026-10-04T13:02:47Z"
+    },
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "handover": null
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5dc"
+    },
+    "itemId": {
+      "$oid": "6ae1bf339beea47bfc38e494"
+    },
+    "claimantId": {
+      "$ref": "users",
+      "$id": {
+        "$oid": "6ae1bf229beea47bfc38e316"
+      }
+    },
+    "matchId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5db"
+    },
+    "answers": [
+      {
+        "question": "What colour is the strap?",
+        "answer": "grey"
+      },
+      {
+        "question": "What is the watch face showing?",
+        "answer": "blue sticker"
+      }
+    ],
+    "proofNote": "I can describe a scratch on the back.",
+    "status": "pending",
+    "failedAttempts": 0,
+    "submittedAt": {
+      "$date": "2026-09-26T14:54:47Z"
+    },
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "handover": null
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5de"
+    },
+    "itemId": {
+      "$oid": "6ae1bf329beea47bfc38e440"
+    },
+    "claimantId": {
+      "$ref": "users",
+      "$id": {
+        "$oid": "6ae1bf229beea47bfc38e36b"
+      }
+    },
+    "matchId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5dd"
+    },
+    "answers": [
+      {
+        "question": "What is attached to the key ring?",
+        "answer": "pink"
+      },
+      {
+        "question": "How many keys are on it?",
+        "answer": "blue sticker"
+      }
+    ],
+    "proofNote": "I can describe a scratch on the back.",
+    "status": "pending",
+    "failedAttempts": 0,
+    "submittedAt": {
+      "$date": "2026-10-25T02:33:47Z"
+    },
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "handover": null
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e0"
+    },
+    "itemId": {
+      "$oid": "6ae1bf2d9beea47bfc38e3c8"
+    },
+    "claimantId": {
+      "$ref": "users",
+      "$id": {
+        "$oid": "6ae1bf229beea47bfc38e2e2"
+      }
+    },
+    "matchId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5df"
+    },
+    "answers": [
+      {
+        "question": "What colour is the case?",
+        "answer": "white"
+      },
+      {
+        "question": "What is the device name when paired?",
+        "answer": "blue sticker"
+      }
+    ],
+    "proofNote": "I can describe a scratch on the back.",
+    "status": "pending",
+    "failedAttempts": 0,
+    "submittedAt": {
+      "$date": "2026-10-08T20:16:47Z"
+    },
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "handover": null
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5ea"
+    },
+    "itemId": {
+      "$oid": "6ae1bf239beea47bfc38e374"
+    },
+    "claimantId": {
+      "$ref": "users",
+      "$id": {
+        "$oid": "6ae1bf229beea47bfc38e32f"
+      }
+    },
+    "matchId": null,
+    "answers": [
+      {
+        "question": "Whose name is on the card?",
+        "answer": "white"
+      },
+      {
+        "question": "What is the colour of the card holder?",
+        "answer": "blue sticker"
+      }
+    ],
+    "proofNote": "I can describe a scratch on the back.",
+    "status": "pending",
+    "failedAttempts": 0,
+    "submittedAt": {
+      "$date": "2026-09-18T21:11:47Z"
+    },
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "handover": null
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5eb"
+    },
+    "itemId": {
+      "$oid": "6ae1bf239beea47bfc38e376"
+    },
+    "claimantId": {
+      "$ref": "users",
+      "$id": {
+        "$oid": "6ae1bf229beea47bfc38e323"
+      }
+    },
+    "matchId": null,
+    "answers": [
+      {
+        "question": "What is attached to the key ring?",
+        "answer": "no idea"
+      },
+      {
+        "question": "How many keys are on it?",
+        "answer": "maybe red"
+      }
+    ],
+    "proofNote": null,
+    "status": "locked",
+    "failedAttempts": 3,
+    "submittedAt": {
+      "$date": "2026-09-15T21:02:47Z"
+    },
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "handover": null
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5ec"
+    },
+    "itemId": {
+      "$oid": "6ae1bf249beea47bfc38e37a"
+    },
+    "claimantId": {
+      "$ref": "users",
+      "$id": {
+        "$oid": "6ae1bf229beea47bfc38e345"
+      }
+    },
+    "matchId": null,
+    "answers": [
+      {
+        "question": "What colour is the frame?",
+        "answer": "grey"
+      },
+      {
+        "question": "What colour is the glasses case?",
+        "answer": "blue sticker"
+      }
+    ],
+    "proofNote": "I can describe a scratch on the back.",
+    "status": "withdrawn",
+    "failedAttempts": 0,
+    "submittedAt": {
+      "$date": "2026-09-20T09:21:47Z"
+    },
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "handover": null
+  }
+]

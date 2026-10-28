@@ -1,0 +1,442 @@
+[
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5c9"
+    },
+    "lostItemId": {
+      "$oid": "6ae1bf399beea47bfc38e571"
+    },
+    "foundItemId": {
+      "$oid": "6ae1bf349beea47bfc38e4ae"
+    },
+    "score": 60,
+    "reasons": [
+      "same category",
+      "same building (Library)",
+      "same colour (brown)",
+      "dates 7 day(s) apart"
+    ],
+    "status": "confirmed",
+    "createdAt": {
+      "$date": "2026-09-25T12:15:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5cc"
+    },
+    "lostItemId": {
+      "$oid": "6ae1bf349beea47bfc38e4e1"
+    },
+    "foundItemId": {
+      "$oid": "6ae1bf339beea47bfc38e48e"
+    },
+    "score": 87,
+    "reasons": [
+      "same category",
+      "same building (Science Building)",
+      "same colour (brown)",
+      "same brand (Lenovo)",
+      "dates 1 day(s) apart"
+    ],
+    "status": "confirmed",
+    "createdAt": {
+      "$date": "2026-09-10T08:49:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5cf"
+    },
+    "lostItemId": {
+      "$oid": "6ae1bf329beea47bfc38e45f"
+    },
+    "foundItemId": {
+      "$oid": "6ae1bf3a9beea47bfc38e5a4"
+    },
+    "score": 65,
+    "reasons": [
+      "same category",
+      "same building (Building 5)",
+      "same colour (pink)",
+      "dates 5 day(s) apart"
+    ],
+    "status": "confirmed",
+    "createdAt": {
+      "$date": "2026-10-06T12:22:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d1"
+    },
+    "lostItemId": {
+      "$oid": "6ae1bf329beea47bfc38e43d"
+    },
+    "foundItemId": {
+      "$oid": "6ae1bf329beea47bfc38e450"
+    },
+    "score": 65,
+    "reasons": [
+      "same category",
+      "same building (Sports Complex)",
+      "same colour (brown)",
+      "dates 5 day(s) apart"
+    ],
+    "status": "confirmed",
+    "createdAt": {
+      "$date": "2026-10-19T23:22:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d3"
+    },
+    "lostItemId": {
+      "$oid": "6ae1bf329beea47bfc38e44d"
+    },
+    "foundItemId": {
+      "$oid": "6ae1bf249beea47bfc38e378"
+    },
+    "score": 62,
+    "reasons": [
+      "same category",
+      "same colour (pink)",
+      "dates 1 day(s) apart"
+    ],
+    "status": "confirmed",
+    "createdAt": {
+      "$date": "2026-09-18T02:40:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d5"
+    },
+    "lostItemId": {
+      "$oid": "6ae1bf2c9beea47bfc38e3bf"
+    },
+    "foundItemId": {
+      "$oid": "6ae1bf239beea47bfc38e372"
+    },
+    "score": 62,
+    "reasons": [
+      "same category",
+      "same building (Building 2)",
+      "same colour (red)",
+      "dates 6 day(s) apart"
+    ],
+    "status": "confirmed",
+    "createdAt": {
+      "$date": "2026-10-14T11:09:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d7"
+    },
+    "lostItemId": {
+      "$oid": "6ae1bf399beea47bfc38e59b"
+    },
+    "foundItemId": {
+      "$oid": "6ae1bf349beea47bfc38e4de"
+    },
+    "score": 62,
+    "reasons": [
+      "same category",
+      "same colour (black)",
+      "dates 1 day(s) apart"
+    ],
+    "status": "suggested",
+    "createdAt": {
+      "$date": "2026-09-18T22:24:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d9"
+    },
+    "lostItemId": {
+      "$oid": "6ae1bf339beea47bfc38e49b"
+    },
+    "foundItemId": {
+      "$oid": "6ae1bf389beea47bfc38e54c"
+    },
+    "score": 81,
+    "reasons": [
+      "same category",
+      "same building (Student Center)",
+      "same colour (silver)",
+      "same brand (University)",
+      "dates 3 day(s) apart"
+    ],
+    "status": "suggested",
+    "createdAt": {
+      "$date": "2026-10-04T08:16:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5db"
+    },
+    "lostItemId": {
+      "$oid": "6ae1bf359beea47bfc38e4f7"
+    },
+    "foundItemId": {
+      "$oid": "6ae1bf339beea47bfc38e494"
+    },
+    "score": 71,
+    "reasons": [
+      "same category",
+      "same building (Main Auditorium)",
+      "same colour (grey)",
+      "dates 3 day(s) apart"
+    ],
+    "status": "suggested",
+    "createdAt": {
+      "$date": "2026-09-25T21:09:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5dd"
+    },
+    "lostItemId": {
+      "$oid": "6ae1bf399beea47bfc38e58f"
+    },
+    "foundItemId": {
+      "$oid": "6ae1bf329beea47bfc38e440"
+    },
+    "score": 71,
+    "reasons": [
+      "same category",
+      "same building (Business School)",
+      "same colour (pink)",
+      "dates 3 day(s) apart"
+    ],
+    "status": "suggested",
+    "createdAt": {
+      "$date": "2026-10-24T12:25:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5df"
+    },
+    "lostItemId": {
+      "$oid": "6ae1bf2b9beea47bfc38e3ad"
+    },
+    "foundItemId": {
+      "$oid": "6ae1bf2d9beea47bfc38e3c8"
+    },
+    "score": 65,
+    "reasons": [
+      "same category",
+      "same building (Parking Area)",
+      "same colour (white)",
+      "dates 5 day(s) apart"
+    ],
+    "status": "suggested",
+    "createdAt": {
+      "$date": "2026-10-08T05:12:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e1"
+    },
+    "lostItemId": {
+      "$oid": "6ae1bf329beea47bfc38e43b"
+    },
+    "foundItemId": {
+      "$oid": "6ae1bf2e9beea47bfc38e3f8"
+    },
+    "score": 68,
+    "reasons": [
+      "same category",
+      "same building (Building 3)",
+      "same colour (green)",
+      "dates 4 day(s) apart"
+    ],
+    "status": "suggested",
+    "createdAt": {
+      "$date": "2026-10-12T12:46:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e2"
+    },
+    "lostItemId": {
+      "$oid": "6ae1bf399beea47bfc38e58b"
+    },
+    "foundItemId": {
+      "$oid": "6ae1bf389beea47bfc38e552"
+    },
+    "score": 60,
+    "reasons": [
+      "same category",
+      "same building (Cafeteria)",
+      "same colour (yellow)",
+      "dates 7 day(s) apart"
+    ],
+    "status": "suggested",
+    "createdAt": {
+      "$date": "2026-10-03T17:39:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e3"
+    },
+    "lostItemId": {
+      "$oid": "6ae1bf349beea47bfc38e4c9"
+    },
+    "foundItemId": {
+      "$oid": "6ae1bf349beea47bfc38e4e4"
+    },
+    "score": 66,
+    "reasons": [
+      "same category",
+      "same colour (black)",
+      "same brand (Hydro Flask)",
+      "dates 3 day(s) apart"
+    ],
+    "status": "suggested",
+    "createdAt": {
+      "$date": "2026-09-30T21:26:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e4"
+    },
+    "lostItemId": {
+      "$oid": "6ae1bf399beea47bfc38e58d"
+    },
+    "foundItemId": {
+      "$oid": "6ae1bf2e9beea47bfc38e3e4"
+    },
+    "score": 60,
+    "reasons": [
+      "same category",
+      "same building (Engineering Building)",
+      "same colour (red)",
+      "dates 7 day(s) apart"
+    ],
+    "status": "suggested",
+    "createdAt": {
+      "$date": "2026-09-24T05:36:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e5"
+    },
+    "lostItemId": {
+      "$oid": "6ae1bf329beea47bfc38e443"
+    },
+    "foundItemId": {
+      "$oid": "6ae1bf339beea47bfc38e474"
+    },
+    "score": 62,
+    "reasons": [
+      "same category",
+      "same building (Business School)",
+      "same colour (white)",
+      "dates 6 day(s) apart"
+    ],
+    "status": "suggested",
+    "createdAt": {
+      "$date": "2026-09-17T19:09:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e6"
+    },
+    "lostItemId": {
+      "$oid": "6ae1bf359beea47bfc38e4f5"
+    },
+    "foundItemId": {
+      "$oid": "6ae1bf349beea47bfc38e4d6"
+    },
+    "score": 62,
+    "reasons": [
+      "same category",
+      "same building (Science Building)",
+      "same colour (red)",
+      "dates 6 day(s) apart"
+    ],
+    "status": "dismissed",
+    "createdAt": {
+      "$date": "2026-09-17T04:07:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e7"
+    },
+    "lostItemId": {
+      "$oid": "6ae1bf2d9beea47bfc38e3cf"
+    },
+    "foundItemId": {
+      "$oid": "6ae1bf2a9beea47bfc38e3a4"
+    },
+    "score": 68,
+    "reasons": [
+      "same category",
+      "same building (Building 4)",
+      "same colour (blue)",
+      "dates 4 day(s) apart"
+    ],
+    "status": "dismissed",
+    "createdAt": {
+      "$date": "2026-09-27T00:12:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e8"
+    },
+    "lostItemId": {
+      "$oid": "6ae1bf3a9beea47bfc38e5ad"
+    },
+    "foundItemId": {
+      "$oid": "6ae1bf379beea47bfc38e520"
+    },
+    "score": 65,
+    "reasons": [
+      "same category",
+      "same building (Library)",
+      "same colour (grey)",
+      "dates 5 day(s) apart"
+    ],
+    "status": "dismissed",
+    "createdAt": {
+      "$date": "2026-10-03T11:54:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e9"
+    },
+    "lostItemId": {
+      "$oid": "6ae1bf2a9beea47bfc38e3a3"
+    },
+    "foundItemId": {
+      "$oid": "6ae1bf309beea47bfc38e412"
+    },
+    "score": 65,
+    "reasons": [
+      "same category",
+      "same building (Building 1)",
+      "same colour (grey)",
+      "dates 5 day(s) apart"
+    ],
+    "status": "dismissed",
+    "createdAt": {
+      "$date": "2026-09-15T13:47:47Z"
+    }
+  }
+]

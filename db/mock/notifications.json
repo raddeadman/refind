@@ -1,0 +1,594 @@
+[
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e719"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e2fb"
+    },
+    "type": "new_match",
+    "message": "Possible match for your brown smartwatch (60%)",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5c9"
+    },
+    "dedupeKey": "new_match:6ae1bf3b9beea47bfc38e5c9:6ae1bf229beea47bfc38e2fb",
+    "readAt": null,
+    "createdAt": {
+      "$date": "2026-09-25T12:15:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e71a"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e2fb"
+    },
+    "type": "claim_update",
+    "message": "Your claim was approved",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5ca"
+    },
+    "dedupeKey": "claim_update:6ae1bf3b9beea47bfc38e5ca:approved:6ae1bf229beea47bfc38e2fb",
+    "readAt": {
+      "$date": "2026-09-27T01:44:47Z"
+    },
+    "createdAt": {
+      "$date": "2026-09-26T15:20:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e71b"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e2e0"
+    },
+    "type": "claim_update",
+    "message": "Your claim was not approved",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5cb"
+    },
+    "dedupeKey": "claim_update:6ae1bf3b9beea47bfc38e5cb:rejected:6ae1bf229beea47bfc38e2e0",
+    "readAt": null,
+    "createdAt": {
+      "$date": "2026-09-26T15:20:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e71c"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e32f"
+    },
+    "type": "new_match",
+    "message": "Possible match for your brown macbook (87%)",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5cc"
+    },
+    "dedupeKey": "new_match:6ae1bf3b9beea47bfc38e5cc:6ae1bf229beea47bfc38e32f",
+    "readAt": {
+      "$date": "2026-09-11T02:33:47Z"
+    },
+    "createdAt": {
+      "$date": "2026-09-10T08:49:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e71d"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e32f"
+    },
+    "type": "claim_update",
+    "message": "Your claim was approved",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5cd"
+    },
+    "dedupeKey": "claim_update:6ae1bf3b9beea47bfc38e5cd:approved:6ae1bf229beea47bfc38e32f",
+    "readAt": null,
+    "createdAt": {
+      "$date": "2026-09-11T02:49:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e71e"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e2e0"
+    },
+    "type": "claim_update",
+    "message": "Your claim was not approved",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5ce"
+    },
+    "dedupeKey": "claim_update:6ae1bf3b9beea47bfc38e5ce:rejected:6ae1bf229beea47bfc38e2e0",
+    "readAt": {
+      "$date": "2026-09-12T01:57:47Z"
+    },
+    "createdAt": {
+      "$date": "2026-09-11T02:49:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e71f"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e352"
+    },
+    "type": "new_match",
+    "message": "Possible match for your pink key ring (65%)",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5cf"
+    },
+    "dedupeKey": "new_match:6ae1bf3b9beea47bfc38e5cf:6ae1bf229beea47bfc38e352",
+    "readAt": null,
+    "createdAt": {
+      "$date": "2026-10-06T12:22:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e720"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e352"
+    },
+    "type": "claim_update",
+    "message": "Your claim was approved",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d0"
+    },
+    "dedupeKey": "claim_update:6ae1bf3b9beea47bfc38e5d0:approved:6ae1bf229beea47bfc38e352",
+    "readAt": {
+      "$date": "2026-10-08T03:13:47Z"
+    },
+    "createdAt": {
+      "$date": "2026-10-07T14:46:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e721"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e32e"
+    },
+    "type": "new_match",
+    "message": "Possible match for your brown smartwatch (65%)",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d1"
+    },
+    "dedupeKey": "new_match:6ae1bf3b9beea47bfc38e5d1:6ae1bf229beea47bfc38e32e",
+    "readAt": {
+      "$date": "2026-10-20T00:06:47Z"
+    },
+    "createdAt": {
+      "$date": "2026-10-19T23:22:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e722"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e32e"
+    },
+    "type": "claim_update",
+    "message": "Your claim was approved",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d2"
+    },
+    "dedupeKey": "claim_update:6ae1bf3b9beea47bfc38e5d2:approved:6ae1bf229beea47bfc38e32e",
+    "readAt": {
+      "$date": "2026-10-21T13:46:47Z"
+    },
+    "createdAt": {
+      "$date": "2026-10-21T07:57:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e723"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e32e"
+    },
+    "type": "handover_ready",
+    "message": "Collect your brown smartwatch from Security office, Building 5",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d2"
+    },
+    "dedupeKey": "handover_ready:6ae1bf3b9beea47bfc38e5d2:6ae1bf229beea47bfc38e32e",
+    "readAt": null,
+    "createdAt": {
+      "$date": "2026-10-21T07:57:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e724"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e346"
+    },
+    "type": "new_match",
+    "message": "Possible match for your pink necklace (62%)",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d3"
+    },
+    "dedupeKey": "new_match:6ae1bf3b9beea47bfc38e5d3:6ae1bf229beea47bfc38e346",
+    "readAt": null,
+    "createdAt": {
+      "$date": "2026-09-18T02:40:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e725"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e346"
+    },
+    "type": "claim_update",
+    "message": "Your claim was approved",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d4"
+    },
+    "dedupeKey": "claim_update:6ae1bf3b9beea47bfc38e5d4:approved:6ae1bf229beea47bfc38e346",
+    "readAt": {
+      "$date": "2026-09-19T08:50:47Z"
+    },
+    "createdAt": {
+      "$date": "2026-09-19T03:07:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e726"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e346"
+    },
+    "type": "handover_ready",
+    "message": "Collect your pink necklace from Security office, Building 5",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d4"
+    },
+    "dedupeKey": "handover_ready:6ae1bf3b9beea47bfc38e5d4:6ae1bf229beea47bfc38e346",
+    "readAt": null,
+    "createdAt": {
+      "$date": "2026-09-19T03:07:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e727"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e31c"
+    },
+    "type": "new_match",
+    "message": "Possible match for your red thermos (62%)",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d5"
+    },
+    "dedupeKey": "new_match:6ae1bf3b9beea47bfc38e5d5:6ae1bf229beea47bfc38e31c",
+    "readAt": null,
+    "createdAt": {
+      "$date": "2026-10-14T11:09:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e728"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e31c"
+    },
+    "type": "claim_update",
+    "message": "Your claim was approved",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d6"
+    },
+    "dedupeKey": "claim_update:6ae1bf3b9beea47bfc38e5d6:approved:6ae1bf229beea47bfc38e31c",
+    "readAt": null,
+    "createdAt": {
+      "$date": "2026-10-15T14:39:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e729"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e31c"
+    },
+    "type": "handover_ready",
+    "message": "Collect your red thermos from Security office, Building 5",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d6"
+    },
+    "dedupeKey": "handover_ready:6ae1bf3b9beea47bfc38e5d6:6ae1bf229beea47bfc38e31c",
+    "readAt": null,
+    "createdAt": {
+      "$date": "2026-10-15T14:39:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e72a"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e366"
+    },
+    "type": "new_match",
+    "message": "Possible match for your black earbuds (62%)",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d7"
+    },
+    "dedupeKey": "new_match:6ae1bf3b9beea47bfc38e5d7:6ae1bf229beea47bfc38e366",
+    "readAt": null,
+    "createdAt": {
+      "$date": "2026-09-18T22:24:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e72b"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e31b"
+    },
+    "type": "new_match",
+    "message": "Possible match for your silver id card (81%)",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d9"
+    },
+    "dedupeKey": "new_match:6ae1bf3b9beea47bfc38e5d9:6ae1bf229beea47bfc38e31b",
+    "readAt": {
+      "$date": "2026-10-05T01:26:47Z"
+    },
+    "createdAt": {
+      "$date": "2026-10-04T08:16:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e72c"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e316"
+    },
+    "type": "new_match",
+    "message": "Possible match for your grey smartwatch (71%)",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5db"
+    },
+    "dedupeKey": "new_match:6ae1bf3b9beea47bfc38e5db:6ae1bf229beea47bfc38e316",
+    "readAt": {
+      "$date": "2026-09-26T05:39:47Z"
+    },
+    "createdAt": {
+      "$date": "2026-09-25T21:09:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e72d"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e36b"
+    },
+    "type": "new_match",
+    "message": "Possible match for your pink house keys (71%)",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5dd"
+    },
+    "dedupeKey": "new_match:6ae1bf3b9beea47bfc38e5dd:6ae1bf229beea47bfc38e36b",
+    "readAt": null,
+    "createdAt": {
+      "$date": "2026-10-24T12:25:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e72e"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e2e2"
+    },
+    "type": "new_match",
+    "message": "Possible match for your white headphones (65%)",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5df"
+    },
+    "dedupeKey": "new_match:6ae1bf3b9beea47bfc38e5df:6ae1bf229beea47bfc38e2e2",
+    "readAt": {
+      "$date": "2026-10-08T09:54:47Z"
+    },
+    "createdAt": {
+      "$date": "2026-10-08T05:12:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e72f"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e369"
+    },
+    "type": "new_match",
+    "message": "Possible match for your green textbook (68%)",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e1"
+    },
+    "dedupeKey": "new_match:6ae1bf3b9beea47bfc38e5e1:6ae1bf229beea47bfc38e369",
+    "readAt": null,
+    "createdAt": {
+      "$date": "2026-10-12T12:46:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e730"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e36f"
+    },
+    "type": "new_match",
+    "message": "Possible match for your yellow usb cable (60%)",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e2"
+    },
+    "dedupeKey": "new_match:6ae1bf3b9beea47bfc38e5e2:6ae1bf229beea47bfc38e36f",
+    "readAt": {
+      "$date": "2026-10-03T22:32:47Z"
+    },
+    "createdAt": {
+      "$date": "2026-10-03T17:39:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e731"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e348"
+    },
+    "type": "new_match",
+    "message": "Possible match for your black thermos (66%)",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e3"
+    },
+    "dedupeKey": "new_match:6ae1bf3b9beea47bfc38e5e3:6ae1bf229beea47bfc38e348",
+    "readAt": null,
+    "createdAt": {
+      "$date": "2026-09-30T21:26:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e732"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e330"
+    },
+    "type": "new_match",
+    "message": "Possible match for your red phone (60%)",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e4"
+    },
+    "dedupeKey": "new_match:6ae1bf3b9beea47bfc38e5e4:6ae1bf229beea47bfc38e330",
+    "readAt": {
+      "$date": "2026-09-25T03:15:47Z"
+    },
+    "createdAt": {
+      "$date": "2026-09-24T05:36:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e733"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e308"
+    },
+    "type": "new_match",
+    "message": "Possible match for your white headphones (62%)",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e5"
+    },
+    "dedupeKey": "new_match:6ae1bf3b9beea47bfc38e5e5:6ae1bf229beea47bfc38e308",
+    "readAt": {
+      "$date": "2026-09-18T09:04:47Z"
+    },
+    "createdAt": {
+      "$date": "2026-09-17T19:09:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e734"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e2f3"
+    },
+    "type": "new_match",
+    "message": "Possible match for your red laptop bag (62%)",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e6"
+    },
+    "dedupeKey": "new_match:6ae1bf3b9beea47bfc38e5e6:6ae1bf229beea47bfc38e2f3",
+    "readAt": {
+      "$date": "2026-09-17T06:06:47Z"
+    },
+    "createdAt": {
+      "$date": "2026-09-17T04:07:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e735"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e357"
+    },
+    "type": "new_match",
+    "message": "Possible match for your blue folder (68%)",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e7"
+    },
+    "dedupeKey": "new_match:6ae1bf3b9beea47bfc38e5e7:6ae1bf229beea47bfc38e357",
+    "readAt": {
+      "$date": "2026-09-27T04:55:47Z"
+    },
+    "createdAt": {
+      "$date": "2026-09-27T00:12:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e736"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e336"
+    },
+    "type": "new_match",
+    "message": "Possible match for your grey phone (65%)",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e8"
+    },
+    "dedupeKey": "new_match:6ae1bf3b9beea47bfc38e5e8:6ae1bf229beea47bfc38e336",
+    "readAt": {
+      "$date": "2026-10-04T06:34:47Z"
+    },
+    "createdAt": {
+      "$date": "2026-10-03T11:54:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e737"
+    },
+    "userId": {
+      "$oid": "6ae1bf229beea47bfc38e35f"
+    },
+    "type": "new_match",
+    "message": "Possible match for your grey airpods (65%)",
+    "refId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e9"
+    },
+    "dedupeKey": "new_match:6ae1bf3b9beea47bfc38e5e9:6ae1bf229beea47bfc38e35f",
+    "readAt": {
+      "$date": "2026-09-15T19:44:47Z"
+    },
+    "createdAt": {
+      "$date": "2026-09-15T13:47:47Z"
+    }
+  }
+]

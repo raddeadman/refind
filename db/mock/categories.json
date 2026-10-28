@@ -1,0 +1,167 @@
+[
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2cc"
+    },
+    "code": "wallets",
+    "name": "Wallets & purses",
+    "defaultQuestions": [
+      "What colour is the wallet?",
+      "Whose name is on a card inside?"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2cd"
+    },
+    "code": "phones",
+    "name": "Phones",
+    "defaultQuestions": [
+      "What is the lock-screen wallpaper?",
+      "What colour is the phone case?"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2ce"
+    },
+    "code": "keys",
+    "name": "Keys",
+    "defaultQuestions": [
+      "What is attached to the key ring?",
+      "How many keys are on it?"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2cf"
+    },
+    "code": "id-cards",
+    "name": "ID & university cards",
+    "defaultQuestions": [
+      "Whose name is on the card?",
+      "What is the colour of the card holder?"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2d0"
+    },
+    "code": "bags",
+    "name": "Bags & backpacks",
+    "defaultQuestions": [
+      "What colour is the bag?",
+      "Name one item inside the bag"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2d1"
+    },
+    "code": "laptops",
+    "name": "Laptops & tablets",
+    "defaultQuestions": [
+      "What is the desktop wallpaper?",
+      "What sticker is on the cover?"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2d2"
+    },
+    "code": "headphones",
+    "name": "Headphones & earbuds",
+    "defaultQuestions": [
+      "What colour is the case?",
+      "What is the device name when paired?"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2d3"
+    },
+    "code": "glasses",
+    "name": "Glasses",
+    "defaultQuestions": [
+      "What colour is the frame?",
+      "What colour is the glasses case?"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2d4"
+    },
+    "code": "bottles",
+    "name": "Water bottles & cups",
+    "defaultQuestions": [
+      "What colour is the bottle?",
+      "What sticker is on it?"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2d5"
+    },
+    "code": "clothing",
+    "name": "Clothing",
+    "defaultQuestions": [
+      "What colour is it?",
+      "What size is it?"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2d6"
+    },
+    "code": "jewelry",
+    "name": "Jewelry",
+    "defaultQuestions": [
+      "What material is it?",
+      "Is anything engraved on it?"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2d7"
+    },
+    "code": "books",
+    "name": "Books & notebooks",
+    "defaultQuestions": [
+      "What is the subject or title?",
+      "Whose name is written inside?"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2d8"
+    },
+    "code": "umbrellas",
+    "name": "Umbrellas",
+    "defaultQuestions": [
+      "What colour is it?",
+      "What pattern is on it?"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2d9"
+    },
+    "code": "chargers",
+    "name": "Chargers & cables",
+    "defaultQuestions": [
+      "What colour is it?",
+      "What type of connector does it have?"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf229beea47bfc38e2da"
+    },
+    "code": "watches",
+    "name": "Watches",
+    "defaultQuestions": [
+      "What colour is the strap?",
+      "What is the watch face showing?"
+    ]
+  }
+]

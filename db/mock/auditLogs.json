@@ -1,0 +1,1456 @@
+[
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e738"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5c9"
+    },
+    "changes": {
+      "score": 60
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-09-25T12:15:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e739"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2fb"
+    },
+    "action": "claim.submit",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5ca"
+    },
+    "changes": {
+      "itemId": "6ae1bf349beea47bfc38e4ae"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-25T23:22:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e73a"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2df"
+    },
+    "action": "claim.approve",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5ca"
+    },
+    "changes": {
+      "status": [
+        "pending",
+        "approved"
+      ],
+      "matchId": "6ae1bf3b9beea47bfc38e5c9"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-26T15:20:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e73b"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2df"
+    },
+    "action": "item.status",
+    "targetCollection": "items",
+    "targetId": {
+      "$oid": "6ae1bf399beea47bfc38e571"
+    },
+    "changes": {
+      "status": [
+        "matched",
+        "claimed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-26T15:20:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e73c"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2df"
+    },
+    "action": "item.status",
+    "targetCollection": "items",
+    "targetId": {
+      "$oid": "6ae1bf349beea47bfc38e4ae"
+    },
+    "changes": {
+      "status": [
+        "matched",
+        "claimed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-26T15:20:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e73d"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2e0"
+    },
+    "action": "claim.submit",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5cb"
+    },
+    "changes": {
+      "itemId": "6ae1bf349beea47bfc38e4ae"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-25T19:28:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e73e"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2df"
+    },
+    "action": "claim.reject",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5cb"
+    },
+    "changes": {
+      "status": [
+        "pending",
+        "rejected"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-26T15:20:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e73f"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2df"
+    },
+    "action": "claim.handover",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5ca"
+    },
+    "changes": {
+      "idChecked": true
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-28T07:38:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e740"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5cc"
+    },
+    "changes": {
+      "score": 87
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-09-10T08:49:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e741"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e32f"
+    },
+    "action": "claim.submit",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5cd"
+    },
+    "changes": {
+      "itemId": "6ae1bf339beea47bfc38e48e"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-10T22:06:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e742"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2df"
+    },
+    "action": "claim.approve",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5cd"
+    },
+    "changes": {
+      "status": [
+        "pending",
+        "approved"
+      ],
+      "matchId": "6ae1bf3b9beea47bfc38e5cc"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-11T02:49:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e743"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2df"
+    },
+    "action": "item.status",
+    "targetCollection": "items",
+    "targetId": {
+      "$oid": "6ae1bf349beea47bfc38e4e1"
+    },
+    "changes": {
+      "status": [
+        "matched",
+        "claimed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-11T02:49:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e744"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2df"
+    },
+    "action": "item.status",
+    "targetCollection": "items",
+    "targetId": {
+      "$oid": "6ae1bf339beea47bfc38e48e"
+    },
+    "changes": {
+      "status": [
+        "matched",
+        "claimed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-11T02:49:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e745"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2e0"
+    },
+    "action": "claim.submit",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5ce"
+    },
+    "changes": {
+      "itemId": "6ae1bf339beea47bfc38e48e"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-10T11:45:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e746"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2df"
+    },
+    "action": "claim.reject",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5ce"
+    },
+    "changes": {
+      "status": [
+        "pending",
+        "rejected"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-11T02:49:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e747"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2df"
+    },
+    "action": "claim.handover",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5cd"
+    },
+    "changes": {
+      "idChecked": true
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-11T13:10:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e748"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5cf"
+    },
+    "changes": {
+      "score": 65
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-10-06T12:22:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e749"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e352"
+    },
+    "action": "claim.submit",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d0"
+    },
+    "changes": {
+      "itemId": "6ae1bf3a9beea47bfc38e5a4"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-06T23:57:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e74a"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2dd"
+    },
+    "action": "claim.approve",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d0"
+    },
+    "changes": {
+      "status": [
+        "pending",
+        "approved"
+      ],
+      "matchId": "6ae1bf3b9beea47bfc38e5cf"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-07T14:46:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e74b"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2dd"
+    },
+    "action": "item.status",
+    "targetCollection": "items",
+    "targetId": {
+      "$oid": "6ae1bf329beea47bfc38e45f"
+    },
+    "changes": {
+      "status": [
+        "matched",
+        "claimed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-07T14:46:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e74c"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2dd"
+    },
+    "action": "item.status",
+    "targetCollection": "items",
+    "targetId": {
+      "$oid": "6ae1bf3a9beea47bfc38e5a4"
+    },
+    "changes": {
+      "status": [
+        "matched",
+        "claimed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-07T14:46:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e74d"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2dd"
+    },
+    "action": "claim.handover",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d0"
+    },
+    "changes": {
+      "idChecked": true
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-08T04:30:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e74e"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d1"
+    },
+    "changes": {
+      "score": 65
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-10-19T23:22:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e74f"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e32e"
+    },
+    "action": "claim.submit",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d2"
+    },
+    "changes": {
+      "itemId": "6ae1bf329beea47bfc38e450"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-20T09:52:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e750"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2dd"
+    },
+    "action": "claim.approve",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d2"
+    },
+    "changes": {
+      "status": [
+        "pending",
+        "approved"
+      ],
+      "matchId": "6ae1bf3b9beea47bfc38e5d1"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-21T07:57:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e751"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2dd"
+    },
+    "action": "item.status",
+    "targetCollection": "items",
+    "targetId": {
+      "$oid": "6ae1bf329beea47bfc38e43d"
+    },
+    "changes": {
+      "status": [
+        "matched",
+        "claimed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-21T07:57:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e752"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2dd"
+    },
+    "action": "item.status",
+    "targetCollection": "items",
+    "targetId": {
+      "$oid": "6ae1bf329beea47bfc38e450"
+    },
+    "changes": {
+      "status": [
+        "matched",
+        "claimed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-21T07:57:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e753"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d3"
+    },
+    "changes": {
+      "score": 62
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-09-18T02:40:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e754"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e346"
+    },
+    "action": "claim.submit",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d4"
+    },
+    "changes": {
+      "itemId": "6ae1bf249beea47bfc38e378"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-18T09:21:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e755"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2dd"
+    },
+    "action": "claim.approve",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d4"
+    },
+    "changes": {
+      "status": [
+        "pending",
+        "approved"
+      ],
+      "matchId": "6ae1bf3b9beea47bfc38e5d3"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-19T03:07:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e756"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2dd"
+    },
+    "action": "item.status",
+    "targetCollection": "items",
+    "targetId": {
+      "$oid": "6ae1bf329beea47bfc38e44d"
+    },
+    "changes": {
+      "status": [
+        "matched",
+        "claimed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-19T03:07:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e757"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2dd"
+    },
+    "action": "item.status",
+    "targetCollection": "items",
+    "targetId": {
+      "$oid": "6ae1bf249beea47bfc38e378"
+    },
+    "changes": {
+      "status": [
+        "matched",
+        "claimed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-19T03:07:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e758"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d5"
+    },
+    "changes": {
+      "score": 62
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-10-14T11:09:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e759"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e31c"
+    },
+    "action": "claim.submit",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d6"
+    },
+    "changes": {
+      "itemId": "6ae1bf239beea47bfc38e372"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-15T08:53:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e75a"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2de"
+    },
+    "action": "claim.approve",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d6"
+    },
+    "changes": {
+      "status": [
+        "pending",
+        "approved"
+      ],
+      "matchId": "6ae1bf3b9beea47bfc38e5d5"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-15T14:39:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e75b"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2de"
+    },
+    "action": "item.status",
+    "targetCollection": "items",
+    "targetId": {
+      "$oid": "6ae1bf2c9beea47bfc38e3bf"
+    },
+    "changes": {
+      "status": [
+        "matched",
+        "claimed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-15T14:39:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e75c"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2de"
+    },
+    "action": "item.status",
+    "targetCollection": "items",
+    "targetId": {
+      "$oid": "6ae1bf239beea47bfc38e372"
+    },
+    "changes": {
+      "status": [
+        "matched",
+        "claimed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-15T14:39:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e75d"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d7"
+    },
+    "changes": {
+      "score": 62
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-09-18T22:24:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e75e"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e366"
+    },
+    "action": "claim.submit",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d8"
+    },
+    "changes": {
+      "itemId": "6ae1bf349beea47bfc38e4de"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-19T01:29:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e75f"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5d9"
+    },
+    "changes": {
+      "score": 81
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-10-04T08:16:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e760"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e31b"
+    },
+    "action": "claim.submit",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5da"
+    },
+    "changes": {
+      "itemId": "6ae1bf389beea47bfc38e54c"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-04T13:02:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e761"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5db"
+    },
+    "changes": {
+      "score": 71
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-09-25T21:09:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e762"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e316"
+    },
+    "action": "claim.submit",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5dc"
+    },
+    "changes": {
+      "itemId": "6ae1bf339beea47bfc38e494"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-26T14:54:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e763"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5dd"
+    },
+    "changes": {
+      "score": 71
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-10-24T12:25:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e764"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e36b"
+    },
+    "action": "claim.submit",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5de"
+    },
+    "changes": {
+      "itemId": "6ae1bf329beea47bfc38e440"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-25T02:33:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e765"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5df"
+    },
+    "changes": {
+      "score": 65
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-10-08T05:12:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e766"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2e2"
+    },
+    "action": "claim.submit",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e0"
+    },
+    "changes": {
+      "itemId": "6ae1bf2d9beea47bfc38e3c8"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-08T20:16:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e767"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e1"
+    },
+    "changes": {
+      "score": 68
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-10-12T12:46:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e768"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e2"
+    },
+    "changes": {
+      "score": 60
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-10-03T17:39:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e769"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e3"
+    },
+    "changes": {
+      "score": 66
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-09-30T21:26:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e76a"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e4"
+    },
+    "changes": {
+      "score": 60
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-09-24T05:36:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e76b"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e5"
+    },
+    "changes": {
+      "score": 62
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-09-17T19:09:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e76c"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e6"
+    },
+    "changes": {
+      "score": 62
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-09-17T04:07:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e76d"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2f3"
+    },
+    "action": "match.dismiss",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e6"
+    },
+    "changes": {
+      "status": [
+        "suggested",
+        "dismissed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-17T07:41:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e76e"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e7"
+    },
+    "changes": {
+      "score": 68
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-09-27T00:12:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e76f"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e357"
+    },
+    "action": "match.dismiss",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e7"
+    },
+    "changes": {
+      "status": [
+        "suggested",
+        "dismissed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-28T03:24:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e770"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e8"
+    },
+    "changes": {
+      "score": 65
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-10-03T11:54:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e771"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e336"
+    },
+    "action": "match.dismiss",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e8"
+    },
+    "changes": {
+      "status": [
+        "suggested",
+        "dismissed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-05T03:00:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e772"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e9"
+    },
+    "changes": {
+      "score": 65
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-09-15T13:47:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e773"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e35f"
+    },
+    "action": "match.dismiss",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5e9"
+    },
+    "changes": {
+      "status": [
+        "suggested",
+        "dismissed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-16T00:57:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e774"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e32f"
+    },
+    "action": "claim.submit",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5ea"
+    },
+    "changes": {
+      "itemId": "6ae1bf239beea47bfc38e374"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-18T21:11:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e775"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e323"
+    },
+    "action": "claim.submit",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5eb"
+    },
+    "changes": {
+      "itemId": "6ae1bf239beea47bfc38e376"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-15T21:02:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e776"
+    },
+    "actorId": null,
+    "action": "claim.lock",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5eb"
+    },
+    "changes": {
+      "failedAttempts": 3
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-09-15T21:36:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e777"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e345"
+    },
+    "action": "claim.submit",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5ec"
+    },
+    "changes": {
+      "itemId": "6ae1bf249beea47bfc38e37a"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-20T09:21:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e778"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e345"
+    },
+    "action": "claim.withdraw",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae1bf3b9beea47bfc38e5ec"
+    },
+    "changes": {
+      "status": [
+        "pending",
+        "withdrawn"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-20T17:50:47Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e779"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e316"
+    },
+    "action": "user.verify_email",
+    "targetCollection": "users",
+    "targetId": {
+      "$oid": "6ae1bf229beea47bfc38e316"
+    },
+    "changes": {
+      "status": [
+        "unverified",
+        "active"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-28T09:23:46.953Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e77a"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e370"
+    },
+    "action": "user.verify_email",
+    "targetCollection": "users",
+    "targetId": {
+      "$oid": "6ae1bf229beea47bfc38e370"
+    },
+    "changes": {
+      "status": [
+        "unverified",
+        "active"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-28T09:23:46.964Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e77b"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e363"
+    },
+    "action": "user.verify_email",
+    "targetCollection": "users",
+    "targetId": {
+      "$oid": "6ae1bf229beea47bfc38e363"
+    },
+    "changes": {
+      "status": [
+        "unverified",
+        "active"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-28T09:23:46.963Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e77c"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e31f"
+    },
+    "action": "user.verify_email",
+    "targetCollection": "users",
+    "targetId": {
+      "$oid": "6ae1bf229beea47bfc38e31f"
+    },
+    "changes": {
+      "status": [
+        "unverified",
+        "active"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-28T09:23:46.954Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae1bf3b9beea47bfc38e77d"
+    },
+    "actorId": {
+      "$oid": "6ae1bf229beea47bfc38e2eb"
+    },
+    "action": "user.verify_email",
+    "targetCollection": "users",
+    "targetId": {
+      "$oid": "6ae1bf229beea47bfc38e2eb"
+    },
+    "changes": {
+      "status": [
+        "unverified",
+        "active"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-28T09:23:46.948Z"
+    }
+  }
+]
