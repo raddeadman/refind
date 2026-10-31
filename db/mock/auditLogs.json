@@ -1,77 +1,77 @@
 [
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e738"
+      "$oid": "6ae5ff6cbbc67cdfa7936ac1"
     },
     "actorId": null,
     "action": "match.create",
     "targetCollection": "matches",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5c9"
+      "$oid": "6ae5ff69bbc67cdfa7936952"
     },
     "changes": {
       "score": 60
     },
     "ip": null,
     "timestamp": {
-      "$date": "2026-09-25T12:15:47Z"
+      "$date": "2026-10-19T13:08:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e739"
+      "$oid": "6ae5ff6cbbc67cdfa7936ac2"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2fb"
+      "$oid": "6ae5ff59bbc67cdfa79366ce"
     },
     "action": "claim.submit",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5ca"
+      "$oid": "6ae5ff69bbc67cdfa7936953"
     },
     "changes": {
-      "itemId": "6ae1bf349beea47bfc38e4ae"
+      "itemId": "6ae5ff65bbc67cdfa7936885"
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-25T23:22:47Z"
+      "$date": "2026-10-20T00:15:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e73a"
+      "$oid": "6ae5ff6cbbc67cdfa7936ac3"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2df"
+      "$oid": "6ae5ff59bbc67cdfa7936668"
     },
     "action": "claim.approve",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5ca"
+      "$oid": "6ae5ff69bbc67cdfa7936953"
     },
     "changes": {
       "status": [
         "pending",
         "approved"
       ],
-      "matchId": "6ae1bf3b9beea47bfc38e5c9"
+      "matchId": "6ae5ff69bbc67cdfa7936952"
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-26T15:20:47Z"
+      "$date": "2026-10-20T16:13:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e73b"
+      "$oid": "6ae5ff6cbbc67cdfa7936ac4"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2df"
+      "$oid": "6ae5ff59bbc67cdfa7936668"
     },
     "action": "item.status",
     "targetCollection": "items",
     "targetId": {
-      "$oid": "6ae1bf399beea47bfc38e571"
+      "$oid": "6ae5ff65bbc67cdfa7936868"
     },
     "changes": {
       "status": [
@@ -81,20 +81,20 @@
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-26T15:20:47Z"
+      "$date": "2026-10-20T16:13:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e73c"
+      "$oid": "6ae5ff6cbbc67cdfa7936ac5"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2df"
+      "$oid": "6ae5ff59bbc67cdfa7936668"
     },
     "action": "item.status",
     "targetCollection": "items",
     "targetId": {
-      "$oid": "6ae1bf349beea47bfc38e4ae"
+      "$oid": "6ae5ff65bbc67cdfa7936885"
     },
     "changes": {
       "status": [
@@ -104,40 +104,40 @@
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-26T15:20:47Z"
+      "$date": "2026-10-20T16:13:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e73d"
+      "$oid": "6ae5ff6cbbc67cdfa7936ac6"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2e0"
+      "$oid": "6ae5ff59bbc67cdfa7936669"
     },
     "action": "claim.submit",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5cb"
+      "$oid": "6ae5ff69bbc67cdfa7936954"
     },
     "changes": {
-      "itemId": "6ae1bf349beea47bfc38e4ae"
+      "itemId": "6ae5ff65bbc67cdfa7936885"
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-25T19:28:47Z"
+      "$date": "2026-10-19T20:21:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e73e"
+      "$oid": "6ae5ff6cbbc67cdfa7936ac7"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2df"
+      "$oid": "6ae5ff59bbc67cdfa7936668"
     },
     "action": "claim.reject",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5cb"
+      "$oid": "6ae5ff69bbc67cdfa7936954"
     },
     "changes": {
       "status": [
@@ -147,102 +147,102 @@
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-26T15:20:47Z"
+      "$date": "2026-10-20T16:13:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e73f"
+      "$oid": "6ae5ff6cbbc67cdfa7936ac8"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2df"
+      "$oid": "6ae5ff59bbc67cdfa7936668"
     },
     "action": "claim.handover",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5ca"
+      "$oid": "6ae5ff69bbc67cdfa7936953"
     },
     "changes": {
       "idChecked": true
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-28T07:38:47Z"
+      "$date": "2026-10-22T08:31:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e740"
+      "$oid": "6ae5ff6cbbc67cdfa7936ac9"
     },
     "actorId": null,
     "action": "match.create",
     "targetCollection": "matches",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5cc"
+      "$oid": "6ae5ff69bbc67cdfa7936955"
     },
     "changes": {
-      "score": 87
+      "score": 74
     },
     "ip": null,
     "timestamp": {
-      "$date": "2026-09-10T08:49:47Z"
+      "$date": "2026-09-16T15:22:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e741"
+      "$oid": "6ae5ff6cbbc67cdfa7936aca"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e32f"
+      "$oid": "6ae5ff59bbc67cdfa793667b"
     },
     "action": "claim.submit",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5cd"
+      "$oid": "6ae5ff69bbc67cdfa7936956"
     },
     "changes": {
-      "itemId": "6ae1bf339beea47bfc38e48e"
+      "itemId": "6ae5ff64bbc67cdfa79367ed"
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-10T22:06:47Z"
+      "$date": "2026-09-17T04:39:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e742"
+      "$oid": "6ae5ff6cbbc67cdfa7936acb"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2df"
+      "$oid": "6ae5ff59bbc67cdfa7936668"
     },
     "action": "claim.approve",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5cd"
+      "$oid": "6ae5ff69bbc67cdfa7936956"
     },
     "changes": {
       "status": [
         "pending",
         "approved"
       ],
-      "matchId": "6ae1bf3b9beea47bfc38e5cc"
+      "matchId": "6ae5ff69bbc67cdfa7936955"
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-11T02:49:47Z"
+      "$date": "2026-09-17T09:22:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e743"
+      "$oid": "6ae5ff6cbbc67cdfa7936acc"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2df"
+      "$oid": "6ae5ff59bbc67cdfa7936668"
     },
     "action": "item.status",
     "targetCollection": "items",
     "targetId": {
-      "$oid": "6ae1bf349beea47bfc38e4e1"
+      "$oid": "6ae5ff64bbc67cdfa79367d4"
     },
     "changes": {
       "status": [
@@ -252,20 +252,20 @@
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-11T02:49:47Z"
+      "$date": "2026-09-17T09:22:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e744"
+      "$oid": "6ae5ff6cbbc67cdfa7936acd"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2df"
+      "$oid": "6ae5ff59bbc67cdfa7936668"
     },
     "action": "item.status",
     "targetCollection": "items",
     "targetId": {
-      "$oid": "6ae1bf339beea47bfc38e48e"
+      "$oid": "6ae5ff64bbc67cdfa79367ed"
     },
     "changes": {
       "status": [
@@ -275,40 +275,40 @@
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-11T02:49:47Z"
+      "$date": "2026-09-17T09:22:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e745"
+      "$oid": "6ae5ff6cbbc67cdfa7936ace"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2e0"
+      "$oid": "6ae5ff59bbc67cdfa7936669"
     },
     "action": "claim.submit",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5ce"
+      "$oid": "6ae5ff69bbc67cdfa7936957"
     },
     "changes": {
-      "itemId": "6ae1bf339beea47bfc38e48e"
+      "itemId": "6ae5ff64bbc67cdfa79367ed"
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-10T11:45:47Z"
+      "$date": "2026-09-16T18:18:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e746"
+      "$oid": "6ae5ff6cbbc67cdfa7936acf"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2df"
+      "$oid": "6ae5ff59bbc67cdfa7936668"
     },
     "action": "claim.reject",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5ce"
+      "$oid": "6ae5ff69bbc67cdfa7936957"
     },
     "changes": {
       "status": [
@@ -318,102 +318,102 @@
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-11T02:49:47Z"
+      "$date": "2026-09-17T09:22:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e747"
+      "$oid": "6ae5ff6cbbc67cdfa7936ad0"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2df"
+      "$oid": "6ae5ff59bbc67cdfa7936668"
     },
     "action": "claim.handover",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5cd"
+      "$oid": "6ae5ff69bbc67cdfa7936956"
     },
     "changes": {
       "idChecked": true
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-11T13:10:47Z"
+      "$date": "2026-09-17T19:43:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e748"
+      "$oid": "6ae5ff6cbbc67cdfa7936ad1"
     },
     "actorId": null,
     "action": "match.create",
     "targetCollection": "matches",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5cf"
+      "$oid": "6ae5ff69bbc67cdfa7936958"
     },
     "changes": {
-      "score": 65
+      "score": 74
     },
     "ip": null,
     "timestamp": {
-      "$date": "2026-10-06T12:22:47Z"
+      "$date": "2026-09-19T06:30:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e749"
+      "$oid": "6ae5ff6cbbc67cdfa7936ad2"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e352"
+      "$oid": "6ae5ff59bbc67cdfa79366e1"
     },
     "action": "claim.submit",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5d0"
+      "$oid": "6ae5ff69bbc67cdfa7936959"
     },
     "changes": {
-      "itemId": "6ae1bf3a9beea47bfc38e5a4"
+      "itemId": "6ae5ff68bbc67cdfa793691f"
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-10-06T23:57:47Z"
+      "$date": "2026-09-19T18:05:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e74a"
+      "$oid": "6ae5ff6cbbc67cdfa7936ad3"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2dd"
+      "$oid": "6ae5ff59bbc67cdfa7936666"
     },
     "action": "claim.approve",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5d0"
+      "$oid": "6ae5ff69bbc67cdfa7936959"
     },
     "changes": {
       "status": [
         "pending",
         "approved"
       ],
-      "matchId": "6ae1bf3b9beea47bfc38e5cf"
+      "matchId": "6ae5ff69bbc67cdfa7936958"
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-10-07T14:46:47Z"
+      "$date": "2026-09-20T08:54:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e74b"
+      "$oid": "6ae5ff6cbbc67cdfa7936ad4"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2dd"
+      "$oid": "6ae5ff59bbc67cdfa7936666"
     },
     "action": "item.status",
     "targetCollection": "items",
     "targetId": {
-      "$oid": "6ae1bf329beea47bfc38e45f"
+      "$oid": "6ae5ff64bbc67cdfa79367e2"
     },
     "changes": {
       "status": [
@@ -423,20 +423,20 @@
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-10-07T14:46:47Z"
+      "$date": "2026-09-20T08:54:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e74c"
+      "$oid": "6ae5ff6cbbc67cdfa7936ad5"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2dd"
+      "$oid": "6ae5ff59bbc67cdfa7936666"
     },
     "action": "item.status",
     "targetCollection": "items",
     "targetId": {
-      "$oid": "6ae1bf3a9beea47bfc38e5a4"
+      "$oid": "6ae5ff68bbc67cdfa793691f"
     },
     "changes": {
       "status": [
@@ -446,102 +446,318 @@
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-10-07T14:46:47Z"
+      "$date": "2026-09-20T08:54:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e74d"
+      "$oid": "6ae5ff6cbbc67cdfa7936ad6"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2dd"
+      "$oid": "6ae5ff59bbc67cdfa7936666"
     },
     "action": "claim.handover",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5d0"
+      "$oid": "6ae5ff69bbc67cdfa7936959"
     },
     "changes": {
       "idChecked": true
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-10-08T04:30:47Z"
+      "$date": "2026-09-20T22:38:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e74e"
+      "$oid": "6ae5ff6cbbc67cdfa7936ad7"
     },
     "actorId": null,
     "action": "match.create",
     "targetCollection": "matches",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5d1"
+      "$oid": "6ae5ff69bbc67cdfa793695a"
+    },
+    "changes": {
+      "score": 63
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-10-29T09:20:51.274Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae5ff6cbbc67cdfa7936ad8"
+    },
+    "actorId": {
+      "$oid": "6ae5ff59bbc67cdfa79366d3"
+    },
+    "action": "claim.submit",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae5ff69bbc67cdfa793695b"
+    },
+    "changes": {
+      "itemId": "6ae5ff67bbc67cdfa79368ad"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-29T19:50:51.274Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae5ff6cbbc67cdfa7936ad9"
+    },
+    "actorId": {
+      "$oid": "6ae5ff59bbc67cdfa7936666"
+    },
+    "action": "claim.approve",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae5ff69bbc67cdfa793695b"
+    },
+    "changes": {
+      "status": [
+        "pending",
+        "approved"
+      ],
+      "matchId": "6ae5ff69bbc67cdfa793695a"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-30T17:55:51.274Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae5ff6cbbc67cdfa7936ada"
+    },
+    "actorId": {
+      "$oid": "6ae5ff59bbc67cdfa7936666"
+    },
+    "action": "item.status",
+    "targetCollection": "items",
+    "targetId": {
+      "$oid": "6ae5ff68bbc67cdfa79368f4"
+    },
+    "changes": {
+      "status": [
+        "matched",
+        "claimed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-30T17:55:51.274Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae5ff6cbbc67cdfa7936adb"
+    },
+    "actorId": {
+      "$oid": "6ae5ff59bbc67cdfa7936666"
+    },
+    "action": "item.status",
+    "targetCollection": "items",
+    "targetId": {
+      "$oid": "6ae5ff67bbc67cdfa79368ad"
+    },
+    "changes": {
+      "status": [
+        "matched",
+        "claimed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-30T17:55:51.274Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae5ff6cbbc67cdfa7936adc"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae5ff69bbc67cdfa793695c"
+    },
+    "changes": {
+      "score": 68
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-10-25T06:23:51.274Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae5ff6cbbc67cdfa7936add"
+    },
+    "actorId": {
+      "$oid": "6ae5ff59bbc67cdfa79366a7"
+    },
+    "action": "claim.submit",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae5ff69bbc67cdfa793695d"
+    },
+    "changes": {
+      "itemId": "6ae5ff64bbc67cdfa7936809"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-25T13:04:51.274Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae5ff6cbbc67cdfa7936ade"
+    },
+    "actorId": {
+      "$oid": "6ae5ff59bbc67cdfa7936666"
+    },
+    "action": "claim.approve",
+    "targetCollection": "claims",
+    "targetId": {
+      "$oid": "6ae5ff69bbc67cdfa793695d"
+    },
+    "changes": {
+      "status": [
+        "pending",
+        "approved"
+      ],
+      "matchId": "6ae5ff69bbc67cdfa793695c"
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-26T06:50:51.274Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae5ff6cbbc67cdfa7936adf"
+    },
+    "actorId": {
+      "$oid": "6ae5ff59bbc67cdfa7936666"
+    },
+    "action": "item.status",
+    "targetCollection": "items",
+    "targetId": {
+      "$oid": "6ae5ff65bbc67cdfa7936840"
+    },
+    "changes": {
+      "status": [
+        "matched",
+        "claimed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-26T06:50:51.274Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae5ff6cbbc67cdfa7936ae0"
+    },
+    "actorId": {
+      "$oid": "6ae5ff59bbc67cdfa7936666"
+    },
+    "action": "item.status",
+    "targetCollection": "items",
+    "targetId": {
+      "$oid": "6ae5ff64bbc67cdfa7936809"
+    },
+    "changes": {
+      "status": [
+        "matched",
+        "claimed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-26T06:50:51.274Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae5ff6cbbc67cdfa7936ae1"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae5ff69bbc67cdfa793695e"
     },
     "changes": {
       "score": 65
     },
     "ip": null,
     "timestamp": {
-      "$date": "2026-10-19T23:22:47Z"
+      "$date": "2026-10-23T00:15:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e74f"
+      "$oid": "6ae5ff6cbbc67cdfa7936ae2"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e32e"
+      "$oid": "6ae5ff59bbc67cdfa7936689"
     },
     "action": "claim.submit",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5d2"
+      "$oid": "6ae5ff69bbc67cdfa793695f"
     },
     "changes": {
-      "itemId": "6ae1bf329beea47bfc38e450"
+      "itemId": "6ae5ff66bbc67cdfa7936887"
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-10-20T09:52:47Z"
+      "$date": "2026-10-23T21:59:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e750"
+      "$oid": "6ae5ff6cbbc67cdfa7936ae3"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2dd"
+      "$oid": "6ae5ff59bbc67cdfa7936667"
     },
     "action": "claim.approve",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5d2"
+      "$oid": "6ae5ff69bbc67cdfa793695f"
     },
     "changes": {
       "status": [
         "pending",
         "approved"
       ],
-      "matchId": "6ae1bf3b9beea47bfc38e5d1"
+      "matchId": "6ae5ff69bbc67cdfa793695e"
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-10-21T07:57:47Z"
+      "$date": "2026-10-24T03:45:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e751"
+      "$oid": "6ae5ff6cbbc67cdfa7936ae4"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2dd"
+      "$oid": "6ae5ff59bbc67cdfa7936667"
     },
     "action": "item.status",
     "targetCollection": "items",
     "targetId": {
-      "$oid": "6ae1bf329beea47bfc38e43d"
+      "$oid": "6ae5ff69bbc67cdfa7936934"
     },
     "changes": {
       "status": [
@@ -551,20 +767,20 @@
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-10-21T07:57:47Z"
+      "$date": "2026-10-24T03:45:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e752"
+      "$oid": "6ae5ff6cbbc67cdfa7936ae5"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2dd"
+      "$oid": "6ae5ff59bbc67cdfa7936667"
     },
     "action": "item.status",
     "targetCollection": "items",
     "targetId": {
-      "$oid": "6ae1bf329beea47bfc38e450"
+      "$oid": "6ae5ff66bbc67cdfa7936887"
     },
     "changes": {
       "status": [
@@ -574,616 +790,318 @@
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-10-21T07:57:47Z"
+      "$date": "2026-10-24T03:45:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e753"
+      "$oid": "6ae5ff6cbbc67cdfa7936ae6"
     },
     "actorId": null,
     "action": "match.create",
     "targetCollection": "matches",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5d3"
+      "$oid": "6ae5ff69bbc67cdfa7936960"
     },
     "changes": {
-      "score": 62
+      "score": 74
     },
     "ip": null,
     "timestamp": {
-      "$date": "2026-09-18T02:40:47Z"
+      "$date": "2026-09-22T14:39:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e754"
+      "$oid": "6ae5ff6cbbc67cdfa7936ae7"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e346"
+      "$oid": "6ae5ff59bbc67cdfa79366ac"
     },
     "action": "claim.submit",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5d4"
+      "$oid": "6ae5ff69bbc67cdfa7936961"
     },
     "changes": {
-      "itemId": "6ae1bf249beea47bfc38e378"
+      "itemId": "6ae5ff64bbc67cdfa7936815"
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-18T09:21:47Z"
+      "$date": "2026-09-22T17:44:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e755"
-    },
-    "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2dd"
-    },
-    "action": "claim.approve",
-    "targetCollection": "claims",
-    "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5d4"
-    },
-    "changes": {
-      "status": [
-        "pending",
-        "approved"
-      ],
-      "matchId": "6ae1bf3b9beea47bfc38e5d3"
-    },
-    "ip": "10.0.0.1",
-    "timestamp": {
-      "$date": "2026-09-19T03:07:47Z"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e756"
-    },
-    "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2dd"
-    },
-    "action": "item.status",
-    "targetCollection": "items",
-    "targetId": {
-      "$oid": "6ae1bf329beea47bfc38e44d"
-    },
-    "changes": {
-      "status": [
-        "matched",
-        "claimed"
-      ]
-    },
-    "ip": "10.0.0.1",
-    "timestamp": {
-      "$date": "2026-09-19T03:07:47Z"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e757"
-    },
-    "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2dd"
-    },
-    "action": "item.status",
-    "targetCollection": "items",
-    "targetId": {
-      "$oid": "6ae1bf249beea47bfc38e378"
-    },
-    "changes": {
-      "status": [
-        "matched",
-        "claimed"
-      ]
-    },
-    "ip": "10.0.0.1",
-    "timestamp": {
-      "$date": "2026-09-19T03:07:47Z"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e758"
+      "$oid": "6ae5ff6cbbc67cdfa7936ae8"
     },
     "actorId": null,
     "action": "match.create",
     "targetCollection": "matches",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5d5"
+      "$oid": "6ae5ff69bbc67cdfa7936962"
     },
     "changes": {
-      "score": 62
+      "score": 77
     },
     "ip": null,
     "timestamp": {
-      "$date": "2026-10-14T11:09:47Z"
+      "$date": "2026-09-13T15:00:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e759"
+      "$oid": "6ae5ff6cbbc67cdfa7936ae9"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e31c"
+      "$oid": "6ae5ff59bbc67cdfa79366df"
     },
     "action": "claim.submit",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5d6"
+      "$oid": "6ae5ff69bbc67cdfa7936963"
     },
     "changes": {
-      "itemId": "6ae1bf239beea47bfc38e372"
+      "itemId": "6ae5ff62bbc67cdfa793676b"
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-10-15T08:53:47Z"
+      "$date": "2026-09-13T19:46:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e75a"
-    },
-    "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2de"
-    },
-    "action": "claim.approve",
-    "targetCollection": "claims",
-    "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5d6"
-    },
-    "changes": {
-      "status": [
-        "pending",
-        "approved"
-      ],
-      "matchId": "6ae1bf3b9beea47bfc38e5d5"
-    },
-    "ip": "10.0.0.1",
-    "timestamp": {
-      "$date": "2026-10-15T14:39:47Z"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e75b"
-    },
-    "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2de"
-    },
-    "action": "item.status",
-    "targetCollection": "items",
-    "targetId": {
-      "$oid": "6ae1bf2c9beea47bfc38e3bf"
-    },
-    "changes": {
-      "status": [
-        "matched",
-        "claimed"
-      ]
-    },
-    "ip": "10.0.0.1",
-    "timestamp": {
-      "$date": "2026-10-15T14:39:47Z"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e75c"
-    },
-    "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2de"
-    },
-    "action": "item.status",
-    "targetCollection": "items",
-    "targetId": {
-      "$oid": "6ae1bf239beea47bfc38e372"
-    },
-    "changes": {
-      "status": [
-        "matched",
-        "claimed"
-      ]
-    },
-    "ip": "10.0.0.1",
-    "timestamp": {
-      "$date": "2026-10-15T14:39:47Z"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e75d"
+      "$oid": "6ae5ff6cbbc67cdfa7936aea"
     },
     "actorId": null,
     "action": "match.create",
     "targetCollection": "matches",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5d7"
+      "$oid": "6ae5ff69bbc67cdfa7936964"
     },
     "changes": {
-      "score": 62
+      "score": 74
     },
     "ip": null,
     "timestamp": {
-      "$date": "2026-09-18T22:24:47Z"
+      "$date": "2026-10-31T14:46:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e75e"
+      "$oid": "6ae5ff6cbbc67cdfa7936aeb"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e366"
+      "$oid": "6ae5ff59bbc67cdfa79366b8"
     },
     "action": "claim.submit",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5d8"
+      "$oid": "6ae5ff69bbc67cdfa7936965"
     },
     "changes": {
-      "itemId": "6ae1bf349beea47bfc38e4de"
+      "itemId": "6ae5ff65bbc67cdfa793686b"
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-19T01:29:47Z"
+      "$date": "2026-10-31T14:46:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e75f"
+      "$oid": "6ae5ff6cbbc67cdfa7936aec"
     },
     "actorId": null,
     "action": "match.create",
     "targetCollection": "matches",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5d9"
+      "$oid": "6ae5ff69bbc67cdfa7936966"
     },
     "changes": {
       "score": 81
     },
     "ip": null,
     "timestamp": {
-      "$date": "2026-10-04T08:16:47Z"
+      "$date": "2026-10-04T02:39:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e760"
+      "$oid": "6ae5ff6cbbc67cdfa7936aed"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e31b"
+      "$oid": "6ae5ff59bbc67cdfa79366d1"
     },
     "action": "claim.submit",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5da"
+      "$oid": "6ae5ff69bbc67cdfa7936967"
     },
     "changes": {
-      "itemId": "6ae1bf389beea47bfc38e54c"
+      "itemId": "6ae5ff65bbc67cdfa793686d"
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-10-04T13:02:47Z"
+      "$date": "2026-10-04T16:47:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e761"
+      "$oid": "6ae5ff6cbbc67cdfa7936aee"
     },
     "actorId": null,
     "action": "match.create",
     "targetCollection": "matches",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5db"
-    },
-    "changes": {
-      "score": 71
-    },
-    "ip": null,
-    "timestamp": {
-      "$date": "2026-09-25T21:09:47Z"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e762"
-    },
-    "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e316"
-    },
-    "action": "claim.submit",
-    "targetCollection": "claims",
-    "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5dc"
-    },
-    "changes": {
-      "itemId": "6ae1bf339beea47bfc38e494"
-    },
-    "ip": "10.0.0.1",
-    "timestamp": {
-      "$date": "2026-09-26T14:54:47Z"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e763"
-    },
-    "actorId": null,
-    "action": "match.create",
-    "targetCollection": "matches",
-    "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5dd"
-    },
-    "changes": {
-      "score": 71
-    },
-    "ip": null,
-    "timestamp": {
-      "$date": "2026-10-24T12:25:47Z"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e764"
-    },
-    "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e36b"
-    },
-    "action": "claim.submit",
-    "targetCollection": "claims",
-    "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5de"
-    },
-    "changes": {
-      "itemId": "6ae1bf329beea47bfc38e440"
-    },
-    "ip": "10.0.0.1",
-    "timestamp": {
-      "$date": "2026-10-25T02:33:47Z"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e765"
-    },
-    "actorId": null,
-    "action": "match.create",
-    "targetCollection": "matches",
-    "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5df"
-    },
-    "changes": {
-      "score": 65
-    },
-    "ip": null,
-    "timestamp": {
-      "$date": "2026-10-08T05:12:47Z"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e766"
-    },
-    "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2e2"
-    },
-    "action": "claim.submit",
-    "targetCollection": "claims",
-    "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5e0"
-    },
-    "changes": {
-      "itemId": "6ae1bf2d9beea47bfc38e3c8"
-    },
-    "ip": "10.0.0.1",
-    "timestamp": {
-      "$date": "2026-10-08T20:16:47Z"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e767"
-    },
-    "actorId": null,
-    "action": "match.create",
-    "targetCollection": "matches",
-    "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5e1"
-    },
-    "changes": {
-      "score": 68
-    },
-    "ip": null,
-    "timestamp": {
-      "$date": "2026-10-12T12:46:47Z"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e768"
-    },
-    "actorId": null,
-    "action": "match.create",
-    "targetCollection": "matches",
-    "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5e2"
+      "$oid": "6ae5ff69bbc67cdfa7936968"
     },
     "changes": {
       "score": 60
     },
     "ip": null,
     "timestamp": {
-      "$date": "2026-10-03T17:39:47Z"
+      "$date": "2026-09-27T10:27:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e769"
-    },
-    "actorId": null,
-    "action": "match.create",
-    "targetCollection": "matches",
-    "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5e3"
-    },
-    "changes": {
-      "score": 66
-    },
-    "ip": null,
-    "timestamp": {
-      "$date": "2026-09-30T21:26:47Z"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e76a"
-    },
-    "actorId": null,
-    "action": "match.create",
-    "targetCollection": "matches",
-    "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5e4"
-    },
-    "changes": {
-      "score": 60
-    },
-    "ip": null,
-    "timestamp": {
-      "$date": "2026-09-24T05:36:47Z"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e76b"
-    },
-    "actorId": null,
-    "action": "match.create",
-    "targetCollection": "matches",
-    "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5e5"
-    },
-    "changes": {
-      "score": 62
-    },
-    "ip": null,
-    "timestamp": {
-      "$date": "2026-09-17T19:09:47Z"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e76c"
-    },
-    "actorId": null,
-    "action": "match.create",
-    "targetCollection": "matches",
-    "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5e6"
-    },
-    "changes": {
-      "score": 62
-    },
-    "ip": null,
-    "timestamp": {
-      "$date": "2026-09-17T04:07:47Z"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e76d"
+      "$oid": "6ae5ff6cbbc67cdfa7936aef"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2f3"
+      "$oid": "6ae5ff59bbc67cdfa79366b9"
     },
-    "action": "match.dismiss",
-    "targetCollection": "matches",
+    "action": "claim.submit",
+    "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5e6"
+      "$oid": "6ae5ff69bbc67cdfa7936969"
     },
     "changes": {
-      "status": [
-        "suggested",
-        "dismissed"
-      ]
+      "itemId": "6ae5ff62bbc67cdfa793676d"
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-17T07:41:47Z"
+      "$date": "2026-09-28T01:31:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e76e"
+      "$oid": "6ae5ff6cbbc67cdfa7936af0"
     },
     "actorId": null,
     "action": "match.create",
     "targetCollection": "matches",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5e7"
+      "$oid": "6ae5ff69bbc67cdfa793696a"
+    },
+    "changes": {
+      "score": 87
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-10-05T19:48:51.274Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae5ff6cbbc67cdfa7936af1"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae5ff69bbc67cdfa793696b"
+    },
+    "changes": {
+      "score": 65
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-10-23T05:04:51.274Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae5ff6cbbc67cdfa7936af2"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae5ff69bbc67cdfa793696c"
     },
     "changes": {
       "score": 68
     },
     "ip": null,
     "timestamp": {
-      "$date": "2026-09-27T00:12:47Z"
+      "$date": "2026-09-30T05:43:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e76f"
-    },
-    "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e357"
-    },
-    "action": "match.dismiss",
-    "targetCollection": "matches",
-    "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5e7"
-    },
-    "changes": {
-      "status": [
-        "suggested",
-        "dismissed"
-      ]
-    },
-    "ip": "10.0.0.1",
-    "timestamp": {
-      "$date": "2026-09-28T03:24:47Z"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e770"
+      "$oid": "6ae5ff6cbbc67cdfa7936af3"
     },
     "actorId": null,
     "action": "match.create",
     "targetCollection": "matches",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5e8"
+      "$oid": "6ae5ff69bbc67cdfa793696d"
+    },
+    "changes": {
+      "score": 77
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-10-09T02:09:51.274Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae5ff6cbbc67cdfa7936af4"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae5ff69bbc67cdfa793696e"
+    },
+    "changes": {
+      "score": 62
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-10-07T14:11:51.274Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae5ff6cbbc67cdfa7936af5"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae5ff69bbc67cdfa793696f"
     },
     "changes": {
       "score": 65
     },
     "ip": null,
     "timestamp": {
-      "$date": "2026-10-03T11:54:47Z"
+      "$date": "2026-10-31T07:49:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e771"
+      "$oid": "6ae5ff6cbbc67cdfa7936af6"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e336"
+      "$oid": "6ae5ff59bbc67cdfa79366cd"
     },
     "action": "match.dismiss",
     "targetCollection": "matches",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5e8"
+      "$oid": "6ae5ff69bbc67cdfa793696f"
     },
     "changes": {
       "status": [
@@ -1193,38 +1111,38 @@
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-10-05T03:00:47Z"
+      "$date": "2026-10-31T11:23:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e772"
+      "$oid": "6ae5ff6cbbc67cdfa7936af7"
     },
     "actorId": null,
     "action": "match.create",
     "targetCollection": "matches",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5e9"
+      "$oid": "6ae5ff69bbc67cdfa7936970"
     },
     "changes": {
-      "score": 65
+      "score": 68
     },
     "ip": null,
     "timestamp": {
-      "$date": "2026-09-15T13:47:47Z"
+      "$date": "2026-10-22T11:18:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e773"
+      "$oid": "6ae5ff6cbbc67cdfa7936af8"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e35f"
+      "$oid": "6ae5ff59bbc67cdfa793667d"
     },
     "action": "match.dismiss",
     "targetCollection": "matches",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5e9"
+      "$oid": "6ae5ff69bbc67cdfa7936970"
     },
     "changes": {
       "status": [
@@ -1234,98 +1152,180 @@
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-16T00:57:47Z"
+      "$date": "2026-10-23T14:30:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e774"
+      "$oid": "6ae5ff6cbbc67cdfa7936af9"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae5ff69bbc67cdfa7936971"
+    },
+    "changes": {
+      "score": 80
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-10-26T01:19:51.274Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae5ff6cbbc67cdfa7936afa"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e32f"
+      "$oid": "6ae5ff59bbc67cdfa7936677"
+    },
+    "action": "match.dismiss",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae5ff69bbc67cdfa7936971"
+    },
+    "changes": {
+      "status": [
+        "suggested",
+        "dismissed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-10-27T16:25:51.274Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae5ff6cbbc67cdfa7936afb"
+    },
+    "actorId": null,
+    "action": "match.create",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae5ff69bbc67cdfa7936972"
+    },
+    "changes": {
+      "score": 71
+    },
+    "ip": null,
+    "timestamp": {
+      "$date": "2026-09-17T06:37:51.274Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae5ff6cbbc67cdfa7936afc"
+    },
+    "actorId": {
+      "$oid": "6ae5ff59bbc67cdfa79366b4"
+    },
+    "action": "match.dismiss",
+    "targetCollection": "matches",
+    "targetId": {
+      "$oid": "6ae5ff69bbc67cdfa7936972"
+    },
+    "changes": {
+      "status": [
+        "suggested",
+        "dismissed"
+      ]
+    },
+    "ip": "10.0.0.1",
+    "timestamp": {
+      "$date": "2026-09-17T17:47:51.274Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ae5ff6cbbc67cdfa7936afd"
+    },
+    "actorId": {
+      "$oid": "6ae5ff59bbc67cdfa79366b9"
     },
     "action": "claim.submit",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5ea"
+      "$oid": "6ae5ff69bbc67cdfa7936973"
     },
     "changes": {
-      "itemId": "6ae1bf239beea47bfc38e374"
+      "itemId": "6ae5ff5bbbc67cdfa79366fb"
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-18T21:11:47Z"
+      "$date": "2026-10-18T04:47:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e775"
+      "$oid": "6ae5ff6cbbc67cdfa7936afe"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e323"
+      "$oid": "6ae5ff59bbc67cdfa79366ac"
     },
     "action": "claim.submit",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5eb"
+      "$oid": "6ae5ff69bbc67cdfa7936974"
     },
     "changes": {
-      "itemId": "6ae1bf239beea47bfc38e376"
+      "itemId": "6ae5ff5bbbc67cdfa79366fd"
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-15T21:02:47Z"
+      "$date": "2026-09-24T06:05:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e776"
+      "$oid": "6ae5ff6cbbc67cdfa7936aff"
     },
     "actorId": null,
     "action": "claim.lock",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5eb"
+      "$oid": "6ae5ff69bbc67cdfa7936974"
     },
     "changes": {
       "failedAttempts": 3
     },
     "ip": null,
     "timestamp": {
-      "$date": "2026-09-15T21:36:47Z"
+      "$date": "2026-09-24T06:39:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e777"
+      "$oid": "6ae5ff6cbbc67cdfa7936b00"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e345"
+      "$oid": "6ae5ff59bbc67cdfa79366cf"
     },
     "action": "claim.submit",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5ec"
+      "$oid": "6ae5ff69bbc67cdfa7936975"
     },
     "changes": {
-      "itemId": "6ae1bf249beea47bfc38e37a"
+      "itemId": "6ae5ff5bbbc67cdfa79366ff"
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-20T09:21:47Z"
+      "$date": "2026-09-17T15:15:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e778"
+      "$oid": "6ae5ff6cbbc67cdfa7936b01"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e345"
+      "$oid": "6ae5ff59bbc67cdfa79366cf"
     },
     "action": "claim.withdraw",
     "targetCollection": "claims",
     "targetId": {
-      "$oid": "6ae1bf3b9beea47bfc38e5ec"
+      "$oid": "6ae5ff69bbc67cdfa7936975"
     },
     "changes": {
       "status": [
@@ -1335,20 +1335,20 @@
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-09-20T17:50:47Z"
+      "$date": "2026-09-17T23:44:51.274Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e779"
+      "$oid": "6ae5ff6cbbc67cdfa7936b02"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e316"
+      "$oid": "6ae5ff59bbc67cdfa793669f"
     },
     "action": "user.verify_email",
     "targetCollection": "users",
     "targetId": {
-      "$oid": "6ae1bf229beea47bfc38e316"
+      "$oid": "6ae5ff59bbc67cdfa793669f"
     },
     "changes": {
       "status": [
@@ -1358,20 +1358,20 @@
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-10-28T09:23:46.953Z"
+      "$date": "2026-10-31T14:46:49.437Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e77a"
+      "$oid": "6ae5ff6cbbc67cdfa7936b03"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e370"
+      "$oid": "6ae5ff59bbc67cdfa79366f9"
     },
     "action": "user.verify_email",
     "targetCollection": "users",
     "targetId": {
-      "$oid": "6ae1bf229beea47bfc38e370"
+      "$oid": "6ae5ff59bbc67cdfa79366f9"
     },
     "changes": {
       "status": [
@@ -1381,20 +1381,20 @@
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-10-28T09:23:46.964Z"
+      "$date": "2026-10-31T14:46:49.441Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e77b"
+      "$oid": "6ae5ff6cbbc67cdfa7936b04"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e363"
+      "$oid": "6ae5ff59bbc67cdfa79366ec"
     },
     "action": "user.verify_email",
     "targetCollection": "users",
     "targetId": {
-      "$oid": "6ae1bf229beea47bfc38e363"
+      "$oid": "6ae5ff59bbc67cdfa79366ec"
     },
     "changes": {
       "status": [
@@ -1404,20 +1404,20 @@
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-10-28T09:23:46.963Z"
+      "$date": "2026-10-31T14:46:49.441Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e77c"
+      "$oid": "6ae5ff6cbbc67cdfa7936b05"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e31f"
+      "$oid": "6ae5ff59bbc67cdfa79366a8"
     },
     "action": "user.verify_email",
     "targetCollection": "users",
     "targetId": {
-      "$oid": "6ae1bf229beea47bfc38e31f"
+      "$oid": "6ae5ff59bbc67cdfa79366a8"
     },
     "changes": {
       "status": [
@@ -1427,20 +1427,20 @@
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-10-28T09:23:46.954Z"
+      "$date": "2026-10-31T14:46:49.438Z"
     }
   },
   {
     "_id": {
-      "$oid": "6ae1bf3b9beea47bfc38e77d"
+      "$oid": "6ae5ff6cbbc67cdfa7936b06"
     },
     "actorId": {
-      "$oid": "6ae1bf229beea47bfc38e2eb"
+      "$oid": "6ae5ff59bbc67cdfa7936674"
     },
     "action": "user.verify_email",
     "targetCollection": "users",
     "targetId": {
-      "$oid": "6ae1bf229beea47bfc38e2eb"
+      "$oid": "6ae5ff59bbc67cdfa7936674"
     },
     "changes": {
       "status": [
@@ -1450,7 +1450,7 @@
     },
     "ip": "10.0.0.1",
     "timestamp": {
-      "$date": "2026-10-28T09:23:46.948Z"
+      "$date": "2026-10-31T14:46:49.436Z"
     }
   }
 ]

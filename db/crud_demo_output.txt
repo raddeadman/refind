@@ -4,8 +4,8 @@ db.items.insertMany([found, lost])
 {
   acknowledged: true,
   insertedIds: {
-    '0': ObjectId('6ae1bf40fb543ce544ce5f47'),
-    '1': ObjectId('6ae1bf40fb543ce544ce5f48')
+    '0': ObjectId('6ae6119f11bcfd8b1c2258ef'),
+    '1': ObjectId('6ae6119f11bcfd8b1c2258f0')
   }
 }
 
@@ -13,14 +13,14 @@ db.items.insertMany([found, lost])
 db.itemSecrets.insertOne({ itemId, verification: [{ question, answerHash }] })
 {
   acknowledged: true,
-  insertedId: ObjectId('6ae1bf40fb543ce544ce5f49')
+  insertedId: ObjectId('6ae611a011bcfd8b1c2258f1')
 }
 
 === C3 matches.updateOne upsert + $setOnInsert - how the matching engine saves a candidate ===
 db.matches.updateOne({ lostItemId, foundItemId }, { $setOnInsert: {...} }, { upsert: true })
 {
   acknowledged: true,
-  insertedId: ObjectId('6ae1bf409bfc879badfd6a10'),
+  insertedId: ObjectId('6ae6119fc3ca258de25a1dc1'),
   matchedCount: 0,
   modifiedCount: 0,
   upsertedCount: 1
@@ -40,23 +40,23 @@ db.matches.updateOne({ lostItemId, foundItemId }, { $setOnInsert: {...} }, { ups
 db.claims.insertOne({ itemId, claimantId: DBRef('users', id), matchId, answers, status: 'pending' })
 {
   acknowledged: true,
-  insertedId: ObjectId('6ae1bf40fb543ce544ce5f4a')
+  insertedId: ObjectId('6ae611a111bcfd8b1c2258f2')
 }
 
 === C5 notifications.insertOne - new_match alert with its dedupeKey ===
 db.notifications.insertOne({ userId, type: 'new_match', dedupeKey: 'new_match:<matchId>:<userId>' })
 {
   acknowledged: true,
-  insertedId: ObjectId('6ae1bf40fb543ce544ce5f4b')
+  insertedId: ObjectId('6ae611a111bcfd8b1c2258f3')
 }
 
 === C6 the same alert again - rejected by the unique dedupeKey index ===
 db.notifications.insertOne({ ...same dedupeKey })
-Rejected by MongoDB: MongoServerError (code 11000) - E11000 duplicate key error collection: refind.notifications index: dedupeKey_unique dup key: { dedupeKey: "new_match:6ae1bf409bfc879badfd6a10:6ae1bf229beea47bfc38e2e0" }
+Rejected by MongoDB: MongoServerError (code 11000) - E11000 duplicate key error collection: refind.notifications index: dedupeKey_unique dup key: { dedupeKey: "new_match:6ae6119fc3ca258de25a1dc1:6ae5ff59bbc67cdfa7936669" }
 
 === C7 a second claim by the same user on the same item - rejected by { itemId, claimantId } unique ===
 db.claims.insertOne({ itemId, claimantId: <same user> })
-Rejected by MongoDB: MongoServerError (code 11000) - E11000 duplicate key error collection: refind.claims index: item_claimant_unique dup key: { itemId: ObjectId('6ae1bf40fb543ce544ce5f47'), claimantId: { $ref: "users", $id: ObjectId('6ae1bf229beea47bfc38e2e0') } }
+Rejected by MongoDB: MongoServerError (code 11000) - E11000 duplicate key error collection: refind.claims index: item_claimant_unique dup key: { itemId: ObjectId('6ae6119f11bcfd8b1c2258ef'), claimantId: { $ref: "users", $id: ObjectId('6ae5ff59bbc67cdfa7936669') } }
 
 === C8 an item in an unknown building - rejected by the $jsonSchema validator ===
 db.items.insertOne({ ..., location: { building: 'Mars' } })
@@ -66,12 +66,12 @@ Rejected by MongoDB: MongoServerError (code 121) - Document failed validation
 db.items.find({ type: 'found', category: 'wallets', status: { $in: ['open','matched'] }, 'location.building': 'Library' }, { title: 1, date: 1, status: 1 }).sort({ date: -1 }).limit(5)
 [
   {
-    _id: ObjectId('6ae1bf40fb543ce544ce5f47'),
+    _id: ObjectId('6ae6119f11bcfd8b1c2258ef'),
     title: 'Black wallet',
     location: {
       building: 'Library'
     },
-    date: ISODate('2026-10-27T00:00:00.000Z'),
+    date: ISODate('2026-10-30T00:00:00.000Z'),
     status: 'open'
   }
 ]
@@ -84,28 +84,28 @@ db.items.find({ type: 'found', 'location.floor': 'Ground floor', date: { $gte: <
 db.items.find({ $text: { $search: 'black wallet' } }, { score: { $meta: 'textScore' } }).sort({ score: { $meta: 'textScore' } }).limit(5)
 [
   {
-    _id: ObjectId('6ae1bf40fb543ce544ce5f47'),
+    _id: ObjectId('6ae5ff64bbc67cdfa79367cb'),
     title: 'Black wallet',
     score: 8.125
   },
   {
-    _id: ObjectId('6ae1bf329beea47bfc38e442'),
+    _id: ObjectId('6ae6119f11bcfd8b1c2258ef'),
     title: 'Black wallet',
     score: 8.125
   },
   {
-    _id: ObjectId('6ae1bf40fb543ce544ce5f48'),
+    _id: ObjectId('6ae6119f11bcfd8b1c2258f0'),
     title: 'Wallet',
     score: 5.5
   },
   {
-    _id: ObjectId('6ae1bf379beea47bfc38e526'),
-    title: 'Black backpack',
+    _id: ObjectId('6ae5ff61bbc67cdfa7936749'),
+    title: 'Black earbuds',
     score: 4.375
   },
   {
-    _id: ObjectId('6ae1bf349beea47bfc38e4a7'),
-    title: 'Black ring',
+    _id: ObjectId('6ae5ff68bbc67cdfa7936931'),
+    title: 'Black MacBook',
     score: 4.375
   }
 ]
@@ -114,46 +114,46 @@ db.items.find({ $text: { $search: 'black wallet' } }, { score: { $meta: 'textSco
 db.claims.find({ status: 'pending' }).sort({ submittedAt: 1 })
 [
   {
-    _id: ObjectId('6ae1bf3b9beea47bfc38e5ea'),
-    itemId: ObjectId('6ae1bf239beea47bfc38e374'),
+    _id: ObjectId('6ae5ff69bbc67cdfa7936963'),
+    itemId: ObjectId('6ae5ff62bbc67cdfa793676b'),
     status: 'pending',
-    submittedAt: ISODate('2026-09-18T21:11:47.000Z')
+    submittedAt: ISODate('2026-09-13T19:46:51.274Z')
   },
   {
-    _id: ObjectId('6ae1bf3b9beea47bfc38e5d8'),
-    itemId: ObjectId('6ae1bf349beea47bfc38e4de'),
+    _id: ObjectId('6ae5ff69bbc67cdfa7936961'),
+    itemId: ObjectId('6ae5ff64bbc67cdfa7936815'),
     status: 'pending',
-    submittedAt: ISODate('2026-09-19T01:29:47.000Z')
+    submittedAt: ISODate('2026-09-22T17:44:51.274Z')
   },
   {
-    _id: ObjectId('6ae1bf3b9beea47bfc38e5dc'),
-    itemId: ObjectId('6ae1bf339beea47bfc38e494'),
+    _id: ObjectId('6ae5ff69bbc67cdfa7936969'),
+    itemId: ObjectId('6ae5ff62bbc67cdfa793676d'),
     status: 'pending',
-    submittedAt: ISODate('2026-09-26T14:54:47.000Z')
+    submittedAt: ISODate('2026-09-28T01:31:51.274Z')
   },
   {
-    _id: ObjectId('6ae1bf3b9beea47bfc38e5da'),
-    itemId: ObjectId('6ae1bf389beea47bfc38e54c'),
+    _id: ObjectId('6ae5ff69bbc67cdfa7936967'),
+    itemId: ObjectId('6ae5ff65bbc67cdfa793686d'),
     status: 'pending',
-    submittedAt: ISODate('2026-10-04T13:02:47.000Z')
+    submittedAt: ISODate('2026-10-04T16:47:51.274Z')
   },
   {
-    _id: ObjectId('6ae1bf3b9beea47bfc38e5e0'),
-    itemId: ObjectId('6ae1bf2d9beea47bfc38e3c8'),
+    _id: ObjectId('6ae5ff69bbc67cdfa7936973'),
+    itemId: ObjectId('6ae5ff5bbbc67cdfa79366fb'),
     status: 'pending',
-    submittedAt: ISODate('2026-10-08T20:16:47.000Z')
+    submittedAt: ISODate('2026-10-18T04:47:51.274Z')
   },
   {
-    _id: ObjectId('6ae1bf3b9beea47bfc38e5de'),
-    itemId: ObjectId('6ae1bf329beea47bfc38e440'),
+    _id: ObjectId('6ae5ff69bbc67cdfa7936965'),
+    itemId: ObjectId('6ae5ff65bbc67cdfa793686b'),
     status: 'pending',
-    submittedAt: ISODate('2026-10-25T02:33:47.000Z')
+    submittedAt: ISODate('2026-10-31T14:46:51.274Z')
   },
   {
-    _id: ObjectId('6ae1bf40fb543ce544ce5f4a'),
-    itemId: ObjectId('6ae1bf40fb543ce544ce5f47'),
+    _id: ObjectId('6ae611a111bcfd8b1c2258f2'),
+    itemId: ObjectId('6ae6119f11bcfd8b1c2258ef'),
     status: 'pending',
-    submittedAt: ISODate('2026-10-28T09:24:16.325Z')
+    submittedAt: ISODate('2026-10-31T16:04:46.196Z')
   }
 ]
 
@@ -161,7 +161,7 @@ db.claims.find({ status: 'pending' }).sort({ submittedAt: 1 })
 db.claims.aggregate([{ $match: { _id } }, { $lookup: items }, { $lookup: users }, { $project }])
 [
   {
-    _id: ObjectId('6ae1bf40fb543ce544ce5f4a'),
+    _id: ObjectId('6ae611a111bcfd8b1c2258f2'),
     status: 'pending',
     item: [
       {
@@ -258,24 +258,24 @@ db.claims.updateOne({ _id: claimId, status: 'pending' }, { $set: { status: 'appr
 
 === U7 a second confirmed match for the same found item - rejected by the partial unique index ===
 db.matches.insertOne({ lostItemId: <another>, foundItemId, status: 'confirmed' }) after confirming the first
-Rejected by MongoDB: MongoServerError (code 11000) - E11000 duplicate key error collection: refind.matches index: found_confirmed_unique dup key: { foundItemId: ObjectId('6ae1bf40fb543ce544ce5f47') }
+Rejected by MongoDB: MongoServerError (code 11000) - E11000 duplicate key error collection: refind.matches index: found_confirmed_unique dup key: { foundItemId: ObjectId('6ae6119f11bcfd8b1c2258ef') }
 
 === U8 the item after the updates ===
 db.items.findOne({ _id: foundId }, { status: 1, version: 1, description: 1, statusHistory: 1 })
 {
-  _id: ObjectId('6ae1bf40fb543ce544ce5f47'),
+  _id: ObjectId('6ae6119f11bcfd8b1c2258ef'),
   description: 'crud-demo: brown leather wallet',
   status: 'matched',
   version: 3,
   statusHistory: [
     {
       status: 'open',
-      at: ISODate('2026-10-28T09:24:16.325Z'),
-      by: ObjectId('6ae1bf229beea47bfc38e2dc')
+      at: ISODate('2026-10-31T16:04:46.196Z'),
+      by: ObjectId('6ae5ff59bbc67cdfa7936665')
     },
     {
       status: 'matched',
-      at: ISODate('2026-10-28T09:24:16.325Z'),
+      at: ISODate('2026-10-31T16:04:46.196Z'),
       by: null
     }
   ]

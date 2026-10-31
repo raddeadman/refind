@@ -1,7 +1,7 @@
 [
   {
     "_id": {
-      "$oid": "6ae1bf229beea47bfc38e2cc"
+      "$oid": "6ae5ff58bbc67cdfa7936655"
     },
     "code": "wallets",
     "name": "Wallets & purses",
@@ -12,7 +12,7 @@
   },
   {
     "_id": {
-      "$oid": "6ae1bf229beea47bfc38e2cd"
+      "$oid": "6ae5ff58bbc67cdfa7936656"
     },
     "code": "phones",
     "name": "Phones",
@@ -23,7 +23,7 @@
   },
   {
     "_id": {
-      "$oid": "6ae1bf229beea47bfc38e2ce"
+      "$oid": "6ae5ff58bbc67cdfa7936657"
     },
     "code": "keys",
     "name": "Keys",
@@ -34,7 +34,7 @@
   },
   {
     "_id": {
-      "$oid": "6ae1bf229beea47bfc38e2cf"
+      "$oid": "6ae5ff58bbc67cdfa7936658"
     },
     "code": "id-cards",
     "name": "ID & university cards",
@@ -45,7 +45,7 @@
   },
   {
     "_id": {
-      "$oid": "6ae1bf229beea47bfc38e2d0"
+      "$oid": "6ae5ff58bbc67cdfa7936659"
     },
     "code": "bags",
     "name": "Bags & backpacks",
@@ -56,7 +56,7 @@
   },
   {
     "_id": {
-      "$oid": "6ae1bf229beea47bfc38e2d1"
+      "$oid": "6ae5ff58bbc67cdfa793665a"
     },
     "code": "laptops",
     "name": "Laptops & tablets",
@@ -67,7 +67,7 @@
   },
   {
     "_id": {
-      "$oid": "6ae1bf229beea47bfc38e2d2"
+      "$oid": "6ae5ff58bbc67cdfa793665b"
     },
     "code": "headphones",
     "name": "Headphones & earbuds",
@@ -78,7 +78,7 @@
   },
   {
     "_id": {
-      "$oid": "6ae1bf229beea47bfc38e2d3"
+      "$oid": "6ae5ff58bbc67cdfa793665c"
     },
     "code": "glasses",
     "name": "Glasses",
@@ -89,7 +89,7 @@
   },
   {
     "_id": {
-      "$oid": "6ae1bf229beea47bfc38e2d4"
+      "$oid": "6ae5ff58bbc67cdfa793665d"
     },
     "code": "bottles",
     "name": "Water bottles & cups",
@@ -100,7 +100,7 @@
   },
   {
     "_id": {
-      "$oid": "6ae1bf229beea47bfc38e2d5"
+      "$oid": "6ae5ff58bbc67cdfa793665e"
     },
     "code": "clothing",
     "name": "Clothing",
@@ -111,7 +111,7 @@
   },
   {
     "_id": {
-      "$oid": "6ae1bf229beea47bfc38e2d6"
+      "$oid": "6ae5ff58bbc67cdfa793665f"
     },
     "code": "jewelry",
     "name": "Jewelry",
@@ -122,7 +122,7 @@
   },
   {
     "_id": {
-      "$oid": "6ae1bf229beea47bfc38e2d7"
+      "$oid": "6ae5ff58bbc67cdfa7936660"
     },
     "code": "books",
     "name": "Books & notebooks",
@@ -133,7 +133,7 @@
   },
   {
     "_id": {
-      "$oid": "6ae1bf229beea47bfc38e2d8"
+      "$oid": "6ae5ff58bbc67cdfa7936661"
     },
     "code": "umbrellas",
     "name": "Umbrellas",
@@ -144,7 +144,7 @@
   },
   {
     "_id": {
-      "$oid": "6ae1bf229beea47bfc38e2d9"
+      "$oid": "6ae5ff58bbc67cdfa7936662"
     },
     "code": "chargers",
     "name": "Chargers & cables",
@@ -155,7 +155,7 @@
   },
   {
     "_id": {
-      "$oid": "6ae1bf229beea47bfc38e2da"
+      "$oid": "6ae5ff58bbc67cdfa7936663"
     },
     "code": "watches",
     "name": "Watches",
