@@ -1,0 +1,57 @@
+ReFind concurrency test (§5.4), 2026-11-23 20:18 UTC
+
+run  1: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run  2: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run  3: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run  4: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run  5: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run  6: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run  7: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run  8: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run  9: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run 10: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run 11: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run 12: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run 13: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run 14: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run 15: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run 16: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run 17: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run 18: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run 19: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run 20: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run 21: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run 22: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run 23: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run 24: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run 25: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run 26: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run 27: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run 28: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run 29: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run 30: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run 31: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run 32: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run 33: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run 34: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run 35: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run 36: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run 37: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run 38: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run 39: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run 40: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run 41: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run 42: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run 43: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run 44: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run 45: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run 46: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run 47: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run 48: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+run 49: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
+run 50: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
+
+50/50 runs passed in 2.7 s
+winners: A (with match) 25, B (no match) 25
+409 "Claim is no longer pending": 50
+no 500 responses; exactly one approved claim and one claimed item in every run
