@@ -22,6 +22,8 @@ Seed logins: `admin@university.edu`, `officer1@university.edu` … `officer4@…
 
 MongoDB Compass: `mongodb://root:<MONGO_ROOT_PASSWORD>@localhost:27017/?directConnection=true`. MailHog inbox: http://localhost:8025.
 
+**Atlas:** set `MONGO_URI` in `.env` (with a query string, e.g. `...mongodb.net/?retryWrites=true&w=majority`), then run `setup_db` and `seed`. It replaces the local connection and the least-privilege accounts, so `setup_db` skips account creation. With an admin user, `test_api_account_cannot_remove_validators` fails and strips the `refind_test.users` validator; re-run `setup_db` to restore it.
+
 ### Front end
 
 ```bash

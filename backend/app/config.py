@@ -9,6 +9,8 @@ class Settings(BaseSettings):
 
     model_config = SettingsConfigDict(env_file=(".env", "../.env"), extra="ignore")
 
+    # Atlas: when set, every account below is ignored and this URI is used.
+    mongo_uri: str | None = None
     mongo_host: str = "localhost"
     mongo_port: int = 27017
     mongo_db: str = "refind"
@@ -46,7 +48,9 @@ class Settings(BaseSettings):
         domain = email.rsplit("@", 1)[-1].lower()
         return any(domain == d or domain.endswith("." + d) for d in self.allowed_email_domains)
 
-    def mongo_uri(self, user: str, password: str, auth_db: str) -> str:
+    def connection_uri(self, user: str, password: str, auth_db: str) -> str:
+        if self.mongo_uri:
+            return self.mongo_uri
         # directConnection: the single replica-set member advertises
         # localhost:27017, which works from the host and from scripts.
         return (
@@ -58,16 +62,16 @@ class Settings(BaseSettings):
     @property
     def app_uri(self) -> str:
         """refindApp: readWrite on refind (used by the API)."""
-        return self.mongo_uri("refindApp", self.mongo_app_password, self.mongo_auth_db)
+        return self.connection_uri("refindApp", self.mongo_app_password, self.mongo_auth_db)
 
     @property
     def admin_uri(self) -> str:
         """refindAdmin: dbAdmin on refind (set-up script only)."""
-        return self.mongo_uri("refindAdmin", self.mongo_admin_password, self.mongo_auth_db)
+        return self.connection_uri("refindAdmin", self.mongo_admin_password, self.mongo_auth_db)
 
     @property
     def root_uri(self) -> str:
-        return self.mongo_uri(self.mongo_root_user, self.mongo_root_password, "admin")
+        return self.connection_uri(self.mongo_root_user, self.mongo_root_password, "admin")
 
 
 @lru_cache

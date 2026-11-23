@@ -74,8 +74,11 @@ def apply_validators(settings) -> None:
 def main() -> int:
     settings = get_settings()
     try:
-        print("Creating database accounts (root)...")
-        create_accounts(settings)
+        if settings.mongo_uri:
+            print("MONGO_URI set: accounts are managed in Atlas, skipping.")
+        else:
+            print("Creating database accounts (root)...")
+            create_accounts(settings)
         print("Applying $jsonSchema validators (refindAdmin)...")
         apply_validators(settings)
     except OperationFailure as exc:
