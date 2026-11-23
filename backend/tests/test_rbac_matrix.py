@@ -1,10 +1,11 @@
 """H5: RBAC test matrix (§5.1).
 
 Anonymous, user, officer and admin call each key endpoint on fresh data;
-every cell must give the expected status code. When the whole matrix runs,
-it is written to docs/evidence/rbac_matrix.md for the report.
+every cell must give the expected status code. With EVIDENCE=1, a full run
+writes the table to docs/evidence/rbac_matrix.md for the report.
 """
 
+import os
 from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
@@ -65,7 +66,7 @@ RESULTS: dict[tuple[str, str], int] = {}
 @pytest.fixture(scope="module", autouse=True)
 def write_matrix():
     yield
-    if len(RESULTS) != len(ENDPOINTS) * len(ROLES):
+    if not os.environ.get("EVIDENCE") or len(RESULTS) != len(ENDPOINTS) * len(ROLES):
         return  # only part of the matrix ran (e.g. -k); keep the last full table
     rows = ["| Endpoint | Method and path | " + " | ".join(r.capitalize() for r in ROLES) + " |",
             "| --- | --- | " + " | ".join("---" for _ in ROLES) + " |"]

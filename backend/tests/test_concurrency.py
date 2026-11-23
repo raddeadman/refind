@@ -9,10 +9,12 @@ Procedure from the proposal, run 50 times on fresh data:
     one claim approved and the other rejected, A's match confirmed only if
     A won, one approval and one rejection notification.
 
-The log is written to docs/evidence/concurrency_test.log for the report.
+With EVIDENCE=1 the log is written to docs/evidence/concurrency_test.log
+for the report (EVIDENCE=1 pytest tests/test_concurrency.py).
 """
 
 import asyncio
+import os
 import time
 from collections import Counter
 from datetime import UTC, datetime, timedelta
@@ -100,6 +102,8 @@ async def test_two_approvals_at_once(client, make_user):
         *[f"409 \"{detail}\": {count}" for detail, count in sorted(losing.items())],
         "no 500 responses; exactly one approved claim and one claimed item in every run",
     ]
+    if not os.environ.get("EVIDENCE"):
+        return
     LOG.parent.mkdir(parents=True, exist_ok=True)
     header = f"ReFind concurrency test (§5.4), {datetime.now(UTC):%Y-%m-%d %H:%M} UTC"
     LOG.write_text("\n".join([header, "", *lines, *summary]) + "\n")

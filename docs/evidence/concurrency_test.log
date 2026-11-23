@@ -1,4 +1,4 @@
-ReFind concurrency test (§5.4), 2026-11-23 20:21 UTC
+ReFind concurrency test (§5.4), 2026-11-23 20:23 UTC
 
 run  1: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
 run  2: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
