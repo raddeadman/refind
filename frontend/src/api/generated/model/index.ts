@@ -6,13 +6,31 @@
  * OpenAPI spec version: 0.1.0
  */
 
+export * from './archiveRequest';
+export * from './attributes';
+export * from './attributesMember';
 export * from './bodyLogin';
+export * from './bodyUploadItemPhotos';
 export * from './category';
 export * from './categoryCreate';
 export * from './categoryUpdate';
 export * from './changePasswordRequest';
 export * from './health200';
 export * from './hTTPValidationError';
+export * from './itemCreate';
+export * from './itemFull';
+export * from './itemMember';
+export * from './itemPage';
+export * from './itemPublic';
+export * from './itemStatus';
+export * from './itemType';
+export * from './itemUpdate';
+export * from './listItemsBuilding';
+export * from './listItemsParams';
+export * from './location';
+export * from './locationBuilding';
+export * from './locationPublic';
+export * from './locationPublicBuilding';
 export * from './profile';
 export * from './profilePreferredContact';
 export * from './providers';
@@ -20,9 +38,11 @@ export * from './pydanticObjectId';
 export * from './registerRequest';
 export * from './resendRequest';
 export * from './role';
+export * from './statusChange';
 export * from './token';
 export * from './userOut';
 export * from './userStatus';
 export * from './validationError';
 export * from './validationErrorCtx';
+export * from './verificationIn';
 export * from './verifyEmailRequest';

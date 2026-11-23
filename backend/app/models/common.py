@@ -8,6 +8,7 @@ same names.
 
 from datetime import UTC, datetime
 from enum import StrEnum
+from zoneinfo import ZoneInfo
 
 
 def utcnow() -> datetime:
@@ -81,6 +82,10 @@ BUILDINGS: tuple[str, ...] = (
     "Administration Building",
     "Parking Area",
 )
+
+# date + approxTime are what the reporter saw on a campus clock, so they are
+# read in campus time when checking they are not in the future.
+CAMPUS_TZ = ZoneInfo("Asia/Bahrain")
 
 APPROX_TIME_PATTERN = r"^([01]\d|2[0-3]):[0-5]\d$"
 CATEGORY_CODE_PATTERN = r"^[a-z0-9_-]{2,40}$"

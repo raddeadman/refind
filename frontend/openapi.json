@@ -443,10 +443,685 @@
           }
         }
       }
+    },
+    "/api/items": {
+      "post": {
+        "tags": [
+          "items"
+        ],
+        "summary": "Report a lost or found item",
+        "operationId": "create_item",
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemCreate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemFull"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "items"
+        ],
+        "summary": "Search items (guests: public fields of found items)",
+        "operationId": "list_items",
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/ItemType"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Type"
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[a-z0-9_-]{2,40}$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Category"
+            }
+          },
+          {
+            "name": "building",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "Library",
+                    "Building 1",
+                    "Building 2",
+                    "Building 3",
+                    "Building 4",
+                    "Building 5",
+                    "Engineering Building",
+                    "Science Building",
+                    "Business School",
+                    "Student Center",
+                    "Cafeteria",
+                    "Sports Complex",
+                    "Main Auditorium",
+                    "Administration Building",
+                    "Parking Area"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Building"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/ItemStatus"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Status"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 100
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Keywords (title, brand, description)",
+              "title": "Q"
+            },
+            "description": "Keywords (title, brand, description)"
+          },
+          {
+            "name": "dateFrom",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Datefrom"
+            }
+          },
+          {
+            "name": "dateTo",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Dateto"
+            }
+          },
+          {
+            "name": "mine",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "description": "Only my own reports (full view)",
+              "default": false,
+              "title": "Mine"
+            },
+            "description": "Only my own reports (full view)"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "title": "Page"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 50,
+              "minimum": 1,
+              "default": 20,
+              "title": "Pagesize"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemPage"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/items/{item_id}": {
+      "get": {
+        "tags": [
+          "items"
+        ],
+        "summary": "Get one item (fields depend on who asks)",
+        "operationId": "get_item",
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/PydanticObjectId"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ItemPublic"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ItemMember"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ItemFull"
+                    }
+                  ],
+                  "discriminator": {
+                    "propertyName": "access",
+                    "mapping": {
+                      "public": "#/components/schemas/ItemPublic",
+                      "member": "#/components/schemas/ItemMember",
+                      "full": "#/components/schemas/ItemFull"
+                    }
+                  },
+                  "title": "Response Get Item"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "items"
+        ],
+        "summary": "Edit an item (reporter or officer)",
+        "operationId": "update_item",
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/PydanticObjectId"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemUpdate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemFull"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/items/{item_id}/archive": {
+      "post": {
+        "tags": [
+          "items"
+        ],
+        "summary": "Withdraw / archive an item",
+        "operationId": "archive_item",
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/PydanticObjectId"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/ArchiveRequest"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Data"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemFull"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/items/{item_id}/photos": {
+      "post": {
+        "tags": [
+          "items"
+        ],
+        "summary": "Add photos (JPEG/PNG, 5 MB, max 4 per item)",
+        "operationId": "upload_item_photos",
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/PydanticObjectId"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_upload_item_photos"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemFull"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/items/{item_id}/photos/{photo_id}": {
+      "delete": {
+        "tags": [
+          "items"
+        ],
+        "summary": "Remove a photo",
+        "operationId": "delete_item_photo",
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/PydanticObjectId"
+            }
+          },
+          {
+            "name": "photo_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/PydanticObjectId"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemFull"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/photos/{photo_id}": {
+      "get": {
+        "tags": [
+          "items"
+        ],
+        "summary": "Download a photo (reporter, officer, admin)",
+        "operationId": "get_photo",
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "photo_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/PydanticObjectId"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "image/jpeg": {},
+              "image/png": {}
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
+      "ArchiveRequest": {
+        "properties": {
+          "note": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 300
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Note"
+          }
+        },
+        "type": "object",
+        "title": "ArchiveRequest"
+      },
+      "Attributes": {
+        "properties": {
+          "color": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 30
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Color"
+          },
+          "brand": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 50
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Brand"
+          },
+          "model": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 50
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Model"
+          }
+        },
+        "type": "object",
+        "title": "Attributes"
+      },
+      "AttributesMember": {
+        "properties": {
+          "color": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Color"
+          },
+          "brand": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Brand"
+          }
+        },
+        "type": "object",
+        "title": "AttributesMember"
+      },
       "Body_login": {
         "properties": {
           "grant_type": {
@@ -505,6 +1180,24 @@
           "password"
         ],
         "title": "Body_login"
+      },
+      "Body_upload_item_photos": {
+        "properties": {
+          "files": {
+            "items": {
+              "type": "string",
+              "contentMediaType": "application/octet-stream"
+            },
+            "type": "array",
+            "title": "Files",
+            "description": "One to four JPEG or PNG files"
+          }
+        },
+        "type": "object",
+        "required": [
+          "files"
+        ],
+        "title": "Body_upload_item_photos"
       },
       "Category": {
         "properties": {
@@ -649,6 +1342,602 @@
         "type": "object",
         "title": "HTTPValidationError"
       },
+      "ItemCreate": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Title",
+            "examples": [
+              "Black wallet"
+            ]
+          },
+          "category": {
+            "type": "string",
+            "pattern": "^[a-z0-9_-]{2,40}$",
+            "title": "Category",
+            "examples": [
+              "wallets"
+            ]
+          },
+          "attributes": {
+            "$ref": "#/components/schemas/Attributes"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 1000
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
+          "location": {
+            "$ref": "#/components/schemas/Location"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "title": "Date",
+            "description": "Day the item was lost or found (YYYY-MM-DD)."
+          },
+          "approxTime": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Approxtime",
+            "examples": [
+              "14:30"
+            ]
+          },
+          "heldAt": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 100
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Heldat",
+            "examples": [
+              "Security office, Building 5"
+            ]
+          },
+          "type": {
+            "$ref": "#/components/schemas/ItemType"
+          },
+          "verification": {
+            "items": {
+              "$ref": "#/components/schemas/VerificationIn"
+            },
+            "type": "array",
+            "maxItems": 5,
+            "title": "Verification"
+          },
+          "serialNumber": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 100,
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Serialnumber"
+          }
+        },
+        "type": "object",
+        "required": [
+          "title",
+          "category",
+          "location",
+          "date",
+          "type"
+        ],
+        "title": "ItemCreate"
+      },
+      "ItemFull": {
+        "properties": {
+          "access": {
+            "type": "string",
+            "const": "full",
+            "title": "Access",
+            "default": "full"
+          },
+          "id": {
+            "$ref": "#/components/schemas/PydanticObjectId"
+          },
+          "type": {
+            "$ref": "#/components/schemas/ItemType"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "category": {
+            "type": "string",
+            "title": "Category"
+          },
+          "location": {
+            "$ref": "#/components/schemas/Location"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Date"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ItemStatus"
+          },
+          "attributes": {
+            "$ref": "#/components/schemas/Attributes"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
+          "approxTime": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Approxtime"
+          },
+          "timeSubmitted": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Timesubmitted"
+          },
+          "photoIds": {
+            "items": {
+              "$ref": "#/components/schemas/PydanticObjectId"
+            },
+            "type": "array",
+            "title": "Photoids"
+          },
+          "reporterId": {
+            "$ref": "#/components/schemas/PydanticObjectId"
+          },
+          "heldAt": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Heldat"
+          },
+          "version": {
+            "type": "integer",
+            "title": "Version"
+          },
+          "statusHistory": {
+            "items": {
+              "$ref": "#/components/schemas/StatusChange"
+            },
+            "type": "array",
+            "title": "Statushistory"
+          }
+        },
+        "type": "object",
+        "required": [
+          "access",
+          "id",
+          "type",
+          "title",
+          "category",
+          "location",
+          "date",
+          "status",
+          "attributes",
+          "description",
+          "approxTime",
+          "timeSubmitted",
+          "photoIds",
+          "reporterId",
+          "heldAt",
+          "version",
+          "statusHistory"
+        ],
+        "title": "ItemFull"
+      },
+      "ItemMember": {
+        "properties": {
+          "access": {
+            "type": "string",
+            "const": "member",
+            "title": "Access",
+            "default": "member"
+          },
+          "id": {
+            "$ref": "#/components/schemas/PydanticObjectId"
+          },
+          "type": {
+            "$ref": "#/components/schemas/ItemType"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "category": {
+            "type": "string",
+            "title": "Category"
+          },
+          "location": {
+            "$ref": "#/components/schemas/LocationPublic"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Date"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ItemStatus"
+          },
+          "attributes": {
+            "$ref": "#/components/schemas/AttributesMember"
+          }
+        },
+        "type": "object",
+        "required": [
+          "access",
+          "id",
+          "type",
+          "title",
+          "category",
+          "location",
+          "date",
+          "status",
+          "attributes"
+        ],
+        "title": "ItemMember"
+      },
+      "ItemPage": {
+        "properties": {
+          "items": {
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/ItemPublic"
+                },
+                {
+                  "$ref": "#/components/schemas/ItemMember"
+                },
+                {
+                  "$ref": "#/components/schemas/ItemFull"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "access",
+                "mapping": {
+                  "full": "#/components/schemas/ItemFull",
+                  "member": "#/components/schemas/ItemMember",
+                  "public": "#/components/schemas/ItemPublic"
+                }
+              }
+            },
+            "type": "array",
+            "title": "Items"
+          },
+          "total": {
+            "type": "integer",
+            "title": "Total"
+          },
+          "page": {
+            "type": "integer",
+            "title": "Page"
+          },
+          "pageSize": {
+            "type": "integer",
+            "title": "Pagesize"
+          }
+        },
+        "type": "object",
+        "required": [
+          "items",
+          "total",
+          "page",
+          "pageSize"
+        ],
+        "title": "ItemPage"
+      },
+      "ItemPublic": {
+        "properties": {
+          "access": {
+            "type": "string",
+            "const": "public",
+            "title": "Access",
+            "default": "public"
+          },
+          "id": {
+            "$ref": "#/components/schemas/PydanticObjectId"
+          },
+          "type": {
+            "$ref": "#/components/schemas/ItemType"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "category": {
+            "type": "string",
+            "title": "Category"
+          },
+          "location": {
+            "$ref": "#/components/schemas/LocationPublic"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Date"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ItemStatus"
+          }
+        },
+        "type": "object",
+        "required": [
+          "access",
+          "id",
+          "type",
+          "title",
+          "category",
+          "location",
+          "date",
+          "status"
+        ],
+        "title": "ItemPublic"
+      },
+      "ItemStatus": {
+        "type": "string",
+        "enum": [
+          "open",
+          "matched",
+          "claimed",
+          "returned",
+          "archived"
+        ],
+        "title": "ItemStatus"
+      },
+      "ItemType": {
+        "type": "string",
+        "enum": [
+          "lost",
+          "found"
+        ],
+        "title": "ItemType"
+      },
+      "ItemUpdate": {
+        "properties": {
+          "version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Version"
+          },
+          "title": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 100,
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Title"
+          },
+          "category": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-z0-9_-]{2,40}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Category"
+          },
+          "attributes": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Attributes"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 1000
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
+          "location": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Location"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Date"
+          },
+          "approxTime": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Approxtime"
+          },
+          "heldAt": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 100
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Heldat"
+          }
+        },
+        "type": "object",
+        "required": [
+          "version"
+        ],
+        "title": "ItemUpdate",
+        "description": "Fields left out are unchanged. `version` must be the version the\nclient last read; if someone else saved in between, the API returns 409."
+      },
+      "Location": {
+        "properties": {
+          "building": {
+            "type": "string",
+            "enum": [
+              "Library",
+              "Building 1",
+              "Building 2",
+              "Building 3",
+              "Building 4",
+              "Building 5",
+              "Engineering Building",
+              "Science Building",
+              "Business School",
+              "Student Center",
+              "Cafeteria",
+              "Sports Complex",
+              "Main Auditorium",
+              "Administration Building",
+              "Parking Area"
+            ],
+            "title": "Building"
+          },
+          "floor": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 30
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Floor"
+          },
+          "area": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 60
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Area"
+          },
+          "details": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 300
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Details"
+          }
+        },
+        "type": "object",
+        "required": [
+          "building"
+        ],
+        "title": "Location"
+      },
+      "LocationPublic": {
+        "properties": {
+          "building": {
+            "type": "string",
+            "enum": [
+              "Library",
+              "Building 1",
+              "Building 2",
+              "Building 3",
+              "Building 4",
+              "Building 5",
+              "Engineering Building",
+              "Science Building",
+              "Business School",
+              "Student Center",
+              "Cafeteria",
+              "Sports Complex",
+              "Main Auditorium",
+              "Administration Building",
+              "Parking Area"
+            ],
+            "title": "Building"
+          }
+        },
+        "type": "object",
+        "required": [
+          "building"
+        ],
+        "title": "LocationPublic"
+      },
       "Profile": {
         "properties": {
           "phone": {
@@ -758,6 +2047,44 @@
           "admin"
         ],
         "title": "Role"
+      },
+      "StatusChange": {
+        "properties": {
+          "status": {
+            "$ref": "#/components/schemas/ItemStatus"
+          },
+          "at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "At"
+          },
+          "by": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PydanticObjectId"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Note"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status"
+        ],
+        "title": "StatusChange"
       },
       "Token": {
         "properties": {
@@ -888,6 +2215,34 @@
           "type"
         ],
         "title": "ValidationError"
+      },
+      "VerificationIn": {
+        "properties": {
+          "question": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 3,
+            "title": "Question",
+            "examples": [
+              "What name is on the ID card?"
+            ]
+          },
+          "answer": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Answer",
+            "examples": [
+              "Ahmed"
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "question",
+          "answer"
+        ],
+        "title": "VerificationIn"
       },
       "VerifyEmailRequest": {
         "properties": {

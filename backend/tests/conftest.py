@@ -40,7 +40,7 @@ async def database():
 async def clean(database):
     for model in ALL_MODELS:
         await model.get_pymongo_collection().delete_many({})
-    for name in ("rateLimitCounters", "rateLimitWindows"):
+    for name in ("rateLimitCounters", "rateLimitWindows", f"{db.PHOTO_BUCKET}.files", f"{db.PHOTO_BUCKET}.chunks"):
         await database[name].delete_many({})
     yield
 

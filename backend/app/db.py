@@ -14,6 +14,9 @@ from .models import ALL_MODELS
 
 T = TypeVar("T")
 
+# GridFS bucket for item photos: photos.files / photos.chunks (§4.5).
+PHOTO_BUCKET = "photos"
+
 _client: AsyncMongoClient | None = None
 _db: AsyncDatabase | None = None
 
@@ -24,6 +27,10 @@ async def connect(uri: str, db_name: str) -> AsyncDatabase:
     _client = AsyncMongoClient(uri, tz_aware=True, uuidRepresentation="standard")
     _db = _client[db_name]
     await init_beanie(database=_db, document_models=ALL_MODELS)
+    # GridFS normally builds these on first upload, which is not allowed
+    # inside a transaction, so they are created here like every other index.
+    await _db[f"{PHOTO_BUCKET}.files"].create_index([("filename", 1), ("uploadDate", 1)])
+    await _db[f"{PHOTO_BUCKET}.chunks"].create_index([("files_id", 1), ("n", 1)], unique=True)
     return _db
 
 

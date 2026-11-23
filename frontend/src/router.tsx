@@ -9,6 +9,8 @@ import { LoginPage } from '@/pages/login'
 import { NotFoundPage } from '@/pages/not-found'
 import { PlaceholderPage } from '@/pages/placeholder'
 import { RegisterPage } from '@/pages/register'
+import { ReportPage } from '@/pages/report'
+import { SearchPage } from '@/pages/search'
 import { VerifyEmailPage } from '@/pages/verify-email'
 
 const staff = ['officer', 'admin'] as const
@@ -40,11 +42,11 @@ export const router = createBrowserRouter([
       },
 
       // Faisal – items
-      { path: 'search', element: <PlaceholderPage title="Search found items" owner="Faisal" milestone="M3" /> },
+      { path: 'search', element: <SearchPage /> },
       { path: 'items/:id', element: <PlaceholderPage title="Item detail" owner="Faisal" milestone="M7" /> },
       {
         path: 'report',
-        element: <RequireAuth><PlaceholderPage title="Report an item" owner="Faisal" milestone="M3" /></RequireAuth>,
+        element: <RequireAuth><ReportPage /></RequireAuth>,
       },
       {
         path: 'my-reports',

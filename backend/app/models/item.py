@@ -1,4 +1,4 @@
-from datetime import UTC, datetime, timedelta
+from datetime import UTC, datetime, time, timedelta
 from typing import Literal
 
 from beanie import Document, PydanticObjectId
@@ -8,6 +8,7 @@ from pymongo import ASCENDING, DESCENDING, TEXT, IndexModel
 from .common import (
     APPROX_TIME_PATTERN,
     BUILDINGS,
+    CAMPUS_TZ,
     CATEGORY_CODE_PATTERN,
     ItemStatus,
     ItemType,
@@ -45,6 +46,16 @@ def _as_utc(value: datetime) -> datetime:
     return value if value.tzinfo else value.replace(tzinfo=UTC)
 
 
+def happened_at(day: datetime, approx_time: str | None) -> datetime:
+    """When the item was lost/found: the calendar day + approxTime in campus time.
+
+    Without approxTime the start of that day is used. `date` only stores the
+    calendar day (at midnight UTC), so it is re-read as a campus date here.
+    """
+    clock = time(*map(int, approx_time.split(":"))) if approx_time else time()
+    return datetime.combine(day.date(), clock, tzinfo=CAMPUS_TZ)
+
+
 class Item(Document):
     type: ItemType
     title: str = Field(min_length=1, max_length=100)
@@ -76,11 +87,7 @@ class Item(Document):
         submitted = _as_utc(self.timeSubmitted)
         if submitted > datetime.now(UTC) + CLOCK_SKEW:
             raise ValueError("timeSubmitted cannot be in the future")
-        happened = self.date
-        if self.approxTime:
-            hours, minutes = map(int, self.approxTime.split(":"))
-            happened = happened + timedelta(hours=hours, minutes=minutes)
-        if happened > submitted + CLOCK_SKEW:
+        if happened_at(self.date, self.approxTime) > submitted + CLOCK_SKEW:
             raise ValueError("date/approxTime cannot be later than the time the report is submitted")
         return self
 

@@ -27,3 +27,9 @@ class Unauthorized(ServiceError):
 
 class TooManyRequests(ServiceError):
     status_code = 429
+
+
+class InvalidInput(ServiceError):
+    """Well-formed request that breaks a business rule (e.g. unknown category)."""
+
+    status_code = 422
