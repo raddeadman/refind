@@ -18,3 +18,17 @@ mongosh "$URI" db/warehouse_fact.js   # monthly fact table (month x category x b
 | `explain_indexes.js` | Index evidence; no index is dropped (the "before" run uses `hint({ $natural: 1 })`) |
 | `warehouse_fact.js` | Read-only aggregation; uncomment `$merge` to materialise `refind_dw.factItemsMonthly` |
 | `*_output.txt` | Output of the three scripts on the seed data |
+
+## Backup and restore (§5.5)
+
+```bash
+db/backup_restore.sh
+```
+
+Dumps `refind` with `mongodump --gzip` into `backups/` (git-ignored), restores it into `refind_restore` with `--nsFrom/--nsTo` (the live database is never touched), prints the document count of every collection in both and fails if any differ, then deletes dumps older than 14 days (`RETENTION_DAYS`).
+
+- **Atlas:** create a database user `refindBackup` with `read` on `refind` and `readWrite` on `refind_restore` (Database Access → Add New Database User → Specific Privileges), then set `MONGO_BACKUP_URI=mongodb+srv://refindBackup:<password>@<cluster>/` in `.env`.
+- **Local:** without `MONGO_BACKUP_URI` the script uses the docker-compose database and the `refindBackup` account from `scripts/setup_db.py`.
+- No MongoDB tools installed? The script runs them in the `refind-mongo` container, or in a temporary `mongo:7.0` container for Atlas.
+
+Output of the drill on the seed data: `docs/evidence/backup_restore_output.txt`.
