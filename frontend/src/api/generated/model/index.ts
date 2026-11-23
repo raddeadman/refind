@@ -8,6 +8,7 @@
 
 export * from './archiveRequest';
 export * from './attributes';
+export * from './attributesIn';
 export * from './attributesMember';
 export * from './bodyLogin';
 export * from './bodyUploadItemPhotos';
@@ -27,8 +28,11 @@ export * from './itemType';
 export * from './itemUpdate';
 export * from './listItemsBuilding';
 export * from './listItemsParams';
+export * from './listMyItemsParams';
 export * from './location';
 export * from './locationBuilding';
+export * from './locationIn';
+export * from './locationInBuilding';
 export * from './locationPublic';
 export * from './locationPublicBuilding';
 export * from './profile';

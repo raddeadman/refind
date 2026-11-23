@@ -5,8 +5,8 @@
  * Smart Lost & Found platform with automatic matching and claim verification.
  * OpenAPI spec version: 0.1.0
  */
-import type { Attributes } from './attributes';
-import type { Location } from './location';
+import type { AttributesIn } from './attributesIn';
+import type { LocationIn } from './locationIn';
 
 /**
  * Fields left out are unchanged. `version` must be the version the
@@ -17,9 +17,9 @@ export interface ItemUpdate {
   version: number;
   title?: string | null;
   category?: string | null;
-  attributes?: Attributes | null;
+  attributes?: AttributesIn | null;
   description?: string | null;
-  location?: Location | null;
+  location?: LocationIn | null;
   date?: string | null;
   approxTime?: string | null;
   heldAt?: string | null;

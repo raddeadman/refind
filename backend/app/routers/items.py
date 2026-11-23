@@ -8,7 +8,7 @@ from typing import Annotated
 
 from beanie import PydanticObjectId
 from fastapi import APIRouter, File, Query, Response, UploadFile, status
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 from ..deps import ActiveUser, CurrentUser, OptionalUser
 from ..models.common import CATEGORY_CODE_PATTERN, ItemStatus, ItemType
@@ -22,6 +22,8 @@ photos_router = APIRouter(prefix="/api/photos", tags=["items"])
 
 
 class ArchiveRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     note: str | None = Field(default=None, max_length=300)
 
 
@@ -60,6 +62,15 @@ async def list_items(
     )
 
 
+@router.get("/mine", response_model=ItemPage, summary="My own reports, newest first (full view)")
+async def list_my_items(
+    user: CurrentUser,
+    page: Annotated[int, Query(ge=1)] = 1,
+    pageSize: Annotated[int, Query(ge=1, le=MAX_PAGE_SIZE)] = 20,
+) -> ItemPage:
+    return await item_service.search(user, mine=True, page=page, page_size=pageSize)
+
+
 @router.get("/{item_id}", response_model=ItemView, summary="Get one item (fields depend on who asks)")
 async def get_item(item_id: PydanticObjectId, user: OptionalUser):
     item = await item_service.get_visible(item_id, user)
@@ -78,7 +89,13 @@ async def archive_item(item_id: PydanticObjectId, user: ActiveUser, data: Archiv
     return item_service.to_view(item, user)
 
 
-@router.post("/{item_id}/photos", response_model=ItemFull, summary="Add photos (JPEG/PNG, 5 MB, max 4 per item)")
+@router.delete("/{item_id}", response_model=ItemFull, summary="Delete = archive (the record is kept)")
+async def delete_item(item_id: PydanticObjectId, user: ActiveUser):
+    item = await item_service.archive(item_id, user)
+    return item_service.to_view(item, user)
+
+
+@router.post("/{item_id}/photos",response_model=ItemFull, summary="Add photos (JPEG/PNG, 5 MB, max 4 per item)")
 async def upload_item_photos(
     item_id: PydanticObjectId,
     user: ActiveUser,

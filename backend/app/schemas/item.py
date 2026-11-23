@@ -20,11 +20,20 @@ from pydantic import BaseModel, ConfigDict, Field, model_validator
 from ..models import Attributes, Item, Location, StatusChange
 from ..models.common import APPROX_TIME_PATTERN, CATEGORY_CODE_PATTERN, ItemStatus, ItemType
 from ..models.item import CLOCK_SKEW, Building, happened_at
+from .base import StrictModel
 
 # ---------------------------------------------------------------- requests
 
 
-class VerificationIn(BaseModel):
+class AttributesIn(Attributes, StrictModel):
+    pass
+
+
+class LocationIn(Location, StrictModel):
+    pass
+
+
+class VerificationIn(StrictModel):
     question: str = Field(min_length=3, max_length=200, examples=["What name is on the ID card?"])
     # Hashed with bcrypt before it is stored; never returned.
     answer: str = Field(min_length=1, max_length=100, examples=["Ahmed"])
@@ -35,12 +44,12 @@ def midnight_utc(day: Date) -> datetime:
     return datetime.combine(day, time(), tzinfo=UTC)
 
 
-class _ItemFields(BaseModel):
+class _ItemFields(StrictModel):
     title: str = Field(min_length=1, max_length=100, examples=["Black wallet"])
     category: str = Field(pattern=CATEGORY_CODE_PATTERN, examples=["wallets"])
-    attributes: Attributes = Field(default_factory=Attributes)
+    attributes: AttributesIn = Field(default_factory=AttributesIn)
     description: str | None = Field(default=None, max_length=1000)
-    location: Location
+    location: LocationIn
     date: Date = Field(description="Day the item was lost or found (YYYY-MM-DD).")
     approxTime: str | None = Field(default=None, pattern=APPROX_TIME_PATTERN, examples=["14:30"])
     heldAt: str | None = Field(default=None, max_length=100, examples=["Security office, Building 5"])
@@ -67,16 +76,16 @@ class ItemCreate(_ItemFields):
         return self
 
 
-class ItemUpdate(BaseModel):
+class ItemUpdate(StrictModel):
     """Fields left out are unchanged. `version` must be the version the
     client last read; if someone else saved in between, the API returns 409."""
 
     version: int = Field(ge=1)
     title: str | None = Field(default=None, min_length=1, max_length=100)
     category: str | None = Field(default=None, pattern=CATEGORY_CODE_PATTERN)
-    attributes: Attributes | None = None
+    attributes: AttributesIn | None = None
     description: str | None = Field(default=None, max_length=1000)
-    location: Location | None = None
+    location: LocationIn | None = None
     date: Date | None = None
     approxTime: str | None = Field(default=None, pattern=APPROX_TIME_PATTERN)
     heldAt: str | None = Field(default=None, max_length=100)

@@ -77,6 +77,12 @@ async def test_lost_item_has_no_secret(client, make_user):
         {"approxTime": "25:00"},
         {"title": ""},
         {"category": {"$ne": None}},  # operator injection
+        {"title": {"$gt": ""}},  # operator injection on a string field
+        {"attributes": {"color": {"$regex": ".*"}}},
+        {"reporterId": "000000000000000000000000"},  # server-only fields are unknown fields
+        {"status": "returned"},
+        {"location": {"building": "Library", "$where": "1"}},  # nested unknown field
+        {"verification": [{"question": "Name?", "answer": "x", "answerHash": "$2b$12$x"}]},
     ],
 )
 async def test_invalid_reports_rejected(client, make_user, change):
@@ -88,8 +94,7 @@ async def test_invalid_reports_rejected(client, make_user, change):
 
 async def test_server_sets_reporter_and_status(client, make_user):
     user = await make_user()
-    body = FOUND | {"reporterId": "000000000000000000000000", "status": "returned", "version": 9}
-    item = await report(client, user, body)
+    item = await report(client, user)
     assert item["reporterId"] == str(user.id) and item["status"] == "open" and item["version"] == 1
 
 
@@ -191,6 +196,15 @@ async def test_my_reports_include_private_ones(client, make_user):
     assert page["total"] == 1 and page["items"][0]["type"] == "lost" and page["items"][0]["access"] == "full"
 
 
+async def test_items_mine_endpoint(client, make_user):
+    user, other = await make_user(), await make_user()
+    mine = await report(client, user, LOST)
+    await report(client, other)
+    assert (await client.get("/api/items/mine")).status_code == 401
+    page = (await client.get("/api/items/mine", headers=auth(user))).json()
+    assert [i["id"] for i in page["items"]] == [mine["id"]] and page["items"][0]["access"] == "full"
+
+
 async def test_staff_can_search_lost_items(client, make_user):
     user, officer = await make_user(), await make_user(Role.officer)
     await report(client, user, LOST)
@@ -227,6 +241,20 @@ async def test_edit_rules(client, make_user):
     assert (await client.patch(url, json={"version": 1, "category": "nope"}, headers=auth(user))).status_code == 422
     assert (await client.patch(url, json={"version": 1, "title": None}, headers=auth(user))).status_code == 422
     assert (await client.patch(url, json={"version": 1, "heldAt": "Desk 2"}, headers=auth(officer))).status_code == 200
+    # Unknown fields and operators are rejected, not ignored.
+    assert (await client.patch(url, json={"version": 2, "status": "returned"}, headers=auth(user))).status_code == 422
+    assert (await client.patch(url, json={"version": 2, "title": {"$gt": ""}}, headers=auth(user))).status_code == 422
+    assert (await Item.get(item["id"])).status == ItemStatus.open
+
+
+async def test_officer_edits_need_current_version_too(client, make_user):
+    user, officer = await make_user(), await make_user(Role.officer)
+    item = await report(client, user)
+    url = f"/api/items/{item['id']}"
+    assert (await client.patch(url, json={"version": 1, "title": "A"}, headers=auth(user))).status_code == 200
+    stale = await client.patch(url, json={"version": 1, "title": "B"}, headers=auth(officer))
+    assert stale.status_code == 409
+    assert (await Item.get(item["id"])).title == "A"
 
 
 async def test_withdraw(client, make_user):
@@ -244,6 +272,17 @@ async def test_withdraw(client, make_user):
                                headers=auth(user))
     assert patch.status_code == 409
     assert (await Item.get(item["id"])).status == ItemStatus.archived
+
+
+async def test_delete_archives_instead_of_removing(client, make_user):
+    user, other = await make_user(), await make_user()
+    item = await report(client, user)
+    url = f"/api/items/{item['id']}"
+    assert (await client.delete(url, headers=auth(other))).status_code == 403
+    response = await client.delete(url, headers=auth(user))
+    assert response.status_code == 200 and response.json()["status"] == "archived"
+    assert await Item.count() == 1  # the record is kept for the audit trail
+    assert (await client.delete(url, headers=auth(user))).status_code == 409
 
 
 # ---------------------------------------------------------------- photos

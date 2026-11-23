@@ -5,9 +5,9 @@
  * Smart Lost & Found platform with automatic matching and claim verification.
  * OpenAPI spec version: 0.1.0
  */
-import type { Attributes } from './attributes';
+import type { AttributesIn } from './attributesIn';
 import type { ItemType } from './itemType';
-import type { Location } from './location';
+import type { LocationIn } from './locationIn';
 import type { VerificationIn } from './verificationIn';
 
 export interface ItemCreate {
@@ -18,9 +18,9 @@ export interface ItemCreate {
   title: string;
   /** @pattern ^[a-z0-9_-]{2,40}$ */
   category: string;
-  attributes?: Attributes;
+  attributes?: AttributesIn;
   description?: string | null;
-  location: Location;
+  location: LocationIn;
   /** Day the item was lost or found (YYYY-MM-DD). */
   date: string;
   approxTime?: string | null;
