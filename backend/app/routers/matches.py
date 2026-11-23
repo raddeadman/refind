@@ -5,7 +5,7 @@ from typing import Annotated
 from beanie import PydanticObjectId
 from fastapi import APIRouter, Query
 
-from ..deps import ActiveUser, CurrentUser, StaffUser
+from ..deps import ActiveUser, CurrentUser, OfficerUser
 from ..models.common import MatchStatus
 from ..schemas.match import MatchOut, MatchPage, MatchStatusUpdate, NotificationOut, NotificationPage
 from ..services import match_service, notification_service
@@ -24,7 +24,7 @@ async def list_my_matches(user: CurrentUser, status: MatchStatus | None = None, 
 
 
 @router.get("", response_model=MatchPage, summary="All matches (officer)")
-async def list_matches(officer: StaffUser, status: MatchStatus | None = None, page: Page = 1,
+async def list_matches(officer: OfficerUser, status: MatchStatus | None = None, page: Page = 1,
                        pageSize: PageSize = 20) -> MatchPage:
     return await match_service.list_matches(officer, status=status, mine=False, page=page, page_size=pageSize)
 

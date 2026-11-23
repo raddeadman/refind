@@ -1,7 +1,7 @@
 """FastAPI dependencies: current user and RBAC (§5.1, §5.2).
 
 Owner: Habib. Usage on a route:
-    user: User = Depends(require_role(Role.officer, Role.admin))
+    async def approve_claim(claim_id: PydanticObjectId, officer: OfficerUser): ...
 """
 
 from typing import Annotated
@@ -67,3 +67,6 @@ ActiveUser = Annotated[User, Depends(get_active_user)]
 OptionalUser = Annotated[User | None, Depends(get_optional_user)]
 AdminUser = Annotated[User, Depends(require_role(Role.admin))]
 StaffUser = Annotated[User, Depends(require_role(Role.officer, Role.admin))]
+# Lost & Found desk work: claim review, approval, handover, match confirmation.
+# Admins inherit every officer permission (§5.1).
+OfficerUser = StaffUser
