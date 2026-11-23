@@ -19,12 +19,14 @@ from ..models import Category, Item, ItemSecret, StatusChange, User, Verificatio
 from ..models.common import ItemStatus, ItemType, Role
 from ..schemas.item import ItemCreate, ItemPage, ItemPublic, ItemUpdate, midnight_utc, view_of
 from ..security import hash_secret
-from . import audit_service
+from . import audit_service, matching_service
 
 STAFF = {Role.officer, Role.admin}
 # Statuses a non-owner may see, and in which the reporter may still edit.
 VISIBLE = (ItemStatus.open, ItemStatus.matched)
 MAX_PAGE_SIZE = 50
+# An edit to one of these can make new matches, so matching runs again.
+MATCH_FIELDS = {"category", "location", "date", "approxTime", "attributes"}
 
 Access = Literal["public", "member", "full"]
 
@@ -111,8 +113,12 @@ async def create(data: ItemCreate, reporter: User) -> Item:
         )
         return item
 
-    # TODO(M4, Abdullah): run matching_service.find_matches(item) here (§4.3).
-    return await run_in_transaction(txn)
+    item = await run_in_transaction(txn)
+    # Matching runs before the response is returned (§4.3); it may move the
+    # item to "matched", so the item is reloaded.
+    if await matching_service.on_item_saved(item):
+        item = await get_item(item.id)
+    return item
 
 
 # ---------------------------------------------------------------- search
@@ -216,7 +222,10 @@ async def update(item_id: PydanticObjectId, data: ItemUpdate, user: User) -> Ite
         )
         return item
 
-    return await run_in_transaction(txn)
+    item = await run_in_transaction(txn)
+    if changes.keys() & MATCH_FIELDS and await matching_service.on_item_saved(item):
+        item = await get_item(item.id)
+    return item
 
 
 async def archive(item_id: PydanticObjectId, user: User, note: str | None = None) -> Item:
