@@ -29,10 +29,12 @@ import type {
   ClaimOut,
   ClaimPage,
   HTTPValidationError,
+  HandoverIn,
   ListClaimsForReviewParams,
   ListMyClaimsParams,
   PydanticObjectId,
-  Questions
+  Questions,
+  ReviewNote
 } from '../model';
 
 import { apiFetch } from '../../fetcher';
@@ -615,6 +617,396 @@ export const useWithdrawClaim = <TError = HTTPValidationError,
         TContext
       > => {
       return useMutation(getWithdrawClaimMutationOptions(options), queryClient);
+    }
+    export type approveClaimResponse200 = {
+  data: ClaimOut
+  status: 200
+}
+
+export type approveClaimResponse422 = {
+  data: HTTPValidationError
+  status: 422
+}
+
+export type approveClaimResponseSuccess = (approveClaimResponse200) & {
+  headers: Headers;
+};
+export type approveClaimResponseError = (approveClaimResponse422) & {
+  headers: Headers;
+};
+
+export const getApproveClaimUrl = (claimId: PydanticObjectId,) => {
+
+
+
+
+  return `/api/claims/${claimId}/approve`
+}
+
+/**
+ * @summary Approve a claim: releases the item in one transaction (409 if it lost a race)
+ */
+export const approveClaim = async (claimId: PydanticObjectId, options?: Parameters<typeof apiFetch>[1]): Promise<approveClaimResponseSuccess> => {
+
+  return apiFetch<approveClaimResponseSuccess>(getApproveClaimUrl(claimId),
+  {
+    ...options,
+    method: 'POST'
+
+
+  }
+);}
+
+
+
+
+
+export const getApproveClaimMutationKey = () => ['approveClaim'] as const;
+
+export const getApproveClaimMutationOptions = <TError = HTTPValidationError,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof approveClaim>>, TError,ApproveClaimMutationVariables, TContext>, request?: SecondParameter<typeof apiFetch>}
+): UseMutationOptions<Awaited<ReturnType<typeof approveClaim>>, TError,ApproveClaimMutationVariables, TContext> => {
+
+const mutationKey = getApproveClaimMutationKey();
+const {mutation: mutationOptions, request: requestOptions} = options ?
+      options.mutation && 'mutationKey' in options.mutation && options.mutation.mutationKey ?
+      options
+      : {...options, mutation: {...options.mutation, mutationKey}}
+      : {mutation: { mutationKey, }, request: undefined};
+
+
+
+
+      const mutationFn: MutationFunction<Awaited<ReturnType<typeof approveClaim>>, ApproveClaimMutationVariables> = (props) => {
+          const {claimId} = props ?? {};
+
+          return  approveClaim(claimId,requestOptions)
+        }
+
+
+
+
+
+
+  return  { mutationFn, ...mutationOptions }}
+
+    export type ApproveClaimMutationResult = NonNullable<Awaited<ReturnType<typeof approveClaim>>>
+
+    export type ApproveClaimMutationError = HTTPValidationError
+    export type ApproveClaimMutationVariables = {claimId: PydanticObjectId}
+
+    /**
+ * @summary Approve a claim: releases the item in one transaction (409 if it lost a race)
+ */
+export const useApproveClaim = <TError = HTTPValidationError,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof approveClaim>>, TError,ApproveClaimMutationVariables, TContext>, request?: SecondParameter<typeof apiFetch>}
+ , queryClient?: QueryClient): UseMutationResult<
+        Awaited<ReturnType<typeof approveClaim>>,
+        TError,
+        ApproveClaimMutationVariables,
+        TContext
+      > => {
+      return useMutation(getApproveClaimMutationOptions(options), queryClient);
+    }
+    export type rejectClaimResponse200 = {
+  data: ClaimOut
+  status: 200
+}
+
+export type rejectClaimResponse422 = {
+  data: HTTPValidationError
+  status: 422
+}
+
+export type rejectClaimResponseSuccess = (rejectClaimResponse200) & {
+  headers: Headers;
+};
+export type rejectClaimResponseError = (rejectClaimResponse422) & {
+  headers: Headers;
+};
+
+export const getRejectClaimUrl = (claimId: PydanticObjectId,) => {
+
+
+
+
+  return `/api/claims/${claimId}/reject`
+}
+
+/**
+ * @summary Reject a pending or locked claim
+ */
+export const rejectClaim = async (claimId: PydanticObjectId,
+    reviewNoteNull?: ReviewNote | null, options?: Parameters<typeof apiFetch>[1]): Promise<rejectClaimResponseSuccess> => {
+
+    const getHeaders = (h?: NonNullable<RequestInit['headers']>): Record<string, string | readonly string[]> => {
+    if (!h) return {};
+    if (h instanceof Headers) return Object.fromEntries(h.entries());
+    if (Symbol.iterator in h) {
+      return Object.fromEntries(
+        Array.from(h as Iterable<Iterable<string>>, (entry) => Array.from(entry) as [string, string]),
+      );
+    }
+    const headers: Record<string, string | readonly string[]> = {};
+    for (const [name, value] of Object.entries<string | readonly string[] | undefined>(h)) {
+      if (value !== undefined) headers[name] = value;
+    }
+    return headers;
+  };
+return apiFetch<rejectClaimResponseSuccess>(getRejectClaimUrl(claimId),
+  {
+    ...options,
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', ...getHeaders(options?.headers) },
+    body: JSON.stringify(reviewNoteNull)
+  }
+);}
+
+
+
+
+
+export const getRejectClaimMutationKey = () => ['rejectClaim'] as const;
+
+export const getRejectClaimMutationOptions = <TError = HTTPValidationError,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof rejectClaim>>, TError,RejectClaimMutationVariables, TContext>, request?: SecondParameter<typeof apiFetch>}
+): UseMutationOptions<Awaited<ReturnType<typeof rejectClaim>>, TError,RejectClaimMutationVariables, TContext> => {
+
+const mutationKey = getRejectClaimMutationKey();
+const {mutation: mutationOptions, request: requestOptions} = options ?
+      options.mutation && 'mutationKey' in options.mutation && options.mutation.mutationKey ?
+      options
+      : {...options, mutation: {...options.mutation, mutationKey}}
+      : {mutation: { mutationKey, }, request: undefined};
+
+
+
+
+      const mutationFn: MutationFunction<Awaited<ReturnType<typeof rejectClaim>>, RejectClaimMutationVariables> = (props) => {
+          const {claimId,data} = props ?? {};
+
+          return  rejectClaim(claimId,data,requestOptions)
+        }
+
+
+
+
+
+
+  return  { mutationFn, ...mutationOptions }}
+
+    export type RejectClaimMutationResult = NonNullable<Awaited<ReturnType<typeof rejectClaim>>>
+    export type RejectClaimMutationBody = ReviewNote | null | undefined
+    export type RejectClaimMutationError = HTTPValidationError
+    export type RejectClaimMutationVariables = {claimId: PydanticObjectId;data?: ReviewNote | null}
+
+    /**
+ * @summary Reject a pending or locked claim
+ */
+export const useRejectClaim = <TError = HTTPValidationError,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof rejectClaim>>, TError,RejectClaimMutationVariables, TContext>, request?: SecondParameter<typeof apiFetch>}
+ , queryClient?: QueryClient): UseMutationResult<
+        Awaited<ReturnType<typeof rejectClaim>>,
+        TError,
+        RejectClaimMutationVariables,
+        TContext
+      > => {
+      return useMutation(getRejectClaimMutationOptions(options), queryClient);
+    }
+    export type unlockClaimResponse200 = {
+  data: ClaimOut
+  status: 200
+}
+
+export type unlockClaimResponse422 = {
+  data: HTTPValidationError
+  status: 422
+}
+
+export type unlockClaimResponseSuccess = (unlockClaimResponse200) & {
+  headers: Headers;
+};
+export type unlockClaimResponseError = (unlockClaimResponse422) & {
+  headers: Headers;
+};
+
+export const getUnlockClaimUrl = (claimId: PydanticObjectId,) => {
+
+
+
+
+  return `/api/claims/${claimId}/unlock`
+}
+
+/**
+ * @summary Unlock a locked claim after checking in person
+ */
+export const unlockClaim = async (claimId: PydanticObjectId, options?: Parameters<typeof apiFetch>[1]): Promise<unlockClaimResponseSuccess> => {
+
+  return apiFetch<unlockClaimResponseSuccess>(getUnlockClaimUrl(claimId),
+  {
+    ...options,
+    method: 'POST'
+
+
+  }
+);}
+
+
+
+
+
+export const getUnlockClaimMutationKey = () => ['unlockClaim'] as const;
+
+export const getUnlockClaimMutationOptions = <TError = HTTPValidationError,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof unlockClaim>>, TError,UnlockClaimMutationVariables, TContext>, request?: SecondParameter<typeof apiFetch>}
+): UseMutationOptions<Awaited<ReturnType<typeof unlockClaim>>, TError,UnlockClaimMutationVariables, TContext> => {
+
+const mutationKey = getUnlockClaimMutationKey();
+const {mutation: mutationOptions, request: requestOptions} = options ?
+      options.mutation && 'mutationKey' in options.mutation && options.mutation.mutationKey ?
+      options
+      : {...options, mutation: {...options.mutation, mutationKey}}
+      : {mutation: { mutationKey, }, request: undefined};
+
+
+
+
+      const mutationFn: MutationFunction<Awaited<ReturnType<typeof unlockClaim>>, UnlockClaimMutationVariables> = (props) => {
+          const {claimId} = props ?? {};
+
+          return  unlockClaim(claimId,requestOptions)
+        }
+
+
+
+
+
+
+  return  { mutationFn, ...mutationOptions }}
+
+    export type UnlockClaimMutationResult = NonNullable<Awaited<ReturnType<typeof unlockClaim>>>
+
+    export type UnlockClaimMutationError = HTTPValidationError
+    export type UnlockClaimMutationVariables = {claimId: PydanticObjectId}
+
+    /**
+ * @summary Unlock a locked claim after checking in person
+ */
+export const useUnlockClaim = <TError = HTTPValidationError,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof unlockClaim>>, TError,UnlockClaimMutationVariables, TContext>, request?: SecondParameter<typeof apiFetch>}
+ , queryClient?: QueryClient): UseMutationResult<
+        Awaited<ReturnType<typeof unlockClaim>>,
+        TError,
+        UnlockClaimMutationVariables,
+        TContext
+      > => {
+      return useMutation(getUnlockClaimMutationOptions(options), queryClient);
+    }
+    export type handoverClaimResponse200 = {
+  data: ClaimOut
+  status: 200
+}
+
+export type handoverClaimResponse422 = {
+  data: HTTPValidationError
+  status: 422
+}
+
+export type handoverClaimResponseSuccess = (handoverClaimResponse200) & {
+  headers: Headers;
+};
+export type handoverClaimResponseError = (handoverClaimResponse422) & {
+  headers: Headers;
+};
+
+export const getHandoverClaimUrl = (claimId: PydanticObjectId,) => {
+
+
+
+
+  return `/api/claims/${claimId}/handover`
+}
+
+/**
+ * @summary Record the handover after checking the claimant's university ID
+ */
+export const handoverClaim = async (claimId: PydanticObjectId,
+    handoverIn: HandoverIn, options?: Parameters<typeof apiFetch>[1]): Promise<handoverClaimResponseSuccess> => {
+
+    const getHeaders = (h?: NonNullable<RequestInit['headers']>): Record<string, string | readonly string[]> => {
+    if (!h) return {};
+    if (h instanceof Headers) return Object.fromEntries(h.entries());
+    if (Symbol.iterator in h) {
+      return Object.fromEntries(
+        Array.from(h as Iterable<Iterable<string>>, (entry) => Array.from(entry) as [string, string]),
+      );
+    }
+    const headers: Record<string, string | readonly string[]> = {};
+    for (const [name, value] of Object.entries<string | readonly string[] | undefined>(h)) {
+      if (value !== undefined) headers[name] = value;
+    }
+    return headers;
+  };
+return apiFetch<handoverClaimResponseSuccess>(getHandoverClaimUrl(claimId),
+  {
+    ...options,
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', ...getHeaders(options?.headers) },
+    body: JSON.stringify(handoverIn)
+  }
+);}
+
+
+
+
+
+export const getHandoverClaimMutationKey = () => ['handoverClaim'] as const;
+
+export const getHandoverClaimMutationOptions = <TError = HTTPValidationError,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof handoverClaim>>, TError,HandoverClaimMutationVariables, TContext>, request?: SecondParameter<typeof apiFetch>}
+): UseMutationOptions<Awaited<ReturnType<typeof handoverClaim>>, TError,HandoverClaimMutationVariables, TContext> => {
+
+const mutationKey = getHandoverClaimMutationKey();
+const {mutation: mutationOptions, request: requestOptions} = options ?
+      options.mutation && 'mutationKey' in options.mutation && options.mutation.mutationKey ?
+      options
+      : {...options, mutation: {...options.mutation, mutationKey}}
+      : {mutation: { mutationKey, }, request: undefined};
+
+
+
+
+      const mutationFn: MutationFunction<Awaited<ReturnType<typeof handoverClaim>>, HandoverClaimMutationVariables> = (props) => {
+          const {claimId,data} = props ?? {};
+
+          return  handoverClaim(claimId,data,requestOptions)
+        }
+
+
+
+
+
+
+  return  { mutationFn, ...mutationOptions }}
+
+    export type HandoverClaimMutationResult = NonNullable<Awaited<ReturnType<typeof handoverClaim>>>
+    export type HandoverClaimMutationBody = HandoverIn
+    export type HandoverClaimMutationError = HTTPValidationError
+    export type HandoverClaimMutationVariables = {claimId: PydanticObjectId;data: HandoverIn}
+
+    /**
+ * @summary Record the handover after checking the claimant's university ID
+ */
+export const useHandoverClaim = <TError = HTTPValidationError,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof handoverClaim>>, TError,HandoverClaimMutationVariables, TContext>, request?: SecondParameter<typeof apiFetch>}
+ , queryClient?: QueryClient): UseMutationResult<
+        Awaited<ReturnType<typeof handoverClaim>>,
+        TError,
+        HandoverClaimMutationVariables,
+        TContext
+      > => {
+      return useMutation(getHandoverClaimMutationOptions(options), queryClient);
     }
     export type getItemQuestionsResponse200 = {
   data: Questions

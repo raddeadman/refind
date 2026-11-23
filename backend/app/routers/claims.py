@@ -7,7 +7,7 @@ from fastapi import APIRouter, Query, status
 
 from ..deps import ActiveUser, CurrentUser, OfficerUser
 from ..models.common import ClaimStatus
-from ..schemas.claim import ClaimCreate, ClaimOut, ClaimPage, Questions
+from ..schemas.claim import ClaimCreate, ClaimOut, ClaimPage, HandoverIn, Questions, ReviewNote
 from ..services import claim_service
 
 router = APIRouter(prefix="/api/claims", tags=["claims"])
@@ -49,3 +49,26 @@ async def get_claim(claim_id: PydanticObjectId, user: CurrentUser) -> ClaimOut:
 @router.post("/{claim_id}/withdraw", response_model=ClaimOut, summary="Withdraw my pending claim")
 async def withdraw_claim(claim_id: PydanticObjectId, user: ActiveUser) -> ClaimOut:
     return await claim_service.to_out(await claim_service.withdraw(claim_id, user), user)
+
+
+@router.post("/{claim_id}/approve", response_model=ClaimOut,
+             summary="Approve a claim: releases the item in one transaction (409 if it lost a race)")
+async def approve_claim(claim_id: PydanticObjectId, officer: OfficerUser) -> ClaimOut:
+    return await claim_service.to_out(await claim_service.approve(claim_id, officer), officer)
+
+
+@router.post("/{claim_id}/reject", response_model=ClaimOut, summary="Reject a pending or locked claim")
+async def reject_claim(claim_id: PydanticObjectId, officer: OfficerUser, data: ReviewNote | None = None) -> ClaimOut:
+    claim = await claim_service.reject(claim_id, officer, data.note if data else None)
+    return await claim_service.to_out(claim, officer)
+
+
+@router.post("/{claim_id}/unlock", response_model=ClaimOut, summary="Unlock a locked claim after checking in person")
+async def unlock_claim(claim_id: PydanticObjectId, officer: OfficerUser) -> ClaimOut:
+    return await claim_service.to_out(await claim_service.unlock(claim_id, officer), officer)
+
+
+@router.post("/{claim_id}/handover", response_model=ClaimOut,
+             summary="Record the handover after checking the claimant's university ID")
+async def handover_claim(claim_id: PydanticObjectId, data: HandoverIn, officer: OfficerUser) -> ClaimOut:
+    return await claim_service.to_out(await claim_service.handover(claim_id, data, officer), officer)

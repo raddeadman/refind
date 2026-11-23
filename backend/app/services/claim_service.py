@@ -16,14 +16,15 @@ from typing import Any
 
 from beanie import PydanticObjectId
 from pymongo.asynchronous.client_session import AsyncClientSession
+from pymongo.errors import DuplicateKeyError
 
 from ..db import run_in_transaction
 from ..errors import Conflict, Forbidden, InvalidInput, NotFound, ServiceError, TooManyRequests
-from ..models import Claim, ClaimAnswer, Item, ItemSecret, Match, User
-from ..models.common import ClaimStatus, ItemStatus, ItemType, MatchStatus, Role, utcnow
-from ..schemas.claim import ClaimantOut, ClaimCreate, ClaimOut, ClaimPage, Questions
+from ..models import Claim, ClaimAnswer, Handover, Item, ItemSecret, Match, StatusChange, User
+from ..models.common import ClaimStatus, ItemStatus, ItemType, MatchStatus, NotificationType, Role, utcnow
+from ..schemas.claim import ClaimantOut, ClaimCreate, ClaimOut, ClaimPage, HandoverIn, Questions
 from ..security import verify_secret
-from . import audit_service, item_service
+from . import audit_service, item_service, matching_service, notification_service
 
 STAFF = {Role.officer, Role.admin}
 MAX_ATTEMPTS = 3
@@ -241,6 +242,219 @@ async def withdraw(claim_id: PydanticObjectId, user: User) -> Claim:
             raise Conflict(f"A {claim.status.value} claim cannot be withdrawn")
         await audit_service.log(user.id, "claim.withdraw", "claims", claim.id,
                                 {"status": [ClaimStatus.pending.value, ClaimStatus.withdrawn.value]}, session=session)
+        return await get_claim(claim.id, session)
+
+    return await run_in_transaction(txn)
+
+
+# --------------------------------------------- approve (§5.4 transaction)
+
+
+async def approve(claim_id: PydanticObjectId, officer: User) -> Claim:
+    """Release the found item to this claim, all in one transaction.
+
+    Every step is a guarded update: if a competing approval got there
+    first, the guard matches nothing and the request ends with 409. A
+    concurrent write conflict makes with_transaction() retry the whole
+    callback, and the retry then fails at step 1.
+    """
+
+    async def txn(session: AsyncClientSession) -> Claim:
+        now = utcnow()
+        claims, matches = Claim.get_pymongo_collection(), Match.get_pymongo_collection()
+        claim = await get_claim(claim_id, session)
+
+        # 1. Check and approve the claim in one step.
+        result = await claims.update_one(
+            {"_id": claim.id, "status": ClaimStatus.pending.value},
+            {"$set": {"status": ClaimStatus.approved.value, "reviewedBy": officer.id, "reviewedAt": now}},
+            session=session,
+        )
+        if result.modified_count == 0:
+            raise Conflict("Claim is no longer pending")
+        await audit_service.log(officer.id, "claim.approve", "claims", claim.id,
+                                {"status": [ClaimStatus.pending.value, ClaimStatus.approved.value]}, session=session)
+
+        # 2. Claim the found item.
+        found_id = claim.itemId
+        if not await _move_item(found_id, CLAIMABLE, ItemStatus.claimed, officer, session, "claim approved"):
+            raise Conflict("Item already claimed")
+
+        # 4 (checked first). Is the claim's match valid: suggested/confirmed and for this found item?
+        match = None
+        if claim.matchId is not None:
+            match = await Match.get(claim.matchId, session=session)
+            if match is None or match.foundItemId != found_id or match.status == MatchStatus.dismissed:
+                match = None
+
+        # 3. Close everything else for this found item.
+        rivals = [c async for c in claims.find(
+            {"itemId": found_id, "_id": {"$ne": claim.id},
+             "status": {"$in": [ClaimStatus.pending.value, ClaimStatus.locked.value]}},
+            {"_id": 1, "claimantId": 1}, session=session)]
+        if rivals:
+            await claims.update_many(
+                {"_id": {"$in": [r["_id"] for r in rivals]}},
+                {"$set": {"status": ClaimStatus.rejected.value, "reviewedBy": officer.id, "reviewedAt": now}},
+                session=session,
+            )
+        for rival in rivals:
+            await audit_service.log(officer.id, "claim.reject", "claims", rival["_id"],
+                                    {"reason": "item released to another claim"}, session=session)
+
+        keep = match.id if match else None
+        await _dismiss_suggestions({"foundItemId": found_id}, keep, officer, session)
+
+        # 4. Confirm the claimant's match and claim their lost item.
+        if match is not None:
+            if match.status == MatchStatus.suggested:
+                # The partial unique indexes reject a second confirmed match
+                # for either item: DuplicateKeyError -> rollback -> 409.
+                await matches.update_one({"_id": match.id}, {"$set": {"status": MatchStatus.confirmed.value}},
+                                         session=session)
+                await audit_service.log(officer.id, "match.confirm", "matches", match.id,
+                                        {"claimId": str(claim.id)}, session=session)
+            await _dismiss_suggestions({"lostItemId": match.lostItemId}, match.id, officer, session)
+            await _move_item(match.lostItemId, CLAIMABLE, ItemStatus.claimed, officer, session, "claim approved")
+
+        # 5. Tell the claimants.
+        item = await item_service.get_item(found_id, session)
+        where = f" at {item.heldAt}" if item.heldAt else " at the Lost & Found desk"
+        await notification_service.notify(
+            claimant_id(claim), NotificationType.handover_ready,
+            f"Your claim for {item.title.lower()} was approved. Bring your university ID to collect it{where}.",
+            claim.id, f"claim_approved:{claim.id}:{claimant_id(claim)}", session=session,
+        )
+        for rival in rivals:
+            user_id = rival["claimantId"].id
+            await notification_service.notify(
+                user_id, NotificationType.claim_update,
+                f"Your claim for {item.title.lower()} was not approved: the item was returned to someone else.",
+                rival["_id"], f"claim_rejected:{rival['_id']}:{user_id}", session=session,
+            )
+        return await get_claim(claim.id, session)
+
+    try:
+        return await run_in_transaction(txn)
+    except DuplicateKeyError:
+        raise Conflict("Item already claimed") from None
+
+
+async def _move_item(item_id: PydanticObjectId, allowed: tuple[ItemStatus, ...], to: ItemStatus, actor: User,
+                     session: AsyncClientSession, note: str) -> bool:
+    """Guarded status change with history, version bump and audit entry."""
+    before = await Item.get_pymongo_collection().find_one_and_update(
+        {"_id": item_id, "status": {"$in": [s.value for s in allowed]}},
+        {"$set": {"status": to.value},
+         "$push": {"statusHistory": StatusChange(status=to, by=actor.id, note=note).model_dump()},
+         "$inc": {"version": 1}},
+        session=session,
+    )
+    if before is None:
+        return False
+    await audit_service.log(actor.id, "item.status", "items", item_id, {"from": before["status"], "to": to.value},
+                            session=session)
+    return True
+
+
+async def _dismiss_suggestions(where: dict, keep: PydanticObjectId | None, actor: User,
+                               session: AsyncClientSession) -> None:
+    """Dismiss suggested matches (except `keep`); reopen items left with none."""
+    collection = Match.get_pymongo_collection()
+    query = where | {"status": MatchStatus.suggested.value}
+    if keep is not None:
+        query["_id"] = {"$ne": keep}
+    stale = [m async for m in collection.find(query, {"lostItemId": 1, "foundItemId": 1}, session=session)]
+    if not stale:
+        return
+    await collection.update_many({"_id": {"$in": [m["_id"] for m in stale]}},
+                                 {"$set": {"status": MatchStatus.dismissed.value}}, session=session)
+    for m in stale:
+        await audit_service.log(actor.id, "match.dismiss", "matches", m["_id"], {"reason": "claim approved"},
+                                session=session)
+    others = {m["lostItemId"] for m in stale} | {m["foundItemId"] for m in stale}
+    await matching_service.reopen_if_unmatched(list(others), session, actor.id)
+
+
+# ----------------------------------------------------- reject and unlock
+
+
+async def reject(claim_id: PydanticObjectId, officer: User, note: str | None = None) -> Claim:
+    async def txn(session: AsyncClientSession) -> Claim:
+        claim = await get_claim(claim_id, session)
+        result = await Claim.get_pymongo_collection().update_one(
+            {"_id": claim.id, "status": {"$in": [ClaimStatus.pending.value, ClaimStatus.locked.value]}},
+            {"$set": {"status": ClaimStatus.rejected.value, "reviewedBy": officer.id, "reviewedAt": utcnow()}},
+            session=session,
+        )
+        if result.modified_count == 0:
+            raise Conflict(f"A {claim.status.value} claim cannot be rejected")
+        await audit_service.log(officer.id, "claim.reject", "claims", claim.id,
+                                {"from": claim.status.value, "note": note}, session=session)
+        item = await item_service.get_item(claim.itemId, session)
+        reason = f": {note}" if note else ""
+        await notification_service.notify(
+            claimant_id(claim), NotificationType.claim_update,
+            f"Your claim for {item.title.lower()} was not approved{reason}",
+            claim.id, f"claim_rejected:{claim.id}:{claimant_id(claim)}", session=session,
+        )
+        return await get_claim(claim.id, session)
+
+    return await run_in_transaction(txn)
+
+
+async def unlock(claim_id: PydanticObjectId, officer: User) -> Claim:
+    """locked -> pending after the officer checked in person; the claimant gets 3 new tries."""
+
+    async def txn(session: AsyncClientSession) -> Claim:
+        claim = await get_claim(claim_id, session)
+        result = await Claim.get_pymongo_collection().update_one(
+            {"_id": claim.id, "status": ClaimStatus.locked.value},
+            {"$set": {"status": ClaimStatus.pending.value, "failedAttempts": 0}}, session=session,
+        )
+        if result.modified_count == 0:
+            raise Conflict("Only a locked claim can be unlocked")
+        await audit_service.log(officer.id, "claim.unlock", "claims", claim.id,
+                                {"status": [ClaimStatus.locked.value, ClaimStatus.pending.value]}, session=session)
+        return await get_claim(claim.id, session)
+
+    return await run_in_transaction(txn)
+
+
+# --------------------------------------------------------------- handover
+
+
+async def handover(claim_id: PydanticObjectId, data: HandoverIn, officer: User) -> Claim:
+    """Officer hands the item over after checking the claimant's ID (§5.4)."""
+    if not data.idChecked:
+        raise InvalidInput("Check the claimant's university ID card before the handover")
+
+    async def txn(session: AsyncClientSession) -> Claim:
+        claim = await get_claim(claim_id, session)
+        record = Handover(officerId=officer.id, idChecked=True, idLast4=data.idLast4)
+        result = await Claim.get_pymongo_collection().update_one(
+            {"_id": claim.id, "status": ClaimStatus.approved.value, "handover": None},
+            {"$set": {"handover": record.model_dump()}}, session=session,
+        )
+        if result.modified_count == 0:
+            raise Conflict("Only an approved claim that was not handed over yet can be handed over")
+        if not await _move_item(claim.itemId, (ItemStatus.claimed,), ItemStatus.returned, officer, session,
+                                "handed over"):
+            raise Conflict("The item is not waiting for a handover")
+        if claim.matchId is not None:
+            match = await Match.get(claim.matchId, session=session)
+            if match is not None and match.status == MatchStatus.confirmed:
+                await _move_item(match.lostItemId, (ItemStatus.claimed,), ItemStatus.returned, officer, session,
+                                 "handed over")
+        # Never log the ID digits.
+        await audit_service.log(officer.id, "claim.handover", "claims", claim.id, {"idChecked": True},
+                                session=session)
+        item = await item_service.get_item(claim.itemId, session)
+        await notification_service.notify(
+            claimant_id(claim), NotificationType.claim_update,
+            f"You collected your {item.title.lower()}. Thank you for using ReFind!",
+            claim.id, f"handover:{claim.id}:{claimant_id(claim)}", session=session,
+        )
         return await get_claim(claim.id, session)
 
     return await run_in_transaction(txn)
