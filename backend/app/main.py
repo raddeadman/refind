@@ -10,7 +10,7 @@ from starlette.middleware.sessions import SessionMiddleware
 from . import db
 from .config import get_settings
 from .errors import ServiceError
-from .routers import auth, categories, health, items
+from .routers import auth, categories, health, items, matches
 from .services import rate_limit
 
 
@@ -70,6 +70,8 @@ def create_app() -> FastAPI:
     app.include_router(categories.router)
     app.include_router(items.router)
     app.include_router(items.photos_router)
+    app.include_router(matches.router)
+    app.include_router(matches.notifications_router)
     return app
 
 
