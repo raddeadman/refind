@@ -2,7 +2,7 @@ from datetime import datetime
 
 from beanie import Document, Link, PydanticObjectId
 from pydantic import BaseModel, Field
-from pymongo import ASCENDING, IndexModel
+from pymongo import ASCENDING, DESCENDING, IndexModel
 
 from .common import ClaimStatus, utcnow
 from .user import User
@@ -42,4 +42,6 @@ class Claim(Document):
         indexes = [
             IndexModel([("itemId", ASCENDING), ("claimantId", ASCENDING)], unique=True, name="item_claimant_unique"),
             IndexModel([("status", ASCENDING), ("submittedAt", ASCENDING)], name="review_queue"),
+            # claimantId is a DBRef, so "my claims" filters on claimantId.$id.
+            IndexModel([("claimantId.$id", ASCENDING), ("submittedAt", DESCENDING)], name="claimant_submitted"),
         ]

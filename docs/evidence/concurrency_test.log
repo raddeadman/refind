@@ -1,4 +1,4 @@
-ReFind concurrency test (§5.4), 2026-11-23 20:18 UTC
+ReFind concurrency test (§5.4), 2026-11-23 20:21 UTC
 
 run  1: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
 run  2: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
@@ -51,7 +51,7 @@ run 48: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claime
 run 49: A=200 B=409 winner=A loser said "Claim is no longer pending" item=claimed match=confirmed lost=claimed
 run 50: A=409 B=200 winner=B loser said "Claim is no longer pending" item=claimed match=dismissed lost=open
 
-50/50 runs passed in 2.7 s
+50/50 runs passed in 2.8 s
 winners: A (with match) 25, B (no match) 25
 409 "Claim is no longer pending": 50
 no 500 responses; exactly one approved claim and one claimed item in every run

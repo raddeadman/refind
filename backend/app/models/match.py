@@ -22,6 +22,9 @@ class Match(Document):
         indexes = [
             # The same lost/found pair is never suggested twice.
             IndexModel([("lostItemId", ASCENDING), ("foundItemId", ASCENDING)], unique=True, name="pair_unique"),
+            # pair_unique serves lookups by lostItemId; this serves the other
+            # side of "matches for my items" and the approval transaction.
+            IndexModel([("foundItemId", ASCENDING), ("status", ASCENDING)], name="found_status"),
             # At most one *confirmed* match per lost item and per found item (§4.3).
             IndexModel(
                 [("lostItemId", ASCENDING)],
