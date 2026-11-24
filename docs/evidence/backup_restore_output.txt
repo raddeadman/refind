@@ -1,5 +1,5 @@
-== ReFind backup and restore drill (local docker-compose MongoDB), 2026-11-23 20:20 UTC
--- 1. mongodump --gzip --db refind -> backups/refind-20261123T202047Z.archive.gz
+== ReFind backup and restore drill (Atlas / MONGO_BACKUP_URI), 2026-11-24 15:09 UTC
+-- 1. mongodump --gzip --db refind -> backups/refind-20261124T150924Z.archive.gz
    size: 58K
 -- 2. mongorestore into refind_restore (--nsFrom 'refind.*' --nsTo 'refind_restore.*' --drop)
 -- 3. document counts
@@ -11,10 +11,9 @@
    items                         600        600
    matches                        20         20
    notifications                  31         31
-   photos.chunks                   0          0
-   photos.files                    0          0
+   rateLimitCounters               0          0
+   rateLimitWindows                0          0
    users                         150        150
 -- 4. retention: delete dumps older than 14 days
-   deleted backups/refind-20261103T000000Z.archive.gz
-== done in 1 s
+== done in 50 s
 OK: every collection has the same number of documents

@@ -59,7 +59,8 @@ elif [[ -z "${MONGO_BACKUP_URI:-}" ]] && docker ps --format '{{.Names}}' 2>/dev/
   fetch() { docker cp -q "refind-mongo:$DIR/$1" "backups/$1"; }
 else
   DIR=/backups
-  run() { docker run --rm -i -v "$ROOT/backups:/backups" mongo:7.0 "$@"; }
+  # Run as the current user so the container can write into ./backups.
+  run() { docker run --rm -i --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$ROOT/backups:/backups" mongo:7.0 "$@"; }
 fi
 
 count_js() {
